@@ -1,10 +1,14 @@
 import Button from '@/components/buttons/Button';
 
-const Ready = () => {
+interface Label {
+  text: string;
+}
+
+const Ready = ({ text }:Label) => {
   return (
     <section className='bg-blue-400 text-white'>
       <div className='container mx-auto max-w-screen-xl min-h96 content-center py-16'>
-        <h1 className='text-center'>Ready to level up your success?</h1>
+        <h1 className='text-center'>{text}</h1>
         <div className='my-5 flex flex-wrap justify-center'>
           <Button
             isLoading={false}

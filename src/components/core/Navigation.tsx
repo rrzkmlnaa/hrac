@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link'
 import React, { useState } from 'react';
 import { GrLanguage, GrSearch } from "react-icons/gr";
 
@@ -42,7 +43,7 @@ const NavigationBar = () => {
     <nav className="bg-white border-2 border-gray-200 py-2" onMouseLeave={closeAllDropdowns}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
         <div className='flex items-center gap-5'>
-          <a href="" className="flex items-center">
+          <Link href="" className="flex items-center">
             <NextImage
               useSkeleton
               className='w-32 md:w-40'
@@ -51,7 +52,7 @@ const NavigationBar = () => {
               height='180'
               alt='Icon'
             />
-          </a>
+          </Link>
           <button onClick={toggleMenu} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-expanded={isMenuOpen}>
             <span className="sr-only">Open main menu</span>
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -86,7 +87,7 @@ const NavigationBar = () => {
                                     <ul className="py-2 text-sm text-gray-700" aria-labelledby="doubleDropdownButton">
                                       {child.children.map((child, idx) => (
                                         <li key={idx}>
-                                          <a href="#" className="block px-4 py-2 hover:bg-gray-100">{child.name}</a>
+                                          <a href={child?.path} className="block px-4 py-2 hover:bg-gray-100">{child.name}</a>
                                         </li>
                                       ))}
                                     </ul>
@@ -96,7 +97,7 @@ const NavigationBar = () => {
                             }
                             return (
                               <li key={idx}>
-                                <a href="#" className="block px-4 py-2 hover:bg-gray-100">{child.name}</a>
+                                <Link href={child?.path} className="block px-4 py-2 hover:bg-gray-100">{child.name}</Link>
                               </li>
                             );
                           })}
@@ -107,7 +108,7 @@ const NavigationBar = () => {
                 }
                 return (
                   <li key={idx}>
-                    <a href="#" className="block py-2 pl-3 pr-4 md:p-0 text-blue-800 md:hover:text-blue-900">{navigation.name}</a>
+                    <Link href={navigation?.path} className="block py-2 pl-3 pr-4 md:p-0 text-blue-800 md:hover:text-blue-900">{navigation.name}</Link>
                   </li>
                 )
 
