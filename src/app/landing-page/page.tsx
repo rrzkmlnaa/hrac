@@ -23,7 +23,7 @@ const Section = () => {
       <Solution />
       <Resource />
       <Featured />
-      <Ready />
+      <Ready text='Ready to level up your success?' />
     </>
   );
 };
