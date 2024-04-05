@@ -1,48 +1,39 @@
-import Image from 'next/image';
+'use client'
 
 import UnderlineLink from '@/components/links/UnderlineLink';
+import NextImage from '@/components/NextImage';
+
+const clients = [
+  { src: '/images/dbs-Logo.png', alt: 'DBS Company' },
+  { src: '/images/deloitte.svg.png', alt: 'Deloitte Company' },
+  { src: '/images/pertamina.png', alt: 'Pertamina Company' },
+  { src: '/images/pwc.png', alt: 'PWC Company' },
+  { src: '/images/rsm.png', alt: 'RSM Company' },
+  { src: '/images/sc-johnson.svg.png', alt: 'SC Johnson Company' },
+  { src: '/images/zahir.png', alt: 'Zahir Company' }
+];
 
 const Client = () => {
   return (
     <section className='mx-auto max-w-screen-xl my-40'>
-      <h2 className='text-center'>Our clients now worked at</h2>
-      <div className='flex flex-wrap justify-center gap-5 p-8'>
-        <Image
-          src='/images/dbs-Logo.png'
-          width={100}
-          height={100}
-          alt='DBS Logo'
-        />
-        <Image
-          src='/images/deloitte.svg.png'
-          width={100}
-          height={100}
-          alt='Deloitte Logo'
-        />
-        <Image
-          src='/images/pertamina.png'
-          width={100}
-          height={100}
-          alt='Pertamina Logo'
-        />
-        <Image src='/images/pwc.png' width={100} height={100} alt='PWC logo' />
-        <Image src='/images/rsm.png' width={100} height={100} alt='RSM Logo' />
-        <Image
-          src='/images/sc-johnson.svg.png'
-          width={100}
-          height={100}
-          alt='SC Johnson Logo'
-        />
-        <Image
-          src='/images/zahir.png'
-          width={100}
-          height={100}
-          alt='Zahir Logo'
-        />
+      <h2 className='text-center text-sky-600'>Our clients now worked at</h2>
+      <div className='flex flex-wrap justify-center items-center gap-10 p-8'>
+        {clients.map((client, index) => (
+          <NextImage
+            key={index}
+            src={client.src}
+            width={100}
+            height={100}
+            alt={client.alt}
+            useSkeleton={true}
+            classNames={{ image: 'object-cover', blur: '' }}
+            className="grayscale-0 hover:scale-100 duration-150"
+          />
+        ))}
       </div>
       <div className='text-center'>
         <UnderlineLink href='/' className='text-sky-500'>
-          Read suceess stories
+          Read success stories
           {' >>'}
         </UnderlineLink>
       </div>

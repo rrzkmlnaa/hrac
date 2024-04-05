@@ -43,7 +43,7 @@ const NavigationBar = () => {
     <nav className="bg-white border-2 border-gray-200 py-2" onMouseLeave={closeAllDropdowns}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
         <div className='flex items-center gap-5'>
-          <Link href="" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <NextImage
               useSkeleton
               className='w-32 md:w-40'

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function VisiMisi() {
   return (
-    <section className="bg-blue-500">
+    <section className="bg-blue-400">
       <div className="mx-auto max-w-screen-xl text-white ">
         <div className="w-full flex flex-wrap justify-around h-screen">
           <div className="">
@@ -11,7 +11,7 @@ export default function VisiMisi() {
               width={600}
               height={500}
               alt=''
-              className='absolute h-screen left-0 rounded-r-[14rem]'
+              className='object-cover absolute h-screen left-0 rounded-r-[14rem]'
             />
           </div>
           <div className="flex flex-wrap flex-col gap-5 justify-center item-center">

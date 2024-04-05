@@ -1,3 +1,5 @@
+import Button from '@/components/buttons/Button';
+
 import Hra from '@/views/company/about-hra';
 import Coach from '@/views/company/coach';
 import Join from '@/views/company/join';
@@ -26,7 +28,27 @@ export default function Companys() {
       <VisiMisi />
       <Join />
       <Coach />
-      <Ready text='Ready to achieve your success?'/>
+      <Ready 
+        colorstyle='bg-white text-black'
+        text='Ready to achieve your success?'  
+      >
+        <Button
+          isLoading={false}
+          variant='primary'
+          size='base'
+          className='border-0 rounded-l-md rounded-r-none p-3'
+        >
+          Get In Touch
+        </Button>
+        <Button
+          isLoading={false}
+          variant='ghost'
+          size='base'
+          className='border-2 rounded-r-md rounded-l-none p-3'
+        >
+          Visit Our Services
+        </Button>
+      </Ready>
     </>
   )
 }

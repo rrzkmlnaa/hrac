@@ -1,14 +1,12 @@
 import Image from 'next/image';
 
-import UnderlineLink from '@/components/links/UnderlineLink';
-
 const Roles = () => {
   return (
     <section className='mx-auto max-w-screen-xl text-center my-40'>
-      <h3 className='text-sky-500 p-3'>DISCOVER TAILORED SOLUTIONS FOR YOU</h3>
-      <UnderlineLink href='/' className='mb-6'>
+      <h3 className='text-sky-600 p-3'>DISCOVER TAILORED SOLUTIONS FOR YOU</h3>
+      <p className='text-base mb-6 text-gray-500'>
         Select your role:
-      </UnderlineLink>
+      </p>
       <div className='flex flex-wrap justify-center gap-5'>
         <div className='relative'>
           <Image

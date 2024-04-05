@@ -2,6 +2,7 @@ import React from 'react'
 
 import Divider from '@/components/Divider'
 import Stack from '@/components/Stack'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -30,15 +31,18 @@ const Footer = () => {
         <Stack gap={4}>
           <h1 className='text-sm'>CONNECT WITH US</h1>
           <Stack gap={2.5}>
-            <p className='text-sm'>
+            <Link href='https://www.instagram.com/hracademy.id/' className='text-sm'>
               Instagram
-            </p>
-            <p className='text-sm'>
+            </Link>
+            <Link href='https://www.linkedin.com/company/hr-academy-id/mycompany/' className='text-sm'>
               Linkedin
-            </p>
-            <p className='text-sm'>
+            </Link>
+            <Link href='https://www.facebook.com/hracademy1/' className='text-sm'>
               Facebook
-            </p>
+            </Link>
+            <Link href='mailto:hramanajemen@gmail.com' className='text-sm'>
+              Email
+            </Link>
           </Stack>
         </Stack>
       </div>

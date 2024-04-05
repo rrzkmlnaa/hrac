@@ -30,6 +30,19 @@ export default function Contact() {
           <input required type="text" name="telephone" id="telephone" className="block w-full rounded-md border-0 py-1.5 pl-4 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="+62 123 456 789" />
           <label htmlFor="company" className="block text-sm font-medium leading-6 text-gray-900">Company <span className="text-red-600">*</span></label>
           <input required type="text" name="company" id="company" className="block w-full rounded-md border-0 py-1.5 pl-4 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="" />
+          <label htmlFor="inquiry" className="block text-sm font-medium leading-6 text-gray-900">Reason to inquiry <span className="text-red-600">*</span></label>
+          <input required list="inquirys" name="inquiry" id="inquiry" className="block w-full rounded-md border-0 py-1.5 pl-4 pr-8.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="" />
+          
+          <datalist id="inquirys">
+            <option value="Career development" />
+            <option value="Training & certifications" />
+            <option value="HR Solutions" />
+            <option value="Ad-Hoc Consulting" />
+            <option value="Media / Press Relations" />
+            <option value="Careers" />
+            <option value="Others" />
+          </datalist>
+          
           <label htmlFor="message" className="block text-sm font-medium leading-6 text-gray-900">How can we help you?</label>
           <textarea name="message" id="message" className="block w-full rounded-md border-0 py-1.5 pl-4 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="Your Message" />
           <div className="w-1/4 mt-3">

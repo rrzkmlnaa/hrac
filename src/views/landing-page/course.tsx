@@ -6,13 +6,13 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 
 const Course = () => {
   return (
-    <section className=' bg-blue-400 pt-16'>
+    <section id='course' className=' bg-blue-400 pt-16'>
       <div className='mx-auto max-w-screen-xl min-h-96 content-center'>
         <div className='text-center'>
           <div className='flex justify-center pb-5'>
             <Image src='/images/pwc.png' width={50} height={50} alt='' />
           </div>
-          <UnderlineLink href='/' className='text-white'>
+          <UnderlineLink href='#course' className='text-white'>
             TRAINING AND CERTIFICATION PROGRAMS
           </UnderlineLink>
           <h1 className='p-5 text-white'>
@@ -23,7 +23,7 @@ const Course = () => {
             licensed certification
           </p>
         </div>
-        <div className='grid grid-cols-4 gap-5 mt-10'>
+        <div className='grid grid-cols-1 xl:grid-cols-4 gap-5 mt-10'>
           <div className='bg-white w-full shadow rounded-lg overflow-hidden'>
             <Image
               src='/images/staff-hr.webp'

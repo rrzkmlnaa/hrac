@@ -13,8 +13,8 @@ const Learn = () => {
         <div className='flex justify-center'>
           <Image
             src='/images/mockup.webp'
-            width={500}
-            height={500}
+            width={800}
+            height={800}
             alt='mockup'
             className='rounded-md shadow-md'
           />
