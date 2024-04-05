@@ -26,7 +26,7 @@ const Section = () => {
       <Resource />
       <Featured />
       <Ready 
-        colorstyle='bg-blue-400 text-white'
+        colorstyle='bg-blue-700 text-white pt-10'
         text='Ready to level up your success?' 
       >
         <Button

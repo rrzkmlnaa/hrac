@@ -1,50 +1,58 @@
-import Image from 'next/image';
+'use client'
+
+import NextImage from '@/components/NextImage';
 
 const Roles = () => {
   return (
-    <section className='mx-auto max-w-screen-xl text-center my-40'>
-      <h3 className='text-sky-600 p-3'>DISCOVER TAILORED SOLUTIONS FOR YOU</h3>
-      <p className='text-base mb-6 text-gray-500'>
-        Select your role:
-      </p>
-      <div className='flex flex-wrap justify-center gap-5'>
-        <div className='relative'>
-          <Image
-            src='/images/role-03.jpg'
-            width={410}
-            height={410}
-            alt='Picture of the author'
-            className='bg-cover bg-center bg-no-repeat drop-shadow-md'
-          />
-          <div className='absolute bottom-0 bg-blue-300'>
-            <p className='uppercase px-5 py-3 text-white'>Individuals</p>
+    <section className='bg-gray-100'>
+      <div className="mx-auto max-w-screen-xl text-center pt-20 pb-32">
+        <h1 className='text-primary-500 p-3'>DISCOVER TAILORED SOLUTIONS FOR YOU</h1>
+        <p className='text-base mb-6 text-gray-500'>
+          Select your role:
+        </p>
+        <div className='flex flex-wrap justify-center gap-5'>
+          <div className='relative'>
+            <NextImage
+              src='/images/individual.webp'
+              width={410}
+              height={500}
+              alt='Individuals Role'
+              useSkeleton={true}
+              classNames={{ image: 'bg-gray-700 object-center object-cover drop-shadow-md rounded-md', blur: '' }}
+            />
+            <div className='absolute bottom-0 bg-primary-500'>
+              <p className='uppercase px-5 py-3 text-white'>Individuals</p>
+            </div>
           </div>
-        </div>
-        <div className='relative'>
-          <Image
-            src='/images/role-03.jpg'
-            width={410}
-            height={410}
-            alt='Picture of the author'
-            className='bg-cover bg-center bg-no-repeat drop-shadow-md'
-          />
-          <div className='absolute bottom-0 bg-blue-300'>
-            <p className='uppercase px-5 py-3 text-white'>hr profesionals</p>
+          <div className='relative'>
+            <NextImage
+              src='/images/hr-profesionals.webp'
+              width={410}
+              height={410}
+              alt='HR-Profesionals Role'
+              useSkeleton={true}
+              classNames={{ image: 'bg-gray-700 object-center object-cover drop-shadow-md rounded-md', blur: '' }}
+            />
+            <div className='absolute bottom-0 bg-primary-500'>
+              <p className='uppercase px-5 py-3 text-white'>hr profesionals</p>
+            </div>
           </div>
-        </div>
-        <div className='relative'>
-          <Image
-            src='/images/role-03.jpg'
-            width={410}
-            height={410}
-            alt='Picture of the author'
-            className='bg-cover bg-center bg-no-repeat drop-shadow-md'
-          />
-          <div className='absolute bottom-0 bg-blue-300'>
-            <p className='uppercase px-5 py-3 text-white'>corporate</p>
+          <div className='relative'>
+            <NextImage
+              src='/images/corporate.webp'
+              width={410}
+              height={410}
+              alt='Corporate Role'
+              useSkeleton={true}
+              classNames={{ image: 'bg-gray-700 object-center object-cover drop-shadow-md rounded-md', blur: '' }}
+            />
+            <div className='absolute bottom-0 bg-primary-500'>
+              <p className='uppercase px-5 py-3 text-white'>corporate</p>
+            </div>
           </div>
         </div>
       </div>
+      
     </section>
   );
 };

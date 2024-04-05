@@ -47,7 +47,7 @@ const NavigationBar = () => {
             <NextImage
               useSkeleton
               className='w-32 md:w-40'
-              src='/images/appLogo.png'
+              src='/images/appLogo.webp'
               width='180'
               height='180'
               alt='Icon'

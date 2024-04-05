@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function VisiMisi() {
   return (
-    <section className="bg-blue-400">
+    <section className="bg-blue-800">
       <div className="mx-auto max-w-screen-xl text-white ">
         <div className="w-full flex flex-wrap justify-around h-screen">
           <div className="">
