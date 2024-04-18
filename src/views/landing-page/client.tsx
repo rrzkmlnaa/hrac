@@ -1,6 +1,6 @@
 'use client'
 
-import UnderlineLink from '@/components/links/UnderlineLink';
+import ArrowLink from '@/components/links/ArrowLink';
 import NextImage from '@/components/NextImage';
 
 const clients = [
@@ -26,15 +26,14 @@ const Client = () => {
             height={80}
             alt={client.alt}
             useSkeleton={true}
-            classNames={{ image: 'object-cover hover:scale-150 duration-150 w-full h-auto', blur: '' }}
+            classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
           />
         ))}
       </div>
       <div className='text-center'>
-        <UnderlineLink href='/' className='text-primary-500'>
+        <ArrowLink href='/' className='text-primary-500'>
           Read success stories
-          {' >>'}
-        </UnderlineLink>
+        </ArrowLink>
       </div>
     </section>
   );

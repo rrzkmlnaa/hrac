@@ -1,58 +1,32 @@
 'use client'
 
+import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 
 const Roles = () => {
   return (
-    <section className='bg-gray-100'>
-      <div className="mx-auto max-w-screen-xl text-center pt-20 pb-32">
+    <section className='bg-gray-100 py-20'>
+      <div className="max-w-screen-xl mx-auto text-center">
         <h1 className='text-primary-500 p-3'>DISCOVER TAILORED SOLUTIONS FOR YOU</h1>
-        <p className='text-base mb-6 text-gray-500'>
-          Select your role:
-        </p>
+        <p className='text-base text-gray-500 mb-6'>Select your role:</p>
         <div className='flex flex-wrap justify-center gap-5'>
-          <div className='relative'>
-            <NextImage
-              src='/images/individual.webp'
-              width={410}
-              height={500}
-              alt='Individuals Role'
-              useSkeleton={true}
-              classNames={{ image: 'bg-gray-700 object-center object-cover drop-shadow-md rounded-md', blur: '' }}
-            />
-            <div className='absolute bottom-0 bg-primary-500'>
-              <p className='uppercase px-5 py-3 text-white'>Individuals</p>
-            </div>
-          </div>
-          <div className='relative'>
-            <NextImage
-              src='/images/hr-profesionals.webp'
-              width={410}
-              height={410}
-              alt='HR-Profesionals Role'
-              useSkeleton={true}
-              classNames={{ image: 'bg-gray-700 object-center object-cover drop-shadow-md rounded-md', blur: '' }}
-            />
-            <div className='absolute bottom-0 bg-primary-500'>
-              <p className='uppercase px-5 py-3 text-white'>hr profesionals</p>
-            </div>
-          </div>
-          <div className='relative'>
-            <NextImage
-              src='/images/corporate.webp'
-              width={410}
-              height={410}
-              alt='Corporate Role'
-              useSkeleton={true}
-              classNames={{ image: 'bg-gray-700 object-center object-cover drop-shadow-md rounded-md', blur: '' }}
-            />
-            <div className='absolute bottom-0 bg-primary-500'>
-              <p className='uppercase px-5 py-3 text-white'>corporate</p>
-            </div>
-          </div>
+          {['individual', 'hr-professionals', 'corporate'].map((role, index) => (
+            <UnstyledLink href={`roles/${role}`} key={index} className='relative'>
+              <NextImage
+                src={`/images/${role}.webp`}
+                width={400}
+                height={320}
+                alt={`${role} Role`}
+                useSkeleton={true}
+                classNames={{ image: 'max-[648px]:w-10 object-center object-cover drop-shadow-md rounded-md', blur: 'blur' }}
+              />
+              <div className='absolute bottom-0 bg-primary-500 rounded-md'>
+                <p className='uppercase px-5 py-3 text-white'>{role}</p>
+              </div>
+            </UnstyledLink>
+          ))}
         </div>
       </div>
-      
     </section>
   );
 };

@@ -1,6 +1,7 @@
-import Image from 'next/image';
+'use client'
 
 import Button from "@/components/buttons/Button";
+import NextImage from "@/components/NextImage";
 
 export default function Join() {
   return (
@@ -23,20 +24,24 @@ export default function Join() {
         <div className="mx-auto max-w-screen-xl content-center">
           <div className="flex flex-wrap justify-evenly items-center gap-5 py-10">
             <div className="block">
-              <Image
+              <NextImage
                 src='/images/komunitas.webp'
                 width={250}
                 height={250}
                 alt='Comunity UI' 
+                useSkeleton={true}
+                classNames={{ image: 'object-cover hover:scale-150 duration-150 w-full h-auto', blur: 'blur' }}
               />
               <p className='text-center p-5'>2000+ Members</p>
             </div>
             <div className="block">
-              <Image
+              <NextImage
                 src='/images/mentor.webp'
                 width={250}
                 height={250}
                 alt='Mentor UI' 
+                useSkeleton={true}
+                classNames={{ image: 'object-cover hover:scale-150 duration-150 w-full h-auto', blur: 'blur' }}
               />
               <p className='text-center p-5'>300+ Members</p>
             </div>

@@ -10,7 +10,7 @@ import NextImage from '@/components/NextImage';
 
 const Career = () => {
   return (
-    <section id='career' className='bg-blue-800 text-white'>
+    <section id='career' className='bg-[#004AAD] text-white'>
       <div className="mx-auto max-w-screen-xl py-40 text-center">
         <UnderlineLink href='#career' className='text-base uppercase'>
           Career development
@@ -22,8 +22,8 @@ const Career = () => {
         </p>
         <div className='grid grid-cols-1 xl:grid-cols-3 place-items-center pb-10'>
           <div className='flex flex-wrap gap-10 '>
-            <Link href='/' className='w-full p-3 rounded-xl hover:bg-yellow-400 hover:text-primary-500'>
-              <div className='flex justify-start gap-2'>
+            <Link href='' className='w-full p-3 rounded-xl hover:bg-yellow-400 hover:text-primary-500'>
+              <div className='relative flex justify-start gap-2'>
                 <TbClover size='2rem' color='#38BDF8' />
                 <h4 className='flex items-center'>Career Consulting</h4>
               </div>
@@ -59,7 +59,7 @@ const Career = () => {
             height={350}
             alt='Picture of the author'
             useSkeleton={true}
-            classNames={{ image: 'object-cover rounded-[8rem]', blur: '' }}
+            classNames={{ image: 'object-cover rounded-[8rem]', blur: 'blur' }}
             className="xl:hover:scale-100 duration-150"
           />
           <div className='flex flex-wrap gap-10'>

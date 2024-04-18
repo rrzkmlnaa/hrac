@@ -1,8 +1,8 @@
+import Link from 'next/link'
 import React from 'react'
 
 import Divider from '@/components/Divider'
 import Stack from '@/components/Stack'
-import Link from 'next/link'
 
 const Footer = () => {
   return (

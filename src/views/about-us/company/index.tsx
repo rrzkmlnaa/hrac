@@ -1,9 +1,9 @@
 import Button from '@/components/buttons/Button';
 
-import Hra from '@/views/company/about-hra';
-import Coach from '@/views/company/coach';
-import Join from '@/views/company/join';
-import VisiMisi from '@/views/company/visi-misi';
+import Hra from '@/views/about-us/company/about-hra';
+import Coach from '@/views/about-us/company/coach';
+import Join from '@/views/about-us/company/join';
+import VisiMisi from '@/views/about-us/company/visi-misi';
 import Ready from '@/views/landing-page/ready';
 
 export default function Companys() {

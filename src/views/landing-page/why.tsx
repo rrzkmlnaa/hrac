@@ -10,7 +10,7 @@ const Why = () => {
         <div className='content-center bg-sky-100'>
           <h3 className='text-blue-900'>20+ Years Industry Experience</h3>
         </div>
-        <div className='content-center bg-blue-800'>
+        <div className='content-center bg-[#004AAD]'>
           <h3 className='text-white'>Ongoing Support</h3>
         </div>
       </div>

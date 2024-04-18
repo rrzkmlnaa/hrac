@@ -1,4 +1,6 @@
-import Image from 'next/image';
+'use client'
+
+import NextImage from '@/components/NextImage';
 
 const Learn = () => {
   return (
@@ -11,12 +13,13 @@ const Learn = () => {
           learning.
         </p>
         <div className='flex justify-center'>
-          <Image
+          <NextImage
             src='/images/mockup.webp'
             width={800}
             height={800}
             alt='mockup'
-            className='rounded-md shadow-md'
+            useSkeleton={true}
+            classNames={{ image: 'rounded-md shadow-md object-cover w-full h-auto', blur: 'blur' }}
           />
         </div>
       </div>

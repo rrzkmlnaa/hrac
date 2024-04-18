@@ -1,10 +1,10 @@
 'use client'
 
-import Image from 'next/image';
 import { FaCheckCircle } from "react-icons/fa";
 
 import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
+import NextImage from '@/components/NextImage';
 
 const Solution = () => {
   return (
@@ -48,14 +48,14 @@ const Solution = () => {
               </Button>
             </div>
           </div>
-          <div className='hover:scale-110'>
-            <Image
+          <NextImage
               src='/images/solution.webp'
               width={500}
               height={500}
               alt='mockup solution'
+              useSkeleton={true}
+              classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
             />
-          </div>
         </div>
       </div>
     </section>

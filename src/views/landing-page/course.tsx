@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '@/components/buttons/Button';
@@ -18,7 +17,7 @@ const Course = () => {
             height={50}
             alt='LPK Image' 
             useSkeleton={true}
-            classNames={{ image: 'object-cover hover:scale-150 duration-150 w-full h-auto', blur: '' }}
+            classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
           />
           <NextImage 
             src='/images/BNSP.webp' 
@@ -26,7 +25,7 @@ const Course = () => {
             height={50} 
             alt='BNSP Image'
             useSkeleton={true}
-            classNames={{ image: 'object-cover hover:scale-150 duration-150 w-full h-auto', blur: '' }}
+            classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
           />
         </div>
         <UnderlineLink href='#course'>
@@ -42,12 +41,14 @@ const Course = () => {
       </div>
       <div className='grid grid-cols-1 xl:grid-cols-4 gap-5 mt-10'>
         <div className='bg-white w-full shadow rounded-lg overflow-hidden'>
-          <Image
+          <NextImage
             src='/images/staff-hr.webp'
             className='object-cover h-54 w-full'
             alt=''
             width={320}
             height={240}
+            useSkeleton={true}
+            classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
           />
           <div className='p-4'>
             <h3 className='mt-3 font-bold text-lg pb-4 border-slate-300'>
@@ -67,12 +68,14 @@ const Course = () => {
         </div>
 
         <div className='bg-white w-full shadow rounded-lg overflow-hidden'>
-          <Image
+          <NextImage
             src='/images/supervisor-hr.webp'
             className='object-cover h-54 w-full'
             alt=''
             width={320}
             height={240}
+            useSkeleton={true}
+            classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
           />
           <div className='p-4'>
             <h3 className='mt-3 font-bold text-lg pb-4 border-slate-300'>
@@ -92,12 +95,14 @@ const Course = () => {
         </div>
 
         <div className='bg-white w-full shadow rounded-lg overflow-hidden'>
-          <Image
+          <NextImage
             src='/images/assisten-manager-hr.webp'
             className='object-cover h-54 w-full'
             alt=''
             width={320}
             height={240}
+            useSkeleton={true}
+            classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
           />
           <div className='p-4'>
             <h3 className='mt-3 font-bold text-lg pb-4 border-slate-300'>
@@ -117,12 +122,14 @@ const Course = () => {
         </div>
 
         <div className='bg-white w-full shadow rounded-lg overflow-hidden'>
-          <Image
+          <NextImage
             src='/images/manager-hr.webp'
             className='object-cover h-54 w-full'
             alt=''
             width={320}
             height={240}
+            useSkeleton={true}
+            classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
           />
           <div className='p-4'>
             <h3 className='mt-3 font-bold text-lg pb-4 border-slate-300'>
