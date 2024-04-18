@@ -6,9 +6,9 @@ import NextImage from '@/components/NextImage';
 const Featured = () => {
   return (
     <section className='bg-blue-800 text-white'>
-      <div className='mx-auto max-w-screen min-h-96 content-center container py-16'>
-      <h1 className='py-5 text-white'>Featured</h1>
-        <div className='grid grid-cols-3 place-content-center place-items-center gap-2'>
+      <div className='mx-auto max-w-screen min-h-96 content-center container py-16 px-6'>
+        <h1 className='py-5 text-white text-center md:text-start'>Featured</h1>
+        <div className='grid grid-cols-1 md:grid-cols-3 place-content-center place-items-center gap-2'>
           <div className='flex flex-wrap flex-col p-3 gap-3'>
             <NextImage
               src='/images/hr-professionals.webp'

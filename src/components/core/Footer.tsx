@@ -6,15 +6,15 @@ import Stack from '@/components/Stack'
 
 const Footer = () => {
   return (
-    <div className='px-[7rem] border-t border-gray-200'>
-      <div className='py-10 grid grid-cols-4 space-x-10 '>
-        <Stack gap={4}>
+    <div className='px-6 md:px-[7rem] border-t border-gray-200'>
+      <div className='py-10 grid grid-cols-1 md:grid-cols-4 md:space-x-10 space-y-7 md:space-y-0'>
+        <Stack gap={2}>
           <h1 className='text-sm'>OUR LOCATIONS</h1>
           <p className='text-sm'>
             Jalan Rawa Domba Jl. Kav. Dki No.D 9, RT.1/RW.5, Duren Sawit, Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13440
           </p>
         </Stack>
-        <Stack gap={4}>
+        <Stack gap={2}>
           <h1 className='text-sm'>CONTACT US</h1>
           <Stack gap={2.5}>
             <p className='text-sm'>
@@ -28,7 +28,7 @@ const Footer = () => {
             </p>
           </Stack>
         </Stack>
-        <Stack gap={4}>
+        <Stack gap={2}>
           <h1 className='text-sm'>CONNECT WITH US</h1>
           <Stack gap={2.5}>
             <Link href='https://www.instagram.com/hracademy.id/' className='text-sm'>

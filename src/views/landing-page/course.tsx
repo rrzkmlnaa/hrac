@@ -8,21 +8,21 @@ import NextImage from '@/components/NextImage';
 
 const Course = () => {
   return (
-    <section id='course' className='mx-auto max-w-screen-xl min-h-96 content-center py-16'>
+    <section id='course' className='mx-auto max-w-screen-xl min-h-96 content-center py-16 px-6 md:px-0'>
       <div className='text-center text-primary-500'>
         <div className='flex flex-nowrap items-center justify-center pb-5'>
-          <NextImage 
+          <NextImage
             src='/images/LPK.webp'
-            width={140} 
+            width={140}
             height={50}
-            alt='LPK Image' 
+            alt='LPK Image'
             useSkeleton={true}
             classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
           />
-          <NextImage 
-            src='/images/BNSP.webp' 
-            width={90} 
-            height={50} 
+          <NextImage
+            src='/images/BNSP.webp'
+            width={90}
+            height={50}
             alt='BNSP Image'
             useSkeleton={true}
             classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
@@ -55,7 +55,7 @@ const Course = () => {
               <Link href='/'>Staff HR</Link>
             </h3>
             <p>Harga</p>
-            <h6 className='font-bold pb-5'>Rp. 4.500.000</h6>
+            <h6 className='font-bold pb-5'>Rp. x.xxx.xxx</h6>
             <Button
               isLoading={false}
               variant='primary'
@@ -82,7 +82,7 @@ const Course = () => {
               <Link href='/'>Supervisor HR</Link>
             </h3>
             <p>Harga</p>
-            <h6 className='font-bold pb-5'>Rp. 5.500.000</h6>
+            <h6 className='font-bold pb-5'>Rp. x.xxx.xxx</h6>
             <Button
               isLoading={false}
               variant='primary'
@@ -109,7 +109,7 @@ const Course = () => {
               <Link href='/'>Assisten Manager HR</Link>
             </h3>
             <p>Harga</p>
-            <h6 className='font-bold pb-5'>Rp. 6.500.000</h6>
+            <h6 className='font-bold pb-5'>Rp. x.xxx.xxx</h6>
             <Button
               isLoading={false}
               variant='primary'
@@ -136,7 +136,7 @@ const Course = () => {
               <Link href='/'>Manager HR</Link>
             </h3>
             <p>Harga</p>
-            <h6 className='font-bold pb-5'>Rp. 4.500.000</h6>
+            <h6 className='font-bold pb-5'>Rp. x.xxx.xxx</h6>
             <Button
               isLoading={false}
               variant='primary'

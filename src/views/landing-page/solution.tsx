@@ -9,7 +9,7 @@ import NextImage from '@/components/NextImage';
 const Solution = () => {
   return (
     <section id='solution' className='bg-gray-100'>
-      <div className="bg-gray-100 mx-auto max-w-screen-xl min-h-96 content-center py-16">
+      <div className="bg-gray-100 mx-auto max-w-screen-sm md:max-w-screen-xl min-h-96 content-center py-16 px-10 md:px-0">
         <div className='flex flex-wrap justify-between items-center gap-5'>
           <div className='testing classname'>
             <UnderlineLink href='#solution' className='uppercase text-gray-500'>
@@ -49,13 +49,13 @@ const Solution = () => {
             </div>
           </div>
           <NextImage
-              src='/images/solution.webp'
-              width={500}
-              height={500}
-              alt='mockup solution'
-              useSkeleton={true}
-              classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
-            />
+            src='/images/solution.webp'
+            width={500}
+            height={500}
+            alt='mockup solution'
+            useSkeleton={true}
+            classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
+          />
         </div>
       </div>
     </section>
