@@ -1,3 +1,5 @@
+import Button from '@/components/buttons/Button';
+
 import Career from '@/views/landing-page/career';
 import Clients from '@/views/landing-page/client';
 import Course from '@/views/landing-page/course';
@@ -23,7 +25,26 @@ const Section = () => {
       <Solution />
       <Resource />
       <Featured />
-      <Ready text='Ready to level up your success?' />
+      <Ready 
+        colorstyle='bg-blue-700 text-white pt-10'
+        text='Ready to level up your success?' 
+      >
+        <Button
+            isLoading={false}
+            variant='light'
+            size='base'
+            className='bg-black text-white border-0 rounded-l-md rounded-r-none p-3'
+          >
+            Get In Touch
+          </Button>
+          <Button
+            isLoading={false}
+            variant='dark'
+            className='bg-white text-black hover:text-white border-0 rounded-r-md rounded-l-none p-3'
+          >
+            Visit Our Services
+          </Button>
+      </Ready>
     </>
   );
 };

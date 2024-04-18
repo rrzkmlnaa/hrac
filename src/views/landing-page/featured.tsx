@@ -1,20 +1,23 @@
-import Image from 'next/image';
+'use client'
 
 import UnderlineLink from '@/components/links/UnderlineLink';
+import NextImage from '@/components/NextImage';
 
 const Featured = () => {
   return (
-    <section className='bg-blue-400 text-white'>
+    <section className='bg-blue-800 text-white'>
       <div className='mx-auto max-w-screen min-h-96 content-center container py-16'>
-        <h1 className='py-5'>Featured</h1>
+      <h1 className='py-5 text-white'>Featured</h1>
         <div className='grid grid-cols-3 place-content-center place-items-center gap-2'>
           <div className='flex flex-wrap flex-col p-3 gap-3'>
-            <Image
-              src='/images/role-03.jpg'
+            <NextImage
+              src='/images/hr-professionals.webp'
               width={340}
               height={340}
               alt='sample'
-              className='place-self-center w-full'
+              className='place-self-center w-full rounded-md'
+              useSkeleton={true}
+              classNames={{ image: 'rounded-md object-cover w-full h-auto', blur: 'blur' }}
             />
             <h4 className='text-lime-200'>SD Showcase Gives Back</h4>
             <p>
@@ -26,14 +29,16 @@ const Featured = () => {
             </div>
           </div>
           <div className='flex flex-wrap flex-col p-3 gap-3'>
-            <Image
-              src='/images/role-03.jpg'
+            <NextImage
+              src='/images/hr-professionals.webp'
               width={340}
               height={340}
               alt='sample'
               className='place-self-center w-full'
+              useSkeleton={true}
+              classNames={{ image: 'rounded-md object-cover w-full h-auto', blur: 'blur' }}
             />
-            <h4 className='text-lime-200'>SD Showcase Gives Back</h4>
+            <h4 className='text-lime-200'>Hiro Wilson Ready for SDS</h4>
             <p>
               News write-ups offer a great way to let clients know about new
               products and services, events, awards, and more!
@@ -43,14 +48,16 @@ const Featured = () => {
             </div>
           </div>
           <div className='flex flex-wrap flex-col p-3 gap-3'>
-            <Image
-              src='/images/role-03.jpg'
+            <NextImage
+              src='/images/hr-professionals.webp'
               width={340}
               height={340}
               alt='sample'
               className='place-self-center w-full'
+              useSkeleton={true}
+              classNames={{ image: 'rounded-md object-cover w-full h-auto', blur: 'blur' }}
             />
-            <h4 className='text-lime-200'>SD Showcase Gives Back</h4>
+            <h4 className='text-lime-200'>5k Attendees for SDS 2025</h4>
             <p>
               News write-ups offer a great way to let clients know about new
               products and services, events, awards, and more!

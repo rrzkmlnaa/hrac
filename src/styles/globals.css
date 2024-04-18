@@ -34,11 +34,11 @@
   /* #region  /**=========== Primary Color =========== */
   /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
   --tw-color-primary-50: 240 249 255;
-  --tw-color-primary-100: 224 242 254;
-  --tw-color-primary-200: 186 230 253;
-  --tw-color-primary-300: 125 211 252;
-  --tw-color-primary-400: 56 189 248;
-  --tw-color-primary-500: 14 165 233;
+  --tw-color-primary-100: 207 227 241; /* Intensity Blue 20% */
+  --tw-color-primary-200: 159 199 228; /* Intensity Blue 40% */
+  --tw-color-primary-300: 111 172 214; /* Intensity Blue 60% */
+  --tw-color-primary-400: 62 144 201;  /* Intensity Blue 80% */ 
+  --tw-color-primary-500: 15 117 188;  /* Intensity Blue 100% */
   --tw-color-primary-600: 2 132 199;
   --tw-color-primary-700: 3 105 161;
   --tw-color-primary-800: 7 89 133;
@@ -54,6 +54,21 @@
   --color-primary-800: rgb(var(--tw-color-primary-800)); /* #075985 */
   --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0c4a6e */
   /* #endregion  /**======== Primary Color =========== */
+
+  --tw-color-yellow-100: 254 252 218; /* Intensity yellow 20% */
+  --tw-color-yellow-200: 254 249 181; /* Intensity yellow 40% */
+  --tw-color-yellow-300: 254 246 145; /* Intensity yellow 60% */
+  --tw-color-yellow-400: 254 243 108; /* Intensity yellow 80% */ 
+  --tw-color-yellow-500: 254 241 72;  /* Intensity yellow 100% */
+  --tw-color-yellow-600: 242 224 60;  /* Intensity yellow 100% */
+  --tw-color-yellow-700: 239 223 63;  /* Intensity yellow 100% */
+  --color-yellow-100: rgb(var(--tw-color-yellow-100)); /* #FEFCDA */
+  --color-yellow-200: rgb(var(--tw-color-yellow-200)); /* #FEF9B5 */
+  --color-yellow-300: rgb(var(--tw-color-yellow-300)); /* #FEF691 */
+  --color-yellow-400: rgb(var(--tw-color-yellow-400)); /* #FEF36C */
+  --color-yellow-500: rgb(var(--tw-color-yellow-500)); /* #FEF148 */
+  --color-yellow-600: rgb(var(--tw-color-yellow-600)); /* #F2E03C */
+  --color-yellow-700: rgb(var(--tw-color-yellow-700)); /* #EFDF3F */
 }
 
 @layer base {
