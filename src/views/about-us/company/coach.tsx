@@ -11,16 +11,16 @@ import NextImage from '@/components/NextImage';
 
 export default function Coach() {
   return (
-    <section id='coach' className="mx-auto max-w-screen-xl py-24">
+    <section id='coach' className="mx-auto max-w-screen-xl py-24 px-6 md:px-10">
       <div className="grid grid-cols-1 xl:grid-cols-2 justify-center items-center gap-10">
           <NextImage 
             src='/images/coachwulan.webp'
             width={450}
             height={450}
             alt='coach wulan'
-            className='px-auto rounded-md shadow-md'
+            className='w-1/2 md:w-full px-auto'
             useSkeleton={true}
-            classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
+            classNames={{ image: 'rounded-md shadow-md object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
           /> 
           <div className="flex flex-warp flex-col gap-3 justify-start">
             <UnderlineLink href='#coach' className='text-gray-500 w-fit'>
@@ -28,7 +28,7 @@ export default function Coach() {
             </UnderlineLink>
             <h1 className='font-bold text-primary-500'>MEET OUR LEADER</h1>
             <h3 className='font-bold text-primary-500'>SRI WULANDARI, EPC, S.IP, MBA.</h3>
-            <p>
+            <p className="text-justify">
               Coach Wulan, the visionary behind HR Academy, brings
               over 25 years of extensive experience as a trainer,
               speaker, and HR practitioner in multinational

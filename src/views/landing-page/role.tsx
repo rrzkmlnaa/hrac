@@ -18,6 +18,7 @@ const Roles = () => {
                 height={320}
                 alt={`${role} Role`}
                 useSkeleton={true}
+                className='w-96 h-auto'
                 classNames={{ image: 'max-[648px]:w-10 object-center object-cover drop-shadow-md rounded-md', blur: 'blur' }}
               />
               <div className='absolute bottom-0 bg-primary-500 rounded-md'>

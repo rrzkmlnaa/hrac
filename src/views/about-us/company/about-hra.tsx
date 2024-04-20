@@ -5,8 +5,8 @@ import NextImage from '@/components/NextImage';
 
 export default function HRACademy() {
   return (
-    <section className="mx-auto max-w-screen-xl min-h-96 py-40">
-      <h1 className="text-xl font-extrabold sm:text-5xl">
+    <section className="mx-auto max-w-screen-xl min-h-96 py-14 md:py-40 px-6 md:px-10">
+      <h1 className="text-2xl font-extrabold md:text-5xl">
         Your Path to Success Starts Here
       </h1>
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-3 my-10 items-center">
@@ -24,7 +24,7 @@ export default function HRACademy() {
             Training Institute.
           </p>
         </div>
-        <div className="border-l-2 border-black grid grid-rows-2 place-items-center">
+        <div className="md:border-l-2 md:border-black grid grid-rows-2 place-items-center">
           <div className="flex justify-start items-center">
             <NextImage
               src="/images/LPK.webp"
@@ -32,10 +32,11 @@ export default function HRACademy() {
               height={350}
               alt="LPK Image"
               useSkeleton={true}
-              classNames={{ image: 'object-cover hover:scale-150 duration-150 w-full h-auto', blur: 'blur' }}
+              className='w-full lg:w-96 h-auto'
+              classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
             />
           </div>
-          <div className="text-black px-10">
+          <div className="text-black px-6 md:px-10">
             <h5 className="font-bold">Our LSP program refers to SKKNI as follows:</h5>
             <ul className="list-disc pl-10">
               <li>SKKNI 149 years. 2020 (HRM)</li>

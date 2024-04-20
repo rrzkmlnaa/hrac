@@ -26,6 +26,7 @@ const Client = () => {
             height={80}
             alt={client.alt}
             useSkeleton={true}
+            className='w-24 h-auto'
             classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
           />
         ))}
