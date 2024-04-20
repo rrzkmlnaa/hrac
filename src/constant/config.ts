@@ -1,7 +1,7 @@
 export const siteConfig = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
+  title: 'HR ACADEMY',
   description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+    'HR Academy - Human Capital Solution Human Capital Solutions | Coaching | Staffing | Outsourcing | Manpower Supply | Training | Mentoring | Assessment | Entrepreunership Program, HR Academy Indonesia - Human Capital Solution',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://tsnext-tw.thcl.dev',
+  url: 'https://hracademy.id',
 };

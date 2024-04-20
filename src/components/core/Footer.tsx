@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { GrFacebookOption, GrInstagram, GrLinkedin, GrMail, GrPhone } from 'react-icons/gr'
 
 import Divider from '@/components/Divider'
 import Stack from '@/components/Stack'
@@ -7,47 +8,62 @@ import Stack from '@/components/Stack'
 const Footer = () => {
   return (
     <div className='px-6 md:px-[7rem] border-t border-gray-200'>
-      <div className='py-10 grid grid-cols-1 md:grid-cols-4 md:space-x-10 space-y-7 md:space-y-0'>
+      <div className='py-10 grid grid-cols-1 md:grid-cols-4 md:space-x-10 space-y-7 md:space-y-0 mb-7'>
         <Stack gap={2}>
-          <h1 className='text-sm'>OUR LOCATIONS</h1>
+          <h1 className='text-xl'>OUR LOCATIONS</h1>
           <p className='text-sm'>
             Jalan Rawa Domba Jl. Kav. Dki No.D 9, RT.1/RW.5, Duren Sawit, Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13440
           </p>
         </Stack>
         <Stack gap={2}>
-          <h1 className='text-sm'>CONTACT US</h1>
-          <Stack gap={2.5}>
-            <p className='text-sm'>
-              0859-4221-0575
-            </p>
-            <p className='text-sm'>
-              0859-4221-0575
-            </p>
-            <p className='text-sm'>
-              0859-4221-0575
-            </p>
+          <h1 className='text-xl'>CONTACT US</h1>
+          <Stack gap={2}>
+            <div className='flex items-center gap-4'>
+              <GrPhone />
+              <Link href='tel:+6285942210575' className='text-sm'>
+                +62 859-4221-0575
+              </Link>
+            </div>
+            <div className='flex items-center gap-4'>
+              <GrMail />
+              <Link href='mailto:admin@hracademy.id' className='text-sm'>
+                admin@hracademy.id
+              </Link>
+            </div>
           </Stack>
         </Stack>
         <Stack gap={2}>
-          <h1 className='text-sm'>CONNECT WITH US</h1>
-          <Stack gap={2.5}>
-            <Link href='https://www.instagram.com/hracademy.id/' className='text-sm'>
-              Instagram
-            </Link>
-            <Link href='https://www.linkedin.com/company/hr-academy-id/mycompany/' className='text-sm'>
-              Linkedin
-            </Link>
-            <Link href='https://www.facebook.com/hracademy1/' className='text-sm'>
-              Facebook
-            </Link>
-            <Link href='mailto:hramanajemen@gmail.com' className='text-sm'>
-              Email
-            </Link>
+          <h1 className='text-xl'>CONNECT WITH US</h1>
+          <Stack gap={2}>
+            <div className='flex items-center gap-4'>
+              <GrInstagram />
+              <Link href='https://www.instagram.com/hracademy.id/' className='text-sm'>
+                @hracademy.id
+              </Link>
+            </div>
+            <div className='flex items-center gap-4'>
+              <GrLinkedin />
+              <Link href='https://www.linkedin.com/company/hr-academy-id/mycompany/' className='text-sm'>
+                @hr-academy-id
+              </Link>
+            </div>
+            <div className='flex items-center gap-4'>
+              <GrFacebookOption />
+              <Link href='https://www.facebook.com/hracademy1/' className='text-sm'>
+                @hracademy1
+              </Link>
+            </div>
+            <div className='flex items-center gap-4'>
+              <GrMail />
+              <Link href='mailto:hramanajemen@gmail.com' className='text-sm'>
+                hramanajemen
+              </Link>
+            </div>
           </Stack>
         </Stack>
       </div>
       <Divider color='black' size={2} />
-      <p className='pb-8 pt-2'>&copy; Copyright HR Academy {new Date().getFullYear()}. Allright reserved.</p>
+      <p className='pb-8 pt-2 text-sm'>&copy; Copyright HR Academy {new Date().getFullYear()}. Allright reserved.</p>
     </div>
   )
 }

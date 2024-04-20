@@ -19,7 +19,7 @@ const Roles = () => {
                 alt={`${role} Role`}
                 useSkeleton={true}
                 className='w-96 h-auto'
-                classNames={{ image: 'max-[648px]:w-10 object-center object-cover drop-shadow-md rounded-md', blur: 'blur' }}
+                classNames={{ image: 'w-full object-center object-cover drop-shadow-md rounded-md', blur: 'blur' }}
               />
               <div className='absolute bottom-0 bg-primary-500 rounded-md'>
                 <p className='uppercase px-5 py-3 text-white'>{role}</p>

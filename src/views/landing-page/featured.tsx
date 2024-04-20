@@ -1,5 +1,10 @@
 'use client'
 
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 import UnderlineLink from '@/components/links/UnderlineLink';
 import NextImage from '@/components/NextImage';
 
@@ -50,6 +55,18 @@ const Featured: React.FC = () => {
       imageUrl: '/images/hr-professionals.webp',
       alt: 'sample',
       description: 'News write-ups offer a great way to let clients know about new products and services, events, awards, and more!'
+    },
+    {
+      title: '5k Attendees for SDS 2025',
+      imageUrl: '/images/hr-professionals.webp',
+      alt: 'sample',
+      description: 'News write-ups offer a great way to let clients know about new products and services, events, awards, and more!'
+    },
+    {
+      title: '5k Attendees for SDS 2025',
+      imageUrl: '/images/hr-professionals.webp',
+      alt: 'sample',
+      description: 'News write-ups offer a great way to let clients know about new products and services, events, awards, and more!'
     }
   ];
 
@@ -57,13 +74,31 @@ const Featured: React.FC = () => {
     <section className='bg-blue-800 text-white'>
       <div className='mx-auto max-w-screen min-h-96 content-center container py-16 px-6'>
         <h1 className='py-5 text-white text-center md:text-start px-3'>Featured</h1>
-        <div className='grid grid-cols-1 md:grid-cols-3 place-content-center place-items-center gap-2'>
+        {/* <div className='grid grid-cols-1 md:grid-cols-3 place-content-center place-items-center gap-2'> */}
+        <Swiper
+          slidesPerView={1}
+          breakpoints={{
+            576: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }}
+          spaceBetween={30}
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
           {items.map((item, index) => (
-            <FeaturedItem key={index} {...item}>
-              {item.description}
-            </FeaturedItem>
+            <SwiperSlide key={index}>
+              <FeaturedItem  {...item}>
+                {item.description}
+              </FeaturedItem>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+        {/* </div> */}
       </div>
     </section>
   );

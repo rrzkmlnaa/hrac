@@ -1,6 +1,10 @@
 'use client'
 
 import Link from 'next/link';
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
@@ -31,7 +35,7 @@ const Course = () => {
       imageUrl: '/images/manager-hr.webp',
       price: 'Rp. x.xxx.xxx',
       link: '/'
-    }
+    },
   ];
 
   return (
@@ -70,36 +74,52 @@ const Course = () => {
         </p>
       </div>
       {/* Course Cards */}
-      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mt-10 md:px-6 lg:px-10'>
+      <Swiper
+        slidesPerView={1}
+        breakpoints={{
+          576: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+        }}
+        spaceBetween={30}
+        navigation={true}
+        modules={[Navigation]}
+        className="mySwiper mt-12"
+      >
         {courses.map((course, index) => (
-          <div key={index} className='bg-white w-full shadow rounded-lg overflow-hidden'>
-            <NextImage
-              src={course.imageUrl}
-              className='object-cover h-54 w-full'
-              alt={course.title}
-              width={320}
-              height={240}
-              useSkeleton={true}
-              classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
-            />
-            <div className='p-4'>
-              <h3 className='mt-3 font-bold text-lg pb-4 border-slate-300'>
-                <Link href={course.link}>{course.title}</Link>
-              </h3>
-              <p>Harga</p>
-              <h6 className='font-bold pb-5'>{course.price}</h6>
-              <Button
-                isLoading={false}
-                variant='primary'
-                size='base'
-                className='w-full uppercase flex justify-center border-none'
-              >
-                lihat detail
-              </Button>
+          <SwiperSlide key={index}>
+            <div className='bg-white w-full shadow rounded-lg overflow-hidden'>
+              <NextImage
+                src={course.imageUrl}
+                className='object-cover h-54 w-full'
+                alt={course.title}
+                width={320}
+                height={240}
+                useSkeleton={true}
+                classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
+              />
+              <div className='p-4'>
+                <h3 className='mt-3 font-bold text-lg pb-4 border-slate-300'>
+                  <Link href={course.link}>{course.title}</Link>
+                </h3>
+                <p>Harga</p>
+                <h6 className='font-bold pb-5'>{course.price}</h6>
+                <Button
+                  isLoading={false}
+                  variant='primary'
+                  size='base'
+                  className='w-full uppercase flex justify-center border-none'
+                >
+                  lihat detail
+                </Button>
+              </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </section>
   );
 };
