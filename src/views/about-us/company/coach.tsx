@@ -20,7 +20,7 @@ export default function Coach() {
           alt='coach wulan'
           className='w-1/2 md:w-full px-auto'
           useSkeleton={true}
-          classNames={{ image: 'rounded-md shadow-md object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
+          classNames={{ image: 'rounded-md shadow-md object-cover hover:scale-105 duration-150 w-full h-auto', blur: 'blur' }}
         />
         <div className="flex flex-warp flex-col gap-3 justify-start">
           <UnderlineLink href='#coach' className='text-gray-500 w-fit'>

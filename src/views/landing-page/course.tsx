@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import { Navigation } from 'swiper/modules';
+import { Mousewheel, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -86,7 +86,10 @@ const Course = () => {
         }}
         spaceBetween={30}
         navigation={true}
-        modules={[Navigation]}
+        mousewheel={{
+          forceToAxis: true,
+        }}
+        modules={[Navigation, Mousewheel]}
         className="mySwiper mt-12"
       >
         {courses.map((course, index) => (

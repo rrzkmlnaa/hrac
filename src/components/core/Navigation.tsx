@@ -1,18 +1,18 @@
 "use client"
 
 import Link from 'next/link'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GrLanguage, GrSearch } from "react-icons/gr";
 
 import NextImage from '@/components/NextImage';
 
 import { navigations } from '@/constant/navigations';
 
-
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState('');
   const [activeDoubleDropdown, setActiveDoubleDropdown] = useState('');
+  const [scroll, setScroll] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -39,8 +39,14 @@ const NavigationBar = () => {
     setActiveDoubleDropdown('');
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 10);
+    });
+  });
+
   return (
-    <nav className="bg-white border-2 border-gray-200 py-2" onMouseLeave={closeAllDropdowns}>
+    <nav className={`bg-white border-2 border-gray-200 py-2 ${scroll ? 'sticky-navbar shadow-sm z-50' : ''}`} onMouseLeave={closeAllDropdowns}>
       <div className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-3 md:px-0">
         <div className='flex items-center gap-5'>
           <button onClick={toggleMenu} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-expanded={isMenuOpen}>

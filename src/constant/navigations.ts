@@ -13,10 +13,6 @@ export const navigations = [
             name: "Service 1.2",
             path: "#",
           },
-          {
-            name: "Service 1.3",
-            path: "#",
-          },
         ],
       },
       {
@@ -24,14 +20,6 @@ export const navigations = [
         children: [
           {
             name: "Service 1.1",
-            path: "#",
-          },
-          {
-            name: "Service 1.2",
-            path: "#",
-          },
-          {
-            name: "Service 1.3",
             path: "#",
           },
         ],
@@ -43,25 +31,16 @@ export const navigations = [
     ],
   },
   {
+    name: "Resources",
+    path: "#",
+  },
+  {
     name: "Success Story",
     path: "/about",
   },
   {
     name: "Issues",
-    children: [
-      {
-        name: "Issue 1",
-        path: "#",
-      },
-      {
-        name: "Issue 2",
-        path: "#",
-      },
-      {
-        name: "Issue 3",
-        path: "#",
-      },
-    ],
+    path: '#'
   },
   {
     name: "Careers",

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Button from '@/components/buttons/Button';
 
 import Career from '@/views/landing-page/career';
@@ -25,11 +27,12 @@ const Section = () => {
       <Solution />
       <Resource />
       <Featured />
-      <Ready 
+      <Ready
         colorstyle='bg-blue-700 text-white pt-10'
-        text='Ready to level up your success?' 
+        text='Ready to level up your success?'
       >
-        <Button
+        <Link href='/about-us/contact-us'>
+          <Button
             isLoading={false}
             variant='light'
             size='base'
@@ -37,13 +40,14 @@ const Section = () => {
           >
             Get In Touch
           </Button>
-          <Button
-            isLoading={false}
-            variant='dark'
-            className='bg-white text-black hover:text-white border-0 rounded-r-md rounded-l-none p-3'
-          >
-            Visit Our Services
-          </Button>
+        </Link>
+        <Button
+          isLoading={false}
+          variant='dark'
+          className='bg-white text-black hover:text-white border-0 rounded-r-md rounded-l-none p-3'
+        >
+          Visit Our Services
+        </Button>
       </Ready>
     </>
   );

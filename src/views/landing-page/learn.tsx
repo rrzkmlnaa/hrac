@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link';
+
 import NextImage from '@/components/NextImage';
 
 const Learn = () => {
@@ -12,16 +14,18 @@ const Learn = () => {
           designed to <br /> increase the efficiency and comprehensiveness of
           learning.
         </p>
-        <div className='flex justify-center'>
-          <NextImage
-            src='/images/mockup.webp'
-            width={800}
-            height={800}
-            alt='mockup'
-            useSkeleton={true}
-            classNames={{ image: 'rounded-md shadow-md object-cover w-full h-auto', blur: 'blur' }}
-          />
-        </div>
+        <Link href='https://campus.hracademy.id' target='_blank'>
+          <div className='flex justify-center'>
+            <NextImage
+              src='/images/mockup.webp'
+              width={800}
+              height={800}
+              alt='mockup'
+              useSkeleton={true}
+              classNames={{ image: 'rounded-md shadow-md object-cover w-full h-auto', blur: 'blur' }}
+            />
+          </div>
+        </Link>
       </div>
     </section>
   );

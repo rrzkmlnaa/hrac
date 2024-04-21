@@ -1,6 +1,6 @@
 'use client'
 
-import { Navigation } from 'swiper/modules';
+import { Mousewheel, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -85,9 +85,12 @@ const Featured: React.FC = () => {
               slidesPerView: 3,
             },
           }}
+          mousewheel={{
+            forceToAxis: true,
+          }}
           spaceBetween={30}
           navigation={true}
-          modules={[Navigation]}
+          modules={[Navigation, Mousewheel]}
           className="mySwiper"
         >
           {items.map((item, index) => (

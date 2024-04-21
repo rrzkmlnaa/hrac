@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import { FaCheckCircle } from "react-icons/fa";
 
 import Button from '@/components/buttons/Button';
@@ -43,9 +44,11 @@ const Solution = () => {
               <p className="place-self-center">Ad-hoc Consulting Service</p>
             </div>
             <div className='py-10'>
-              <Button isLoading={false} variant='primary' className='border-none'>
-                SCHEDULE FREE CONSULTATION
-              </Button>
+              <Link href="https://api.whatsapp.com/send/?phone=6285942210575&text=Saya+tertarik+untuk+Menggunakan+Layanan+di+Perusahan+Anda.+Apakah+bisa+dibantu%3F&type=phone_number&app_absent=0">
+                <Button isLoading={false} variant='primary' className='border-none'>
+                  SCHEDULE FREE CONSULTATION
+                </Button>
+              </Link>
             </div>
           </div>
           <NextImage

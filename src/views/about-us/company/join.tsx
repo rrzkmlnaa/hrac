@@ -1,5 +1,7 @@
 'use client'
 
+import Link from "next/link";
+
 import Button from "@/components/buttons/Button";
 import NextImage from "@/components/NextImage";
 
@@ -13,12 +15,14 @@ export default function Join() {
           Indonesia under the Incubator for Cooperatives and Micro, Small, <br className='hidden md:block' />and Medium Enterprises,
           with certificate number 202100131.
         </p>
-        <Button
-          variant='yellow'
-          className="border-none"
-        >
-          Join Now
-        </Button>
+        <Link href="https://api.whatsapp.com/send/?phone=6285942210575&text=Saya+tertarik+untuk+Menggunakan+Layanan+di+Perusahan+Anda.+Apakah+bisa+dibantu%3F&type=phone_number&app_absent=0">
+          <Button
+            variant='yellow'
+            className="border-none"
+          >
+            Join Now
+          </Button>
+        </Link>
       </section>
       <section className="bg-gray-100">
         <div className="mx-auto max-w-screen-xl content-center">
@@ -28,7 +32,7 @@ export default function Join() {
                 src='/images/komunitas.webp'
                 width={250}
                 height={250}
-                alt='Comunity UI' 
+                alt='Comunity UI'
                 useSkeleton={true}
                 className="w-1/2 lg:w-2/3 h-auto"
                 classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}
@@ -40,7 +44,7 @@ export default function Join() {
                 src='/images/mentor.webp'
                 width={250}
                 height={250}
-                alt='Mentor UI' 
+                alt='Mentor UI'
                 useSkeleton={true}
                 className="w-1/2 lg:w-2/3 h-auto"
                 classNames={{ image: 'object-cover hover:scale-110 duration-150 w-full h-auto', blur: 'blur' }}

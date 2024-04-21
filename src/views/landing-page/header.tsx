@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import Button from '@/components/buttons/Button';
@@ -18,13 +19,15 @@ const HeaderSection = () => {
             </p>
 
             <div className='mt-8 flex flex-wrap text-center justify-center md:justify-start'>
-              <Button
-                isLoading={false}
-                variant='yellow'
-                className='border-0 rounded-l-md rounded-r-none'
-              >
-                Register Now
-              </Button>
+              <Link href='/about-us/contact-us'>
+                <Button
+                  isLoading={false}
+                  variant='yellow'
+                  className='border-0 rounded-l-md rounded-r-none'
+                >
+                  Register Now
+                </Button>
+              </Link>
               <Button
                 isLoading={false}
                 variant='primary'
