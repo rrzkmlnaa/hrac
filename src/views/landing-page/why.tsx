@@ -5,13 +5,13 @@ const Why = () => {
       <p className='text-base uppercase text-gray-500 pb-5'>WHY PARTNER WITH US</p>
       <div className='grid grid-start-3 grid-cols-3 w-full h-80 text-white'>
         <div className='content-center bg-blue-600'>
-          <h3 className='text-gray-200'>Global Knowledge, Local Experts</h3>
+          <h3 className='text-gray-200 text-base sm:text-4xl text-wrap'>Global Knowledge, Local Experts</h3>
         </div>
         <div className='content-center bg-sky-100'>
-          <h3 className='text-blue-900'>20+ Years Industry Experience</h3>
+          <h3 className='text-blue-900 text-base sm:text-4xl text-wrap'>20+ Years Industry Experience</h3>
         </div>
         <div className='content-center bg-[#004AAD]'>
-          <h3 className='text-white'>Ongoing Support</h3>
+          <h3 className='text-white text-base sm:text-4xl text-wrap'>Ongoing Support</h3>
         </div>
       </div>
     </section>

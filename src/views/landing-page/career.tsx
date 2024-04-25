@@ -72,7 +72,7 @@ const Career = () => {
 
   return (
     <section id='career' className='bg-[#004AAD] text-white'>
-      <div className='mx-auto max-w-screen-xl py-16 md:py-40 text-center'>
+      <div className='mx-auto max-w-screen-xl pt-24 pb-16 md:py-40 text-center'>
         <UnderlineLink href='#career' className='text-base uppercase'>
           Career development
         </UnderlineLink>

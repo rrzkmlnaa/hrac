@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { GrLanguage, GrSearch } from "react-icons/gr";
 
 import NextImage from '@/components/NextImage';
@@ -45,9 +45,28 @@ const NavigationBar = () => {
     });
   });
 
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (drawerRef.current && !drawerRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
+  
   return (
     <nav className={`bg-white border-2 border-gray-200 py-2 ${scroll ? 'sticky-navbar shadow-sm z-50' : ''}`} onMouseLeave={closeAllDropdowns}>
-      <div className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-3 md:px-0">
+      <div className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-3 xl:px-0">
         <div className='flex items-center gap-5'>
           <button onClick={toggleMenu} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-expanded={isMenuOpen}>
             <span className="sr-only">Open main menu</span>
@@ -65,7 +84,7 @@ const NavigationBar = () => {
               alt='Icon'
             />
           </Link>
-          <div className={`hidden w-full md:block md:w-auto ${isMenuOpen ? '' : 'hidden'}`}>
+          <div ref={drawerRef} className={`w-full md:block md:w-auto md:static fixed z-10 inset-0 top-[73px] transform ease-in-out transition-all ${isMenuOpen ? ' translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
               {navigations.map((navigation, idx) => {
                 if (navigation?.children) {
@@ -77,7 +96,7 @@ const NavigationBar = () => {
                           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                         </svg>
                       </button>
-                      <div className={`absolute z-10 ${isDropdownOpen(navigation.name) ? '' : 'hidden'} font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`} onMouseLeave={() => toggleDropdown(navigation.name)}>
+                      <div className={`z-10 pl-4 md:pl-0 md:absolute md:bg-white md:divide-y md:divide-gray-100 md:rounded-lg md:shadow w-full md:w-44 ${isDropdownOpen(navigation.name) ? '' : 'hidden'} font-normal `} onMouseLeave={() => toggleDropdown(navigation.name)}>
                         <ul className="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                           {navigation.children.map((child, idx) => {
                             if (child.children) {
@@ -89,7 +108,7 @@ const NavigationBar = () => {
                                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                                     </svg>
                                   </button>
-                                  <div className={`z-10 absolute ${isDoubleDropdownOpen(child.name) ? '' : 'hidden'} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 transform translate-x-44 translate-y-[-2.7rem]`}>
+                                  <div className={`z-10 static md:absolute ${isDoubleDropdownOpen(child.name) ? '' : 'hidden'} pl-4 md:pl-0 md:bg-white md:divide-y md:divide-gray-100 md:rounded-lg md:shadow w-full md:w-44 md:transform md:translate-x-44 md:translate-y-[-2.7rem]`}>
                                     <ul className="py-2 text-sm text-gray-700" aria-labelledby="doubleDropdownButton">
                                       {child.children.map((child, idx) => (
                                         <li key={idx}>

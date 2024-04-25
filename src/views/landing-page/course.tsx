@@ -39,7 +39,7 @@ const Course = () => {
   ];
 
   return (
-    <section id='course' className='mx-auto max-w-screen-xl min-h-96 content-center py-16 px-6 md:px-0'>
+    <section id='course' className='mx-auto max-w-screen-xl min-h-96 content-center pt-24 pb-16 px-6 md:px-0'>
       <div className='text-center text-primary-500'>
         <div className='flex flex-nowrap items-center justify-center pb-5'>
           {/* LPK and BNSP images */}
