@@ -26,7 +26,11 @@ const Section = () => {
       <Learn />
       <Solution />
       <Resource />
-      <Featured />
+      <Featured 
+        head="Featured"
+        headColor='text-white'
+        sectionStyled='bg-blue-800 text-white'
+      />
       <Ready
         colorstyle='bg-blue-700 text-white pt-10'
         text='Ready to level up your success?'

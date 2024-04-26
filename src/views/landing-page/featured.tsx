@@ -5,17 +5,28 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
+import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
+
+import { featuredItems } from '@/content/featured';
 
 interface FeaturedItemProps {
   title: string;
   imageUrl: string;
   alt: string;
   children: React.ReactNode;
+  slug: string;
 }
 
-const FeaturedItem: React.FC<FeaturedItemProps> = ({ title, imageUrl, alt, children }) => {
+interface styledCustomProps {
+  head: string;
+  headColor: string;
+  sectionStyled: string;
+}
+
+const FeaturedItem: React.FC<FeaturedItemProps> = ({ title, imageUrl, alt, children, slug }) => {
   return (
     <div className='flex flex-wrap flex-col p-3 gap-3'>
       <NextImage
@@ -30,50 +41,17 @@ const FeaturedItem: React.FC<FeaturedItemProps> = ({ title, imageUrl, alt, child
       <h4 className='text-lime-200'>{title}</h4>
       <p>{children}</p>
       <div className='text-start'>
-        <UnderlineLink href='/'>Read more</UnderlineLink>
+        <UnderlineLink href={`/featured/${slug}`}>Read more</UnderlineLink>
       </div>
     </div>
   );
 };
 
-const Featured: React.FC = () => {
-  const items = [
-    {
-      title: 'SD Showcase Gives Back',
-      imageUrl: '/images/hr-professionals.webp',
-      alt: 'sample',
-      description: 'News write-ups offer a great way to let clients know about new products and services, events, awards, and more!'
-    },
-    {
-      title: 'Hiro Wilson Ready for SDS',
-      imageUrl: '/images/hr-professionals.webp',
-      alt: 'sample',
-      description: 'News write-ups offer a great way to let clients know about new products and services, events, awards, and more!'
-    },
-    {
-      title: '5k Attendees for SDS 2025',
-      imageUrl: '/images/hr-professionals.webp',
-      alt: 'sample',
-      description: 'News write-ups offer a great way to let clients know about new products and services, events, awards, and more!'
-    },
-    {
-      title: '5k Attendees for SDS 2025',
-      imageUrl: '/images/hr-professionals.webp',
-      alt: 'sample',
-      description: 'News write-ups offer a great way to let clients know about new products and services, events, awards, and more!'
-    },
-    {
-      title: '5k Attendees for SDS 2025',
-      imageUrl: '/images/hr-professionals.webp',
-      alt: 'sample',
-      description: 'News write-ups offer a great way to let clients know about new products and services, events, awards, and more!'
-    }
-  ];
-
+const Featured: React.FC<styledCustomProps> = ({ head, headColor, sectionStyled }) => {
   return (
-    <section className='bg-blue-800 text-white'>
-      <div className='mx-auto max-w-screen min-h-96 content-center container py-16 px-6'>
-        <h1 className='py-5 text-white text-center md:text-start px-3'>Featured</h1>
+    <section className={`${sectionStyled}`}>
+      <div className='mx-auto max-w-screen-xl min-h-96 content-center container py-16 px-6'>
+        <h1 className={`py-5 ${headColor} text-center md:text-start px-3`}>{head}</h1>
         {/* <div className='grid grid-cols-1 md:grid-cols-3 place-content-center place-items-center gap-2'> */}
         <Swiper
           slidesPerView={1}
@@ -93,7 +71,7 @@ const Featured: React.FC = () => {
           modules={[Navigation, Mousewheel]}
           className="mySwiper"
         >
-          {items.map((item, index) => (
+          {featuredItems.map((item, index) => (
             <SwiperSlide key={index}>
               <FeaturedItem  {...item}>
                 {item.description}
@@ -103,6 +81,14 @@ const Featured: React.FC = () => {
         </Swiper>
         {/* </div> */}
       </div>
+      <UnstyledLink href='/featured' className="w-full h-auto flex justify-center items-center pb-10">
+        <Button
+          variant='yellow'
+          className='px-10'
+        >
+          View More
+        </Button>
+      </UnstyledLink>
     </section>
   );
 };
