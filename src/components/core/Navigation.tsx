@@ -8,6 +8,12 @@ import NextImage from '@/components/NextImage';
 
 import { navigations } from '@/constant/navigations';
 
+interface NavigationItem {
+  name: string;
+  path: string;
+  children?: NavigationItem[]; // Optional children array of the same type
+}
+
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState('');
@@ -63,7 +69,7 @@ const NavigationBar = () => {
     };
   }, [isMenuOpen]);
 
-  
+
   return (
     <nav className={`bg-white border-2 border-gray-200 py-2 ${scroll ? 'sticky-navbar shadow-sm z-50' : ''}`} onMouseLeave={closeAllDropdowns}>
       <div className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-3 xl:px-0">
@@ -98,7 +104,7 @@ const NavigationBar = () => {
                       </button>
                       <div className={`z-10 pl-4 md:pl-0 md:absolute md:bg-white md:divide-y md:divide-gray-100 md:rounded-lg md:shadow w-full md:w-44 ${isDropdownOpen(navigation.name) ? '' : 'hidden'} font-normal `} onMouseLeave={() => toggleDropdown(navigation.name)}>
                         <ul className="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
-                          {navigation.children.map((child, idx) => {
+                          {navigation.children?.map((child: NavigationItem, idx) => {
                             if (child.children) {
                               return (
                                 <li key={idx}>

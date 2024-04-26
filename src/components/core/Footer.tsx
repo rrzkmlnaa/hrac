@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
             <div className='flex items-center gap-4'>
               <GrPhone />
-              <Link href='tel:+085942210587' className='text-sm'>
+              <Link href='tel:+6285942210587' className='text-sm'>
                 Admin 2
               </Link>
             </div>
