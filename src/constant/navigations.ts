@@ -3,36 +3,22 @@ export const navigations = [
     name: "Services",
     children: [
       {
-        name: "Service 1",
-        children: [
-          {
-            name: "Service 1.1",
-            path: "#",
-          },
-          {
-            name: "Service 1.2",
-            path: "#",
-          },
-        ],
+        name: "Career Development",
+        path: "/",
       },
       {
-        name: "Service 2",
-        children: [
-          {
-            name: "Service 1.1",
-            path: "#",
-          },
-        ],
+        name: "Training and Certification",
+        path: "/",
       },
       {
-        name: "Service 3",
-        path: "#",
+        name: "HR Solutions",
+        path: "/",
       },
     ],
   },
   {
     name: "Resources",
-    path: "#",
+    path: "/",
   },
   {
     name: "Success Story",
@@ -40,7 +26,7 @@ export const navigations = [
   },
   {
     name: "Issues",
-    path: '#'
+    path: '/'
   },
   {
     name: "Careers",

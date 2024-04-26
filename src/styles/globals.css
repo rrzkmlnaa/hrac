@@ -1,11 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import '@/styles/swiper.css';
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('/fonts/BeVietnamPro-Regular.ttf') format('ttf'),
+       url('/fonts/BeVietnamPro-Bold.ttf') format('ttf'),
+       url('/fonts/BeVietnamPro-Light.ttf') format('ttf'),
+       url('/fonts/BeVietnamPro-SemiBold.ttf') format('ttf'),
+       url('/fonts/BeVietnamPro-ExtraBold.ttf') format('ttf');
+}
 
 * {
   scroll-behavior: smooth;
+  font-family: 'BeVietnamPro', sans-serif;
   /* border: 1px solid red; */
 }
 

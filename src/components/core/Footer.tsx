@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { GrFacebookOption, GrInstagram, GrLinkedin, GrMail, GrPhone } from 'react-icons/gr'
+import { GrInstagram, GrLinkedin, GrMail, GrPhone, GrYoutube } from 'react-icons/gr'
 
 import Divider from '@/components/Divider'
 import Stack from '@/components/Stack'
@@ -21,7 +21,13 @@ const Footer = () => {
             <div className='flex items-center gap-4'>
               <GrPhone />
               <Link href='tel:+6285942210575' className='text-sm'>
-                +62 859-4221-0575
+                Admin 1
+              </Link>
+            </div>
+            <div className='flex items-center gap-4'>
+              <GrPhone />
+              <Link href='tel:+085942210587' className='text-sm'>
+                Admin 2
               </Link>
             </div>
             <div className='flex items-center gap-4'>
@@ -48,15 +54,9 @@ const Footer = () => {
               </Link>
             </div>
             <div className='flex items-center gap-4'>
-              <GrFacebookOption />
-              <Link href='https://www.facebook.com/hracademy1/' className='text-sm'>
-                @hracademy1
-              </Link>
-            </div>
-            <div className='flex items-center gap-4'>
-              <GrMail />
-              <Link href='mailto:hramanajemen@gmail.com' className='text-sm'>
-                hramanajemen
+              <GrYoutube />
+              <Link href='https://www.youtube.com/@hracademy_id' className='text-sm'>
+                @hracademy_id
               </Link>
             </div>
           </Stack>
