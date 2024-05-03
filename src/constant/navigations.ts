@@ -4,15 +4,40 @@ export const navigations = [
     children: [
       {
         name: "Career Development",
-        path: "/",
+        path: "/services/career-development",
       },
       {
         name: "Training and Certification",
-        path: "/",
+        path: "/services/training-and-certification",
       },
       {
-        name: "HR Solutions",
-        path: "/",
+        name: "Solutions",
+        children: [
+          {
+            name: "Talent Recruitment",
+            path: "/services/solutions/talent-recruitment"
+          },
+          {
+            name: "Employee On-boarding & Off-boarding",
+            path: "/services/solutions/employee-on-boarding-and-off-boarding"
+          },
+          {
+            name: "Performance & Career Management",
+            path: "/services/solutions/performance-and-career-management"
+          },
+          {
+            name: "Payroll Management",
+            path: "/services/solutions/payroll-management"
+          },
+          {
+            name: "Human Resources System",
+            path: "/services/solutions/human-resource-system"
+          },
+          {
+            name: "Ad-hoc consulting service",
+            path: "/services/solutions/ad-hoc-consulting-services"
+          },
+        ],
       },
     ],
   },

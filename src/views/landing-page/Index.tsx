@@ -1,0 +1,93 @@
+import Ready from '@/components/Banner';
+import Button from '@/components/buttons/Button';
+import Jumbotron from '@/components/Jumbotron';
+import UnstyledLink from '@/components/links/UnstyledLink';
+
+import Career from '@/views/landing-page/components/career';
+import Client from '@/views/landing-page/components/client';
+import Course from '@/views/landing-page/components/course';
+import Featured from '@/views/landing-page/components/featured';
+import Learn from '@/views/landing-page/components/learn';
+import Resource from '@/views/landing-page/components/resource';
+import Role from '@/views/landing-page/components/role';
+import Solution from '@/views/landing-page/components/solution';
+import Why from '@/views/landing-page/components/why';
+
+
+export default function Index() {
+  return (
+    <>
+      <Jumbotron
+        imageName='banner-landingpage.webp'
+      >
+      <h1 className='text-5xl font-extrabold text-center md:text-start'>
+              Your Path to Success Starts Here
+            </h1>
+
+            <p className='mt-4 max-w-lg text-xl/relaxed text-center md:text-start'>
+              ELEVATE YOUR COMPETENCE, SECURE YOUR DREAM JOB, AND EXPAND YOUR
+              BUSINESS WITH OUR TAILORED COACHING AND TRAINING PROGRAMS
+            </p>
+
+            <div className='mt-8 flex flex-wrap text-center justify-center md:justify-start'>
+              <UnstyledLink href='/about-us/contact-us'>
+                <Button
+                  isLoading={false}
+                  variant='yellow'
+                  className='border-0 rounded-l-md rounded-r-none'
+                >
+                  Register Now
+                </Button>
+              </UnstyledLink>
+              <Button
+                isLoading={false}
+                variant='primary'
+                className='border-0 rounded-r-md rounded-l-none'
+              >
+                Visit Our Services
+              </Button>
+            </div>
+      </Jumbotron>
+      <Client />
+      <Role
+        bgColor="bg-gray-100"
+        title='DISCOVER TAILORED SOLUTIONS FOR YOU'
+      />
+      <Why />
+      <Career />
+      <Course />
+      <Learn />
+      <Solution />
+      <Resource />
+      <Featured 
+        head="Featured"
+        headColor='text-white'
+        sectionStyled='bg-blue-800 text-white'
+      />
+      <Ready
+        colorstyle='bg-blue-700 text-white pt-10'
+      >
+        <h1 className='text-center'>Ready to level up your success?</h1>
+        <div className='my-5 flex flex-wrap justify-center'>
+          <UnstyledLink href='/about-us/contact-us'>
+            <Button
+              isLoading={false}
+              variant='light'
+              size='base'
+              className='bg-black text-white border-0 rounded-l-md rounded-r-none p-3'
+            >
+              Get In Touch
+            </Button>
+          </UnstyledLink>
+          <Button
+            isLoading={false}
+            variant='dark'
+            className='bg-white text-black hover:text-white border-0 rounded-r-md rounded-l-none p-3'
+          >
+            Visit Our Services
+          </Button>
+        </div>
+      </Ready>
+    </>
+  );
+};

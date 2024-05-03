@@ -3,8 +3,8 @@
 import NextImage from '@/components/NextImage';
 
 import NotFound from '@/app/not-found';
-import { featuredItems } from '@/content/featured';
-import Featured from '@/views/landing-page/featured';
+import { featuredItems } from '@/constant/featured';
+import Featured from '@/views/landing-page/components/featured';
 
 interface Featured {
   date: string;
@@ -12,7 +12,7 @@ interface Featured {
   title: string;
   imageUrl: string;
   alt: string;
-  description: string;
+  content: string;
 }
 
 interface Query {
@@ -33,7 +33,7 @@ const FeaturedDetail = (query: Query) => {
   if (!featured) {
     return <NotFound />;
   }
-
+  const htmlContent = featured.content;
   return (
     <>
       <div className='container mx-auto max-w-screen-xl min-h-96 py-10 px-5 md:px-10 xl:px-0 '>
@@ -51,7 +51,8 @@ const FeaturedDetail = (query: Query) => {
           classNames={{ image: 'rounded-md object-cover w-full h-auto', blur: 'blur' }}
         />
         <h1 className='text-xl md:text-4xl lg:text-5xl py-5'>{featured.title}</h1>
-        <p>{featured.description}</p>
+        
+        <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
       </div>
       <Featured
         head='Our Lastest Featured'

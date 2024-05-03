@@ -1,13 +1,28 @@
 'use client'
 
 import Link from "next/link";
+import { IconBaseProps } from "react-icons";
 import { FaCheckCircle } from "react-icons/fa";
 
 import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import NextImage from '@/components/NextImage';
 
-const Solution = () => {
+interface SolutionType {
+  title: string;
+  icon:  React.ElementType<IconBaseProps>;
+}
+
+const data: SolutionType[] = [
+  { title: 'Talent Recruitment', icon: FaCheckCircle },
+  { title: 'Employee On-boarding & Off-boarding', icon: FaCheckCircle },
+  { title: 'Performance & Career Management', icon: FaCheckCircle },
+  { title: 'Payroll Management', icon: FaCheckCircle },
+  { title: 'Human Resources System', icon: FaCheckCircle },
+  { title: 'Ad-hoc Consulting Service', icon: FaCheckCircle },
+]
+
+export default function Solution() {
   return (
     <section id='solution' className='bg-gray-100'>
       <div className="bg-gray-100 mx-auto max-w-screen-sm md:max-w-screen-xl min-h-96 content-center pt-24 pb-16 px-10 md:px-0">
@@ -19,30 +34,12 @@ const Solution = () => {
             <h1 className='py-4 text-primary-500 text-balance text-start'>
               Human Capital Solutions for <br /> the Digital Era
             </h1>
-            <div className='flex flex-wrap gap-3 pt-5 pl-5 pb-2'>
-              <FaCheckCircle size='2rem' color='#EDB526' />
-              <p className="place-self-center">Talent Recruitment</p>
-            </div>
-            <div className='flex flex-wrap gap-3 py-2 pl-5'>
-              <FaCheckCircle size='2rem' color='#EDB526' />
-              <p className="place-self-center">Employee On-boarding & <br className="block md:hidden" /> Off-boardingt</p>
-            </div>
-            <div className='flex flex-wrap gap-3 py-2 pl-5'>
-              <FaCheckCircle size='2rem' color='#EDB526' />
-              <p className="place-self-center">Performance & <br className="block md:hidden" />Career Management</p>
-            </div>
-            <div className='flex flex-wrap gap-3 py-2 pl-5'>
-              <FaCheckCircle size='2rem' color='#EDB526' />
-              <p className="place-self-center">Payroll Management</p>
-            </div>
-            <div className='flex flex-wrap gap-3 py-2 pl-5'>
-              <FaCheckCircle size='2rem' color='#EDB526' />
-              <p className="place-self-center">Human Resources System</p>
-            </div>
-            <div className='flex flex-wrap gap-3 py-2 pl-5'>
-              <FaCheckCircle size='2rem' color='#EDB526' />
-              <p className="place-self-center">Ad-hoc Consulting Service</p>
-            </div>
+            {data.map((item, index)=>(
+              <div key={index} className='flex flex-wrap gap-1 sm:gap-3 pt-5 pl-5 pb-2'>
+                <item.icon size='2rem' color='#EDB526' />
+                <p className="place-self-center text-sm sm:text-base">{item.title}</p>
+              </div>
+            ))}
             <div className='py-10'>
               <Link href="https://api.whatsapp.com/send/?phone=6285942210575&text=Saya+tertarik+untuk+Menggunakan+Layanan+di+Perusahan+Anda.+Apakah+bisa+dibantu%3F&type=phone_number&app_absent=0">
                 <Button isLoading={false} variant='primary' className='border-none'>
@@ -65,5 +62,3 @@ const Solution = () => {
     </section>
   );
 };
-
-export default Solution;

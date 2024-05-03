@@ -10,7 +10,7 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 
-import { featuredItems } from '@/content/featured';
+import { featuredItems } from '@/constant/featured';
 
 interface FeaturedItemProps {
   title: string;
@@ -26,7 +26,7 @@ interface styledCustomProps {
   sectionStyled: string;
 }
 
-const FeaturedItem: React.FC<FeaturedItemProps> = ({ title, imageUrl, alt, children, slug }) => {
+const FeaturedItem = ({ title, imageUrl, alt, children, slug }: FeaturedItemProps) => {
   return (
     <div className='flex flex-wrap flex-col p-3 gap-3'>
       <NextImage
@@ -37,9 +37,10 @@ const FeaturedItem: React.FC<FeaturedItemProps> = ({ title, imageUrl, alt, child
         className='place-self-center w-full rounded-md'
         useSkeleton={true}
         classNames={{ image: 'rounded-md object-cover w-full h-auto', blur: 'blur' }}
-      />
-      <h4 className='text-lime-200'>{title}</h4>
-      <p>{children}</p>
+      /><div className="w-full h-60 overflow-hidden">
+          <h4 className="w-full h-24 overflow-hidden text-lime-200">{title}</h4>
+          <p className="w-full h-36 overflow-hidden">{children}</p>
+        </div>
       <div className='text-start'>
         <UnderlineLink href={`/featured/${slug}`}>Read more</UnderlineLink>
       </div>
@@ -47,12 +48,11 @@ const FeaturedItem: React.FC<FeaturedItemProps> = ({ title, imageUrl, alt, child
   );
 };
 
-const Featured: React.FC<styledCustomProps> = ({ head, headColor, sectionStyled }) => {
+export default function Featured({ head, headColor, sectionStyled }: styledCustomProps) {
   return (
     <section className={`${sectionStyled}`}>
       <div className='mx-auto max-w-screen-xl min-h-96 content-center container py-16 px-6'>
         <h1 className={`py-5 ${headColor} text-center md:text-start px-3`}>{head}</h1>
-        {/* <div className='grid grid-cols-1 md:grid-cols-3 place-content-center place-items-center gap-2'> */}
         <Swiper
           slidesPerView={1}
           breakpoints={{
@@ -74,12 +74,11 @@ const Featured: React.FC<styledCustomProps> = ({ head, headColor, sectionStyled 
           {featuredItems.map((item, index) => (
             <SwiperSlide key={index}>
               <FeaturedItem  {...item}>
-                {item.description}
+                {item.shortDescription}
               </FeaturedItem>
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* </div> */}
       </div>
       <UnstyledLink href='/featured' className="w-full h-auto flex justify-center items-center pb-10">
         <Button
@@ -92,5 +91,3 @@ const Featured: React.FC<styledCustomProps> = ({ head, headColor, sectionStyled 
     </section>
   );
 };
-
-export default Featured;

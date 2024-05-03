@@ -10,7 +10,7 @@ import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import NextImage from '@/components/NextImage';
 
-const Course = () => {
+export default function Course() {
   const courses = [
     {
       title: 'Staff HR',
@@ -42,7 +42,6 @@ const Course = () => {
     <section id='course' className='mx-auto max-w-screen-xl min-h-96 content-center pt-24 pb-16 px-6 md:px-0'>
       <div className='text-center text-primary-500'>
         <div className='flex flex-nowrap items-center justify-center pb-5'>
-          {/* LPK and BNSP images */}
           <NextImage
             src='/images/LPK.webp'
             width={140}
@@ -73,7 +72,6 @@ const Course = () => {
           licensed certification
         </p>
       </div>
-      {/* Course Cards */}
       <Swiper
         slidesPerView={1}
         breakpoints={{
@@ -126,5 +124,3 @@ const Course = () => {
     </section>
   );
 };
-
-export default Course;

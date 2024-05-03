@@ -3,7 +3,7 @@
 import UnderlineLink from "@/components/links/UnderlineLink";
 import NextImage from "@/components/NextImage";
 
-import { featuredItems } from '@/content/featured';
+import { featuredItems } from '@/constant/featured';
 
 interface FeaturedItemProps {
     title: string;
@@ -25,8 +25,10 @@ interface FeaturedItemProps {
           useSkeleton={true}
           classNames={{ image: 'rounded-md object-cover w-full h-auto', blur: 'blur' }}
         />
-        <h4>{title}</h4>
-        <p>{children}</p>
+        <div className="w-full h-52 overflow-hidden">
+          <h4 className="w-full h-24 overflow-hidden">{title}</h4>
+          <p className="w-full h-28 overflow-hidden">{children}</p>
+        </div>
         <div className='text-start'>
           <UnderlineLink href={`/featured/${slug}`}>Read more</UnderlineLink>
         </div>
@@ -34,19 +36,17 @@ interface FeaturedItemProps {
     );
   };
 
-const FeaturedView = () => {
+export default function FeaturedView() {
     return (
         <section className="container mx-auto max-w-screen-xl min-h-96 py-10">
             <h1 className='py-5 text-center md:text-start px-3'>Featured</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                 {featuredItems.map((item, index) => (
                     <FeaturedItem key={index} {...item}>
-                        {item.description}
+                        {item.shortDescription}
                     </FeaturedItem>
                 ))}
             </div>
         </section>
     )
 }
-
-export default FeaturedView;

@@ -29,7 +29,7 @@ function ContactFormInput({ label, name, type = "text", placeholder, required = 
   );
 }
 
-function Contact() {
+export default function Contact() {
   return (
     <section className="min-h-96">
       <div className="bg-[#004AAD] content-start text-white py-10 px-6">
@@ -82,5 +82,3 @@ function Contact() {
     </section>
   );
 }
-
-export default Contact;

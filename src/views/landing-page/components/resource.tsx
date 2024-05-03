@@ -4,7 +4,7 @@ import ArrowLink from '@/components/links/ArrowLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import NextImage from "@/components/NextImage";
 
-const Resource = () => {
+export default function Resource() {
   return (
     <section id='resource' className='mx-auto max-w-screen-xl min-h-96 content-center py-16'>
       <div className='text-center text-balance'>
@@ -84,5 +84,3 @@ const Resource = () => {
     </section>
   );
 };
-
-export default Resource;

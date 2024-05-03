@@ -1,9 +1,7 @@
-import BlogView from "@/views/featured";
+import FeaturedView from "@/views/featured";
 
-const Blog = () => {
+export default function Page() {
     return (
-        <BlogView />
+        <FeaturedView />
     )
 }
-
-export default Blog;

@@ -102,7 +102,7 @@ const NavigationBar = () => {
                           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                         </svg>
                       </button>
-                      <div className={`z-10 pl-4 md:pl-0 md:absolute md:bg-white md:divide-y md:divide-gray-100 md:rounded-lg md:shadow w-full md:w-44 ${isDropdownOpen(navigation.name) ? '' : 'hidden'} font-normal `} onMouseLeave={() => toggleDropdown(navigation.name)}>
+                      <div className={`md:border-t-4 md:border-primary-500 z-10 pl-4 md:pl-0 md:absolute md:bg-white md:divide-y md:divide-gray-100 md:rounded-b-lg md:shadow w-full md:w-44 ${isDropdownOpen(navigation.name) ? '' : 'hidden'} font-normal `} onMouseLeave={() => toggleDropdown(navigation.name)}>
                         <ul className="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                           {navigation.children?.map((child: NavigationItem, idx) => {
                             if (child.children) {
@@ -114,7 +114,7 @@ const NavigationBar = () => {
                                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                                     </svg>
                                   </button>
-                                  <div className={`z-10 static md:absolute ${isDoubleDropdownOpen(child.name) ? '' : 'hidden'} pl-4 md:pl-0 md:bg-white md:divide-y md:divide-gray-100 md:rounded-lg md:shadow w-full md:w-44 md:transform md:translate-x-44 md:translate-y-[-2.7rem]`}>
+                                  <div className={`md:border-t-4 md:border-primary-500 z-10 static md:absolute ${isDoubleDropdownOpen(child.name) ? '' : 'hidden'} pl-4 md:pl-0 md:bg-white md:divide-y md:divide-gray-100 md:rounded-b-lg md:shadow w-full md:w-44 md:transform md:translate-x-44 md:translate-y-[-2.7rem]`}>
                                     <ul className="py-2 text-sm text-gray-700" aria-labelledby="doubleDropdownButton">
                                       {child.children.map((child, idx) => (
                                         <li key={idx}>

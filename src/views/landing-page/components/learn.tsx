@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import NextImage from '@/components/NextImage';
 
-const Learn = () => {
+export default function Learn() {
   return (
     <section className='bg-blue-200 py-10 md:px-6'>
       <div className='mx-auto max-w-screen-xl content-center text-center text-primary-500 py-16 px-6 md:px-0'>
@@ -30,5 +30,3 @@ const Learn = () => {
     </section>
   );
 };
-
-export default Learn;

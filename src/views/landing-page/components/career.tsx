@@ -15,7 +15,7 @@ interface CareerSectionProps {
   }[];
 }
 
-const CareerSection: React.FC<CareerSectionProps> = ({ services }) => {
+const CareerSection = ({ services }: CareerSectionProps) => {
   return (
     <div className='flex flex-wrap gap-5 md:gap-10'>
       {services.map((service, index) => (
@@ -33,7 +33,7 @@ const CareerSection: React.FC<CareerSectionProps> = ({ services }) => {
   );
 };
 
-const Career = () => {
+export default function Career() {
   const services = [
     { 
       title: 'Career Consulting', 
@@ -108,5 +108,3 @@ const Career = () => {
     </section>
   );
 };
-
-export default Career;

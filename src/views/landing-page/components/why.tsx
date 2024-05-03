@@ -1,4 +1,4 @@
-const Why = () => {
+export default function Why() {
   return (
     <section className='text-center mt-20'>
       <h1 className='uppercase text-sky-600 py-5'>Why HR Academy?</h1>
@@ -17,5 +17,3 @@ const Why = () => {
     </section>
   );
 };
-
-export default Why;
