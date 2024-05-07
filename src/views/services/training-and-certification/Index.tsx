@@ -11,7 +11,7 @@ export default function Index() {
   return (
     <>
       <Jumbotron
-          imageName="banner-aboutus.webp"
+          imageName="training-sertif-banner.webp"
       >
           <h1 className='text-5xl md:text-6xl font-extrabold text-center text-wrap md:text-start md:text-nowrap'>
               Training & Certifications

@@ -11,19 +11,19 @@ import NextImage from "@/components/NextImage";
 
 const data = [
     {
-        profileUrl: '/images/crack.png',
+        profileUrl: '/images/BNSP.webp',
         userName: 'Steven S',
         jobPosition: 'Sales Planer',
         companyLogo: '/images/pwc.webp'
     },
     {
-        profileUrl: '/images/crack.png',
+        profileUrl: '/images/BNSP.webp',
         userName: 'Steven S',
         jobPosition: 'Sales Planer',
         companyLogo: '/images/pwc.webp'
     },
     {
-        profileUrl: '/images/crack.png',
+        profileUrl: '/images/BNSP.webp',
         userName: 'Steven S',
         jobPosition: 'Sales Planer',
         companyLogo: '/images/pwc.webp'
@@ -32,7 +32,7 @@ const data = [
 
 export default function Testimonial() {
   return (
-    <section id='testimonial' className="container mx-auto w-full h-auto">
+    <section id='testimonial' className="container mx-auto w-full h-auto p-10">
         <div className="text-center">
             <UnderlineLink href='#testimonial' className='capitalize text-gray-500 my-5'>
                 Testimonials
@@ -56,7 +56,7 @@ export default function Testimonial() {
               forceToAxis: true,
             }}
             modules={[Navigation, Mousewheel]}
-            className="mySwiper my-10"
+            className="mySwiper my-5"
             >
                 {data.map((item, index) => (
                     <SwiperSlide key={index} className="w-full h-auto p-5">
@@ -68,7 +68,7 @@ export default function Testimonial() {
                                             src={item.profileUrl}
                                             width={60}
                                             height={60}
-                                            alt="dummy"
+                                            alt={`${item.userName} Profile`}
                                             useSkeleton={true}
                                             classNames={{ image: 'object-cover w-full h-auto rounded-full', blur: 'blur' }}
                                         />

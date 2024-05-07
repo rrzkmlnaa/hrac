@@ -12,7 +12,7 @@ export default function index() {
   return (
     <>
       <Jumbotron
-        imageName='banner-aboutus.webp'
+        imageName='career-dev-banner.webp'
       >
         <h1 className='text-4xl md:text-6xl font-extrabold text-center text-wrap md:text-start md:text-nowrap'>
           Career Development

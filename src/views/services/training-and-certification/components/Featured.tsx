@@ -1,26 +1,28 @@
 'use client'
 
 import UnderlineLink from "@/components/links/UnderlineLink";
+import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 
 const data = [
     {
-        imageUrl: '/images/dummy2.png',
+        imageUrl: '/images/training-calendar.webp',
         title: 'training calendar',
         description: 'check out our upcoming courses',
+        link: '/training-calendar'
     },
     {
-        imageUrl: '/images/dummy2.png',
+        imageUrl: '/images/inhouse-training.webp',
         title: 'Meet our facilitators',
         description: 'Who we are and what we do',
     },
     {
-        imageUrl: '/images/dummy2.png',
+        imageUrl: '/images/inhouse-training.webp',
         title: 'In-house course programmes',
         description: 'Designed specifically for you',
     },
     {
-        imageUrl: '/images/dummy2.png',
+        imageUrl: '/images/lms.webp',
         title: 'LMS HR Academy',
         description: 'Learn Easier with LMS HR Academy',
     },
@@ -34,22 +36,22 @@ export default function Featured() {
                 Featured
             </UnderlineLink>
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-5">
+            <div className="flex flex-wrap justify-center items-center gap-4">
                 {data.map((item, index) => (
-                    <div key={index} className="relative w-fit h-auto">
+                    <UnstyledLink href={`${item.link}`} key={index} className="relative w-fit h-auto">
                         <NextImage
                             src={item.imageUrl}
-                            width={300}
-                            height={300}
-                            alt="dummy"
+                            width={305}
+                            height={305}
+                            alt={item.title}
                             useSkeleton={true}
                             classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
                         />
-                        <div className="absolute bottom-0 left-0 bg-primary-500 p-4 rounded-md text-white">
+                        <div className="absolute bottom-0 left-0 bg-primary-500 p-4 w-64 rounded-md text-white">
                             <h4 className="capitalize">{item.title}</h4>
                             <p className="normal-case">{item.description}</p>
                         </div>
-                    </div>
+                    </UnstyledLink>
                 ))}
             </div>
             <h1 className="mt-20 pb-5 px-6">Learning for Future-Ready Professionals</h1>

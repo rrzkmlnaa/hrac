@@ -10,9 +10,9 @@ interface RoleTypes {
 
 export default function Roles({ title, bgColor}: RoleTypes) {
   const roles = [
-    { title: 'individual', link: 'career', },
-    { title: 'hr-professionals', link: 'course' },
-    { title: 'corporate', link: 'solution' },
+    { title: 'individual', link: 'career', imageUrl: 'individual.webp', },
+    { title: 'hr-professionals', link: 'course', imageUrl: 'hr-professionals.webp' },
+    { title: 'corporate', link: 'solution', imageUrl: 'corporate.webp' },
   ]
   return (
     <section className={`${bgColor} py-20`}>
@@ -21,9 +21,9 @@ export default function Roles({ title, bgColor}: RoleTypes) {
         <p className='text-base text-gray-500 mb-6'>Select your role:</p>
         <div className='flex flex-wrap justify-center gap-5'>
           {roles.map((role, index) => (
-            <UnstyledLink href={`#${role?.link}`} key={index} className='relative'>
+            <UnstyledLink href={`#${role.link}`} key={index} className='relative'>
               <NextImage
-                src={`/images/${role?.title}.webp`}
+                src={`/images/${role.imageUrl}`}
                 width={400}
                 height={320}
                 alt={`${role} Role`}
@@ -32,7 +32,7 @@ export default function Roles({ title, bgColor}: RoleTypes) {
                 classNames={{ image: 'w-full object-center object-cover drop-shadow-md rounded-md', blur: 'blur' }}
               />
               <div className='absolute bottom-0 bg-primary-500 rounded-md mx-5'>
-                <p className='uppercase px-5 py-3 text-white'>{role?.title}</p>
+                <p className='uppercase px-5 py-3 text-white'>{role.title}</p>
               </div>
             </UnstyledLink>
           ))}

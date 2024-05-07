@@ -1,29 +1,52 @@
 'use client'
 
+import Jumbotron from "@/components/Jumbotron"
 import UnstyledLink from "@/components/links/UnstyledLink"
+import NextImage from "@/components/NextImage"
 
 const data = [
-    { title: 'Career Development', linkUrl: '/services/career-development' },
-    { title: 'Training & Certification', linkUrl: '/services/training-and-certification' },
-    { title: 'Solutions', linkUrl: '/services/solutions' },
+    { title: 'Career Development', linkUrl: '/services/career-development', imageUrl: '/images/lms.webp' },
+    { title: 'Training & Certification', linkUrl: '/services/training-and-certification', imageUrl: '/images/lms.webp' },
+    { title: 'Solutions', linkUrl: '/services/solutions', imageUrl: '/images/lms.webp' },
 ]
 
 export default function Page() {
     return (
-        <section className="bg-white py-24">
-            <div className="container mx-auto w-full h-auto">
-                <h1 className="text-center text-primary-500 capitalize">View all our services</h1>
-                <h4 className="font-normal text-center py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae necessitatibus qui inventore unde sunt earum, animi, dolore assumenda reiciendis magni numquam debitis facilis odit dolorum labore iste modi beatae.</h4>
-                <div className="grid gid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-5 px-6 xl:px-0 ">
-                    {data.map((item, index) => (
-                        <UnstyledLink key={index} href={`${item.linkUrl}`}>
-                            <div className="flex flex-col justify-center items-center gap-5 w-full h-full bg-primary-500 p-5">
-                                <h3 className="capitalize text-white text-center">{item.title}</h3>
-                            </div>
-                        </UnstyledLink>
-                    ))}
+        <>
+            <Jumbotron
+                imageName="banner-aboutus.webp"
+            >
+                <h1 className='text-5xl md:text-6xl font-extrabold text-center text-wrap md:text-start md:text-nowrap'>
+                    Services
+                </h1>
+
+                <p className='mt-4 max-w-xl text-xl/relaxed text-center md:text-start'>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit aut non nobis corrupti, cupiditate illum! Esse, harum animi! Qui quam veritatis magni tempora expedita quasi dolores iusto impedit! Magnam, ullam.
+                </p>
+            </Jumbotron>
+            <section className="bg-white py-24">
+                <div className="container mx-auto w-full h-auto">
+                    <h1 className="text-center text-primary-500 capitalize">Our HR Services </h1>
+                    <h4 className="font-normal text-center py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae necessitatibus qui inventore unde sunt earum, animi, dolore assumenda reiciendis magni numquam debitis facilis odit dolorum labore iste modi beatae.</h4>
+                    <div className="flex flex-wrap justify-center items-center gap-10 py-5 px-6 xl:px-0 ">
+                        {data.map((item, index) => (
+                            <UnstyledLink key={index} href={`${item.linkUrl}`} className="relative">
+                                <NextImage
+                                    src={item.imageUrl}
+                                    width={350}
+                                    height={350}
+                                    alt={`${item.title} Images`}
+                                    useSkeleton={true}
+                                    classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
+                                />
+                                <div className="absolute bottom-0 w-full h-auto bg-primary-500 p-5">
+                                    <h3 className="capitalize text-white text-center">{item.title}</h3>
+                                </div>
+                            </UnstyledLink>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     )
 }
