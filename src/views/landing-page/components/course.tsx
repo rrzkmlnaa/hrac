@@ -13,30 +13,6 @@ import NextImage from '@/components/NextImage';
 export default function Course() {
   const courses = [
     {
-      title: 'Staff HR',
-      imageUrl: '/images/staff-hr.webp',
-      price: 'Rp. x.xxx.xxx',
-      link: '#'
-    },
-    {
-      title: 'Supervisor HR',
-      imageUrl: '/images/supervisor-hr.webp',
-      price: 'Rp. x.xxx.xxx',
-      link: '#'
-    },
-    {
-      title: 'Assisten Manager HR',
-      imageUrl: '/images/assisten-manager-hr.webp',
-      price: 'Rp. x.xxx.xxx',
-      link: '#'
-    },
-    {
-      title: 'Manager HR',
-      imageUrl: '/images/manager-hr.webp',
-      price: 'Rp. x.xxx.xxx',
-      link: '#'
-    },
-    {
       title: 'Certified Human Resources Supervisor HR Academy',
       imageUrl: '/images/CHRS.webp',
       price: 'Rp. x.xxx.xxx',
@@ -57,6 +33,30 @@ export default function Course() {
     {
       title: 'Certified Human Capital General Manager HR Academy',
       imageUrl: '/images/CHCGM.webp',
+      price: 'Rp. x.xxx.xxx',
+      link: '#'
+    },
+    {
+      title: 'Staff HR',
+      imageUrl: '/images/staff-hr.webp',
+      price: 'Rp. x.xxx.xxx',
+      link: '#'
+    },
+    {
+      title: 'Supervisor HR',
+      imageUrl: '/images/supervisor-hr.webp',
+      price: 'Rp. x.xxx.xxx',
+      link: '#'
+    },
+    {
+      title: 'Assisten Manager HR',
+      imageUrl: '/images/assisten-manager-hr.webp',
+      price: 'Rp. x.xxx.xxx',
+      link: '#'
+    },
+    {
+      title: 'Manager HR',
+      imageUrl: '/images/manager-hr.webp',
       price: 'Rp. x.xxx.xxx',
       link: '#'
     },
