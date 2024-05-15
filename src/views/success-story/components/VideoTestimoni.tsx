@@ -9,7 +9,7 @@ export default function VideoTestimoni() {
         {
             videoSrc: '/videos/cepi.mp4',
             thumbnail: '/videos/thumbnail-cepi.png',
-            name: 'Pak Capi',
+            name: 'Pak Cepi',
             pelatihan: 'Pelatihan dan Sertifikasi Manager HR SDM Level 6',
         },
         {
