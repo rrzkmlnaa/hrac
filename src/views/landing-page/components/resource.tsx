@@ -23,14 +23,14 @@ export default function Resource() {
           width={400}
           height={90}
           alt=''
-          className='hidden lg:block md:absolute top-[20%] lg:w-2/6 w-full left-[18%] -z-10'
+          className='hidden lg:block md:absolute top-[20%] lg:w-2/6 w-full left-[18%] -z-10 h-auto'
         />
         <NextImage
           src='/images/garis-mirror.webp'
           width={400}
           height={90}
           alt=''
-          className='hidden lg:block md:absolute top-[20%] lg:w-2/6 w-full left-[51%] -z-10'
+          className='hidden lg:block md:absolute top-[20%] lg:w-2/6 w-full left-[51%] -z-10 h-auto'
         />
         <div className='flex flex-col justify-center items-center p-6'>
           <NextImage

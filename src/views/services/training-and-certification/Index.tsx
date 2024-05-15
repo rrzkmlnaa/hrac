@@ -23,6 +23,7 @@ export default function Index() {
       </Jumbotron>
       <Featured />
       <Role
+        titleStyle="mt-4"
         bgColor="bg-white"
         title='TRAINING PROGRAMS DESIGNED FOR YOU'
       />

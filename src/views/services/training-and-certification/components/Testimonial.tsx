@@ -32,7 +32,7 @@ const data = [
 
 export default function Testimonial() {
   return (
-    <section id='testimonial' className="container mx-auto w-full h-auto p-10">
+    <section id='testimonial' className="container mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl h-auto p-10">
         <div className="text-center">
             <UnderlineLink href='#testimonial' className='capitalize text-gray-500 my-5'>
                 Testimonials

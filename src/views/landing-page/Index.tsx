@@ -1,10 +1,13 @@
+'use client'
+
 import Ready from '@/components/Banner';
 import Button from '@/components/buttons/Button';
+// import Client from '@/views/landing-page/components/client';
+import Client, { clients } from '@/components/Client';
 import Jumbotron from '@/components/Jumbotron';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
 import Career from '@/views/landing-page/components/career';
-import Client from '@/views/landing-page/components/client';
 import Course from '@/views/landing-page/components/course';
 import Featured from '@/views/landing-page/components/featured';
 import Learn from '@/views/landing-page/components/learn';
@@ -15,6 +18,10 @@ import Why from '@/views/landing-page/components/why';
 
 
 export default function Index() {
+  const selectedClients = clients.slice(0, 7);
+
+  const imagUrls = selectedClients.map(client => client.src);
+  const alts = selectedClients.map(client => client.alt);
   return (
     <>
       <Jumbotron
@@ -48,8 +55,15 @@ export default function Index() {
               </Button>
             </div>
       </Jumbotron>
-      <Client />
+      <Client
+        bgColor='py-20 md:py-32'
+        title='Our clients now worked at'
+        imagUrls={imagUrls}
+        alts={alts}
+        readMore=''
+      />
       <Role
+        titleStyle='absolute bottom-0'
         bgColor="bg-gray-100"
         title='DISCOVER TAILORED SOLUTIONS FOR YOU'
       />

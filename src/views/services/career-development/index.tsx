@@ -5,7 +5,7 @@ import Button from '@/components/buttons/Button';
 import Jumbotron from '@/components/Jumbotron'
 import NextImage from '@/components/NextImage';
 
-import BundleService from '@/views/services/career-development/components/BundleService';
+// import BundleService from '@/views/services/career-development/components/BundleService';
 import SingleService from '@/views/services/career-development/components/SingleService';
 
 export default function index() {
@@ -23,20 +23,20 @@ export default function index() {
           COACHING AND ESSENTIALS RESOURCES
         </p>
       </Jumbotron>
-      <BundleService />
-      <Ready
+      {/* <BundleService /> */}
+      {/* <Ready
         colorstyle='bg-blue-700 text-white p-10'
        >
         <h1 className='text-center text-2xl md:text-5xl'>3 Months Average <br />time to land a job</h1>
-      </Ready>
+      </Ready> */}
       <SingleService />
       <Ready
         colorstyle='bg-blue-700 text-white p-10'
        >
         <div className="flex flex-wrap justify-between items-center px-6">
           <div className="block">
-            <h2 className='text-3x'>Questions about our services?</h2>
-            <h5 className='pb-5 pt-2 text-2xl'>Chat with our Success Team.</h5>
+            <h2 className='text-3xl'>Questions about our services?</h2>
+            <h5 className='pb-5 pt-2 text-xl'>Chat with our Success Team.</h5>
             <Button
               variant='yellow'
             >

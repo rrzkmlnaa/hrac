@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import { Mousewheel, Navigation } from 'swiper/modules';
+import { Autoplay,Mousewheel, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,25 +16,49 @@ export default function Course() {
       title: 'Staff HR',
       imageUrl: '/images/staff-hr.webp',
       price: 'Rp. x.xxx.xxx',
-      link: '/'
+      link: '#'
     },
     {
       title: 'Supervisor HR',
       imageUrl: '/images/supervisor-hr.webp',
       price: 'Rp. x.xxx.xxx',
-      link: '/'
+      link: '#'
     },
     {
       title: 'Assisten Manager HR',
       imageUrl: '/images/assisten-manager-hr.webp',
       price: 'Rp. x.xxx.xxx',
-      link: '/'
+      link: '#'
     },
     {
       title: 'Manager HR',
       imageUrl: '/images/manager-hr.webp',
       price: 'Rp. x.xxx.xxx',
-      link: '/'
+      link: '#'
+    },
+    {
+      title: 'Certified Human Resources Supervisor HR Academy',
+      imageUrl: '/images/CHRS.webp',
+      price: 'Rp. x.xxx.xxx',
+      link: '#'
+    },
+    {
+      title: 'Senior Professional Human Resource HR Academy',
+      imageUrl: '/images/SPHR.webp',
+      price: 'Rp. x.xxx.xxx',
+      link: '#'
+    },
+    {
+      title: 'Certified Human Resource Professional HR Academy',
+      imageUrl: '/images/CHRP.webp',
+      price: 'Rp. x.xxx.xxx',
+      link: '#'
+    },
+    {
+      title: 'Certified Human Capital General Manager HR Academy',
+      imageUrl: '/images/CHCGM.webp',
+      price: 'Rp. x.xxx.xxx',
+      link: '#'
     },
   ];
 
@@ -87,15 +111,19 @@ export default function Course() {
         mousewheel={{
           forceToAxis: true,
         }}
-        modules={[Navigation, Mousewheel]}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Mousewheel, Autoplay]}
         className="mySwiper mt-12"
       >
         {courses.map((course, index) => (
-          <SwiperSlide key={index}>
-            <div className='bg-white w-full shadow rounded-lg overflow-hidden'>
+          <SwiperSlide key={index} className='pb-5'>
+            <div className='bg-white w-full h-max shadow rounded-lg overflow-hidden'>
               <NextImage
                 src={course.imageUrl}
-                className='object-cover h-54 w-full'
+                className='object-cover w-full'
                 alt={course.title}
                 width={320}
                 height={240}

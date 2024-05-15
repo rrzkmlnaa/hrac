@@ -15,7 +15,7 @@ export default function Jumbotron({ imageName, children }: PropsType) {
 
     return (
         <section style={sectionStyle}>
-            <div className='relative text-white mx-auto max-w-screen-xl px-6 py-32 md:px-10 lg:flex lg:h-screen lg:items-center lg:px-8'>
+            <div className='relative text-white mx-auto max-w-screen-xl px-6 py-32 md:px-10 lg:flex h-screen lg:items-center lg:px-8'>
                 <div className='max-w-xl text-start ltr:sm:text-left rtl:sm:text-right'>
                     {children}
                 </div>

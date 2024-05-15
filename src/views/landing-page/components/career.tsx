@@ -65,10 +65,16 @@ export default function Career() {
       description: 'Enhance your LinkedIn profile. Stand out professionally and attract potential opportunities.', 
       link: '/' 
     },
+    { 
+      title: 'Individual Development Planning', 
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, labore nihil.', 
+      link: '/', 
+    },
   ];
 
   const mainServices = services.slice(0, 3);
-  const additionalServices = services.slice(3);
+  const additionalServices = services.slice(3, 6);
+  const lastServices = services.slice(6, 7);
 
   return (
     <section id='career' className='bg-[#004AAD] text-white'>
@@ -83,7 +89,7 @@ export default function Career() {
             <br /> Let us guide you to your dream job. It's what we do best.
           </p>
         </div>
-        <div className='grid grid-cols-1 xl:grid-cols-3 place-items-center pb-10 px-3 md:px-3 lg:px-6'>
+        <div className='grid grid-cols-1 xl:grid-cols-3 place-items-center px-3 md:px-3 lg:px-6'>
           <CareerSection services={mainServices} />
           <NextImage
             src='/images/career.webp'
@@ -96,12 +102,25 @@ export default function Career() {
           />
           <CareerSection services={additionalServices} />
         </div>
+        {lastServices.map((service, index) => (
+          <Link key={index} href={service.link} passHref>
+            <div className='flex justify-start lg:justify-center gap-5 md:gap-10 my-5 p-3 xl:pl-14'>
+              <div className='w-full xl:w-1/3 p-3 rounded-xl hover:bg-yellow-400 hover:text-primary-500 duration-150'>
+                  <div className='flex justify-start gap-2'>
+                    <TbClover size='2rem' color='#38BDF8' />
+                    <h4 className='flex text-start xl:items-center'>{service.title}</h4>
+                  </div>
+                  <p className='text-sm text-left ml-10 md:ml-14'>{service.description}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
         <Button
           isLoading={false}
           variant='yellow'
           size='base'
           className='border-none px-5 py-3'
-        >
+          >
           VIEW OUR SERVICES
         </Button>
       </div>

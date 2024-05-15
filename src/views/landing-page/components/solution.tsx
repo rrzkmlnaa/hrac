@@ -20,6 +20,7 @@ const data: SolutionType[] = [
   { title: 'Payroll Management', icon: FaCheckCircle },
   { title: 'Human Resources System', icon: FaCheckCircle },
   { title: 'Ad-hoc Consulting Service', icon: FaCheckCircle },
+  { title: 'Human Resources Strategy Management', icon: FaCheckCircle },
 ]
 
 export default function Solution() {
@@ -35,7 +36,7 @@ export default function Solution() {
               Human Capital Solutions for <br /> the Digital Era
             </h1>
             {data.map((item, index)=>(
-              <div key={index} className='flex flex-wrap gap-1 sm:gap-3 pt-5 pl-5 pb-2'>
+              <div key={index} className='flex flex-wrap gap-1 sm:gap-3 pt-5 pl-2 md:pl-5 pb-2'>
                 <item.icon size='2rem' color='#EDB526' />
                 <p className="place-self-center text-sm sm:text-base">{item.title}</p>
               </div>

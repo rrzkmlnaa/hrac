@@ -6,9 +6,10 @@ import NextImage from '@/components/NextImage';
 interface RoleTypes {
   title: string;
   bgColor: string;
+  titleStyle: string;
 }
 
-export default function Roles({ title, bgColor}: RoleTypes) {
+export default function Roles({ title, bgColor, titleStyle }: RoleTypes) {
   const roles = [
     { title: 'individual', link: 'career', imageUrl: 'individual.webp', },
     { title: 'hr-professionals', link: 'course', imageUrl: 'hr-professionals.webp' },
@@ -31,7 +32,7 @@ export default function Roles({ title, bgColor}: RoleTypes) {
                 className='w-96 h-auto px-5'
                 classNames={{ image: 'w-full object-center object-cover drop-shadow-md rounded-md', blur: 'blur' }}
               />
-              <div className='absolute bottom-0 bg-primary-500 rounded-md mx-5'>
+              <div className={`${titleStyle} bg-primary-500 rounded-md mx-5`}>
                 <p className='uppercase px-5 py-3 text-white'>{role.title}</p>
               </div>
             </UnstyledLink>

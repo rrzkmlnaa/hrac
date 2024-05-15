@@ -5,12 +5,16 @@ import { useEffect, useMemo,useState } from 'react';
 import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
+import { workshopData } from '../../../constant/trainingCalendar';
+
 interface Workshop {
+  slug: string;
   name: string;
   linkUrl: string;
   duration: string;
   date: string;
   category: string;
+  detaiArticle?: { title: string; article: string }[];
 }
 
 interface TableProps {
@@ -19,48 +23,35 @@ interface TableProps {
 
 const WorkshopPage = ({ data }: TableProps) => {
   return (
-    <table className="min-w-full bg-white border border-gray-300">
-      <thead>
-        <tr>
-          <th className="px-6 py-3 text-center font-bold text-md text-gray-500 uppercase tracking-wider border-b">Workshop</th>
-          <th className="px-6 py-3 text-center font-bold text-md text-gray-500 uppercase tracking-wider border-b">Duration</th>
-          <th className="px-6 py-3 text-center font-bold text-md text-gray-500 uppercase tracking-wider border-b">Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((table, index) => (
-          <tr key={index} className={index % 2 === 0 ? 'bg-gray-100 border-b' : 'bg-white border-b'}>
-            <td className="px-6 py-4 whitespace-nowrap text-center">
-              <UnderlineLink href={table.linkUrl}>
-                {table.name}
-              </UnderlineLink>
-            </td>
-            <td className="px-6 py-4 whitespace-nowrap text-center">{table.duration}</td>
-            <td className="px-6 py-4 whitespace-nowrap text-center">{table.date}</td>
+    <div className="flex justify-start items-center overflow-x-scroll md:overflow-auto p-6 md:px-6 md:py-3">
+      <table className="min-w-full table-auto bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th className="px-6 py-3 text-center font-bold text-md text-gray-500 uppercase tracking-wider border-b">Workshop</th>
+            <th className="px-6 py-3 text-center font-bold text-md text-gray-500 uppercase tracking-wider border-b">Duration</th>
+            <th className="px-6 py-3 text-center font-bold text-md text-gray-500 uppercase tracking-wider border-b">Date</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((table, index) => (
+            <tr key={index} className={index % 2 === 0 ? 'bg-gray-100 border-b' : 'bg-white border-b'}>
+              <td className="px-6 py-4 whitespace-nowrap text-center">
+                <UnderlineLink href={`/training-calendar/${table.slug}`}>
+                  {table.name}
+                </UnderlineLink>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap text-center">{table.duration}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-center">{table.date}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
 const Table = () => {
-  const data: Workshop[] = useMemo(() => [
-    { category: 'Double Degree Program', name: 'Senior Professional Human Resource', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '6 May - 9 May 2024' },
-    { category: 'Double Degree Program', name: 'Senior Professional Human Resource', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '13 May - 16 May 2024' },
-    { category: 'Double Degree Program', name: 'Senior Professional Human Resource', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '27 May - 30 May 2024' },
-    { category: 'Double Degree Program', name: 'Certified Human Resource Professional', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '3 June - 6 June 2024' },
-    { category: 'Double Degree Program', name: 'Certified Human Resource Professional', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '10 June - 13 June 2024' },
-    { category: 'Double Degree Program', name: 'Certified Human Resource Professional', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '24 June - 27 June 2024' },
-    { category: 'Double Degree Program', name: 'Certified Human Resources Supervisor', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '4 June - 6 June 2024' },
-    { category: 'Double Degree Program', name: 'Certified Human Resources Supervisor', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '11 June - 13 June 2024' },
-    { category: 'Double Degree Program', name: 'Certified Human Resources Supervisor', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '25 June - 27 June 2024' },
-    
-    { category: 'BNSP Program', name: 'HR STAFF', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '7 May - 9 May 2024' },
-    { category: 'BNSP Program', name: 'HR STAFF', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '14 May - 16 May 2024' },
-    { category: 'BNSP Program', name: 'HR STAFF', linkUrl: '/', duration: '3 day (6-7 hrs)', date: '28 May - 30 May 2024' },
-  ], []);
-
+  const data: Workshop[] = useMemo(() => workshopData, []);
   const [categories, setCategories] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 
@@ -76,7 +67,7 @@ const Table = () => {
 
   return (
     <div className="container mx-auto w-full h-auto min-h-96 py-16">
-      <div className="flex flex-wrap space-x-4 mb-6">
+      <div className="flex flex-wrap space-x-2  mb-6 px-6 xl:px-4">
         {categories.map((category, index) => (
           <Button
             key={index}

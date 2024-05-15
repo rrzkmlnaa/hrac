@@ -22,7 +22,7 @@ const data: LearningType[] = [
 export default function Learning() {
     return (
         <section className="bg-gray-100 py-24">
-            <div className="container mx-auto w-full h-auto">
+            <div className="container mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl h-auto">
                 <h1 className="text-center text-primary-500">Our Learning Method</h1>
                 <h4 className="font-normal text-center py-5">Our trainers are skilled practitioners who are directly involved in <br /> the industry and often lead training sessions</h4>
                 <div className="grid gid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-5 px-6 xl:px-0 ">

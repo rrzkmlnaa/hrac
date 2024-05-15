@@ -7,20 +7,20 @@ import Navigation from '@/components/core/Navigation';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <>
+    <main>
       <FloatingWhatsapp />
       <Navigation />
       <Breadcrumb
         homeElement='Home'
         separator={<span> &gt; </span>}
         activeClasses='text-primary-500'
-        containerClasses='container mx-auto w-full h-auto flex py-5' 
+        containerClasses='container mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl h-auto flex py-5' 
         listClasses='hover:underline mx-2'
         capitalizeLinks
       />
       {children}
       <Footer />
-    </>
+    </main>
   );
 };
 
