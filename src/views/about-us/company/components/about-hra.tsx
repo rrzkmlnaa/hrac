@@ -5,7 +5,7 @@ import NextImage from '@/components/NextImage';
 
 export default function HRACademy() {
   return (
-    <section className="mx-auto max-w-screen-xl min-h-96 py-14 md:py-40 px-6 md:px-10">
+    <section className="mx-auto max-w-screen-xl min-h-96 py-14 md:pt-40 px-6 md:px-10">
       <h1 className="text-2xl font-extrabold md:text-5xl">
         Your Path to Success Starts Here
       </h1>

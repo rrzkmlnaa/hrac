@@ -4,6 +4,7 @@ import Banners from '@/components/Jumbotron';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
 import Hra from '@/views/about-us/company/components/about-hra';
+import Chart from '@/views/about-us/company/components/Chart';
 import Coach from '@/views/about-us/company/components/coach';
 import Join from '@/views/about-us/company/components/join';
 import VisiMisi from '@/views/about-us/company/components/visi-misi';
@@ -24,6 +25,7 @@ export default function Companys() {
         </h1>
       </Banners>
       <Hra />
+      <Chart />
       <VisiMisi />
       <Join />
       <Coach />

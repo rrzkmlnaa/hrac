@@ -13,7 +13,7 @@ export interface SingleServiceType {
     body?: string;
 }
 
-const dummyData:SingleServiceType[] = [
+const dummyData: SingleServiceType[] = [
     {   
         imageUrl: '/images/career-consulting-icon.png',
         title: 'Career Consulting',
@@ -81,10 +81,12 @@ export default function SingleService() {
                 </div>
             </div>
             {selectedCard && (
-                <Modal
-                    card={selectedCard}
-                    onClose={() => setSelectedCard(null)}
-                />
+                <Modal onClose={() => setSelectedCard(null)}>
+                    <>
+                        <h3 className="text-xl font-semibold text-center pb-3">{selectedCard.title}</h3>
+                        {selectedCard.body && <div dangerouslySetInnerHTML={{ __html: selectedCard.body }} />}
+                    </>
+                </Modal>
             )}
         </section>
     );
