@@ -9,7 +9,7 @@ export default function Join() {
   return (
     <>
       <section className="mx-auto max-w-screen-xl my-24 px-6 md:px-10">
-        <h1>Empowering Community & SMEs </h1>
+        <h1>Join HRA UMKM</h1>
         <p className="py-5 text-justify">We also serves as a development partner for Small, Micro, and Medium Enterprises (SMEs),
           registered incubator accredited <br className='hidden md:block' /> by the Ministry of Cooperatives and SMEs of the Republic of
           Indonesia under the Incubator for Cooperatives and Micro, Small, <br className='hidden md:block' />and Medium Enterprises,

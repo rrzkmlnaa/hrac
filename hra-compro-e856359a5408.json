@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hra-compro",
+  "private_key_id": "e856359a54089292e24768b6d10b1c7766b67154",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDYh8+yE0XrN+mJ\n8HZhx23gZKO33/vxhvgEX4uD+mGpSa4DkXyo1LvyWcQlHfAFiNxiRaE+7pSuFkFe\nAHbObR0v1yzm5qTcBBy8M20MFsRgQVHc/rkCe6AbFpP4LW5/On6QhvczydfZuvSL\nJF/eD5KtUoAi4wM5W9xsvmHpIirc0RlWGetz/Kst8rI4hab3pQOoXEYEe9ypsYo0\nFH0mLFlejFa0qnqlq6KpTE6P50WHRvikOpHvq0RDWVG/Yvq6W/Bd++muukxqQ/r3\n5tziPbGNv1tvjpLLVhlHlnS6mWsP0U4GV6PMmaQgDkmmiVqKPy6z6uaEizWEYA84\n2hgZLjWzAgMBAAECggEAK5xC5SNDmEnlE/6l4TCo/SJX5Q9ML4uXBU53C4hQxidM\nUHSrbleWWQviWPVsI7k6ZeKPRN0JffyGgtfGFfJdCAcnCIRYnOWJIhCbfG1TdO2C\n/ucgvRLIHtyPxdLkp+RQnGxKephDDJu+aA3V7yQkzxrIKv6c5h8NyKsZjjpu9pUZ\n0fHTiEgvs0uxQ8v0AxLbM6fzabkfAT1a34Y7GguNNh9i0qsdHCKskQ/+KWYWDBFL\nxQrCqORkwgCmMaBX09ScLFTPPiJiC80xtwCv+B8wg/1E3xFZ2QoT7ih5kp2liB64\nFKOWiIdJetJZQsG250msGxW9E+E2G5daaLmIHuAMnQKBgQDvw0kLqpeN3/S9kzma\nj4ps4uReWVcRco5+hU/3YgJwe1Lxy5/J9/Lx/hkZblcs1uMPqQ5EEEf0/ro/48je\nbqvu3aDlZr4Tx3pFHxjdc9djqJxLVw6FXZR3mtKQ4F4Zpxoo3O2rR5XIShE3h8vX\nHe82gGmBn69fXnGOU7HQkI4dvQKBgQDnMcCfM0kg2DNWm8ArB8Nsh47AI4kWxSDG\nNpsfRQ7IAp9N9yIalBEE7KB2jStfCkwdsHbVgZ0X2YuQidpMUEGVDCmRjZcdAS1Z\npAsZ6xqzgBNTqQPrIaI7bmdJI69OE+NQCVT2h4U9jckXaawOGFAFJGPrtrkP5k7l\nIBRauf3ALwKBgGSVwsE4Mhh9Cgm2CAaFjYccsL28MUDKlGkTuHaKEYfq1ONHj6OF\nd9B5z0HR/pR7Ggrp22hGhEmNy8kd4JkgSNUO+X8D2V4m4264GxBcltHiXJ9myFq+\n5Zg/xXKuDgwpBFp8ROEESRwbpplrSOLYVhDBUoHk4gfacT1Kc2CSJGzpAoGBAL23\nOvyo5iJ4p7AzgP8OkNP3bTHIN0+jFeDxoFuJnLaOSFF/MdIjnM+wqYB/GY8U8R8P\n1oQfp1yR3RAPvz4OQbLgVyAk01MuyxsbHSz4m2GfAL0PHbMOV4VzdHg1Oz7T3R2p\neroOvUykk9aNlW2/j7KYiRI9UCF2+VjV+T32D/9rAoGBAL6xRfHR8fup12g6K32H\nnsnRJx/ey3mKR+W2MreaAYQmYq6cCtGWLydj5VUF9m1C0yUrU8kvjtoL78Ln4S9Y\nvVa/hx7sEyV2fgGxwj8wEGcSmc253arv6JMO+R2ltNDIFAKkx/dwEtTV45cx2O5/\nI1PwUD28aD3aBHteXFYazCDD\n-----END PRIVATE KEY-----\n",
+  "client_email": "hracompro@hra-compro.iam.gserviceaccount.com",
+  "client_id": "105712280841859532321",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hracompro%40hra-compro.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

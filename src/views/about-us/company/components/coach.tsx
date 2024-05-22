@@ -1,6 +1,6 @@
 'use client'
 
-import { FaFacebookSquare } from "react-icons/fa";
+// import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 
@@ -40,7 +40,7 @@ export default function Coach() {
           </p>
           <p className='font-bold mt-5 md:mt-24'>Get in touch with Coach Wulan</p>
           <div className="flex justify-start flex-nowrap gap-5 text-primary-500">
-            <UnstyledLink href='https://www.facebook.com/hracademy1/'><FaFacebookSquare size='1.5em' /></UnstyledLink>
+            {/* <UnstyledLink href='https://www.facebook.com/hracademy1/'><FaFacebookSquare size='1.5em' /></UnstyledLink> */}
             {/* <UnstyledLink href=''><FaTwitter size='1.5em'/></UnstyledLink> */}
             <UnstyledLink href='https://www.instagram.com/coachwulan_/'><FaInstagram size='1.5em' /></UnstyledLink>
             <UnstyledLink href='https://www.linkedin.com/in/sri-wulandari-epc-s-ip-mba-5b643aa/'><FaLinkedin size='1.5em' /></UnstyledLink>

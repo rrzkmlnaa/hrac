@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Breadcrumb
         homeElement='Home'
         separator={<span> &gt; </span>}
-        activeClasses='text-primary-500'
+        activeClasses='text-primary-500 capitalize'
         containerClasses='container mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl h-auto flex py-5' 
         listClasses='hover:underline mx-2'
         capitalizeLinks

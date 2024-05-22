@@ -42,7 +42,7 @@ export default function Solution() {
               </div>
             ))}
             <div className='py-10'>
-              <Link href="https://api.whatsapp.com/send/?phone=6285942210575&text=Saya+tertarik+untuk+Menggunakan+Layanan+di+Perusahan+Anda.+Apakah+bisa+dibantu%3F&type=phone_number&app_absent=0">
+              <Link href="/about-us/contact-us">
                 <Button isLoading={false} variant='primary' className='border-none'>
                   SCHEDULE FREE CONSULTATION
                 </Button>

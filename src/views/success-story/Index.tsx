@@ -52,13 +52,15 @@ export default function Index() {
               Get In Touch
             </Button>
           </UnstyledLink>
-          <Button
-            isLoading={false}
-            variant='primary'
-            className='text-white border-0 rounded-r-md rounded-l-none py-3 px-6'
-          >
-            Visit Our Services
-          </Button>
+          <UnstyledLink href='/#role'>
+            <Button
+              isLoading={false}
+              variant='primary'
+              className='text-white border-0 rounded-r-md rounded-l-none py-3 px-6'
+            >
+              Visit Our Services
+            </Button>
+          </UnstyledLink>
         </div>
       </Banner>
     </>

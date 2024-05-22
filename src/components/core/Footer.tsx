@@ -3,6 +3,7 @@ import React from 'react'
 import { GrInstagram, GrLinkedin, GrMail, GrPhone, GrYoutube } from 'react-icons/gr'
 
 import Divider from '@/components/Divider'
+import UnstyledLink from '@/components/links/UnstyledLink'
 import Stack from '@/components/Stack'
 
 const Footer = () => {
@@ -20,15 +21,15 @@ const Footer = () => {
           <Stack gap={2}>
             <div className='flex items-center gap-4'>
               <GrPhone />
-              <Link href='tel:+6285942210575' className='text-sm'>
+              <UnstyledLink href='https://api.whatsapp.com/send/?phone=6285942210575&text=Saya+tertarik+untuk+Menggunakan+Layanan+di+Perusahan+Anda.+Apakah+bisa+dibantu+jelaskan+lebih+lanjut+mengenai+.....%3F&type=phone_number&app_absent=0' className='text-sm'>
                 Admin 1
-              </Link>
+              </UnstyledLink>
             </div>
             <div className='flex items-center gap-4'>
               <GrPhone />
-              <Link href='tel:+6285942210587' className='text-sm'>
+              <UnstyledLink href='https://api.whatsapp.com/send/?phone=6285942210587&text=Saya+tertarik+untuk+Menggunakan+Layanan+di+Perusahan+Anda.+Apakah+bisa+dibantu+jelaskan+lebih+lanjut+mengenai+.....%3F&type=phone_number&app_absent=0' className='text-sm'>
                 Admin 2
-              </Link>
+              </UnstyledLink>
             </div>
             <div className='flex items-center gap-4'>
               <GrMail />

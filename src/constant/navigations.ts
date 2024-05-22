@@ -43,7 +43,7 @@ export const navigations = [
   },
   {
     name: "Resources",
-    path: "/",
+    path: "/resources",
   },
   {
     name: "Success Story",
@@ -51,7 +51,13 @@ export const navigations = [
   },
   {
     name: "Issues",
-    path: '/'
+    // path: '/'
+    children: [
+      {
+        name: "Event",
+        path: "/"
+      }
+    ]
   },
   {
     name: "Careers",

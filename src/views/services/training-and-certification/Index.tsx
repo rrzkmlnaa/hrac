@@ -1,6 +1,7 @@
+'use client'
 import Jumbotron from "@/components/Jumbotron";
 
-import Role from "@/views/landing-page/components/role";
+import Role, { roles } from "@/views/landing-page/components/role";
 import Featured from "@/views/services/training-and-certification/components/Featured";
 import Learning from "@/views/services/training-and-certification/components/Learning";
 import Testimonial from "@/views/services/training-and-certification/components/Testimonial";
@@ -8,6 +9,7 @@ import Testimonial from "@/views/services/training-and-certification/components/
 import NeedInfo from "./components/NeedInfo";
 
 export default function Index() {
+  const selectedRoles = roles.slice(3, 6);
   return (
     <>
       <Jumbotron
@@ -23,9 +25,10 @@ export default function Index() {
       </Jumbotron>
       <Featured />
       <Role
-        titleStyle="mt-4"
+        title="TRAINING PROGRAMS DESIGNED FOR YOU"
         bgColor="bg-white"
-        title='TRAINING PROGRAMS DESIGNED FOR YOU'
+        titleStyle="mt-4"
+        roles={selectedRoles}
       />
       <Learning />
       <Testimonial />

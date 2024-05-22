@@ -3,7 +3,6 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import Banner from "@/components/Banner";
 import UnstyledLink from "@/components/links/UnstyledLink";
 
-// import Shorting from "@/views/training-calendar/components/Shorting";
 import Table from "@/views/training-calendar/components/Table";
 
 export default function Index() {
@@ -17,7 +16,7 @@ export default function Index() {
                 <IoShareSocialOutline color="#fff" size={34} className="my-5"/>
             </UnstyledLink>
         </Banner>
-        {/* <Shorting /> */}
+
         <Table />
         <Banner
             colorstyle="bg-primary-500 py-10 px-6 md:px-4"

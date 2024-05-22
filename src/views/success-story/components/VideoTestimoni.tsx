@@ -19,9 +19,33 @@ export default function VideoTestimoni() {
             pelatihan: 'Pelatihan dan Sertifikasi Supervisor SDM Level 4',
         },
         {
-            videoSrc: '/videos/cepi.mp4',
-            thumbnail: '/videos/thumbnail-cepi.png',
-            name: 'Sample',
+            videoSrc: '/videos/budi.mp4',
+            thumbnail: '/videos/thumbnail-budi.png',
+            name: 'Pak Budi',
+            pelatihan: 'lorem ipsum dor sit amet',
+        },
+        {
+            videoSrc: '/videos/hari.mp4',
+            thumbnail: '/videos/thumbnail-hari.png',
+            name: 'Pak Hari',
+            pelatihan: 'lorem ipsum dor sit amet',
+        },
+        {
+            videoSrc: '/videos/rumi.mp4',
+            thumbnail: '/videos/thumbnail-rumi.png',
+            name: 'Ibu Rumi',
+            pelatihan: 'lorem ipsum dor sit amet',
+        },
+        {
+            videoSrc: '/videos/gina.mp4',
+            thumbnail: '/videos/thumbnail-gina.png',
+            name: 'Ibu Gina',
+            pelatihan: 'lorem ipsum dor sit amet',
+        },
+        {
+            videoSrc: '/videos/6.mp4',
+            thumbnail: '/videos/thumbnail-6.png',
+            name: 'Lorem Ipsum dor sit amet',
             pelatihan: 'lorem ipsum dor sit amet',
         },
         

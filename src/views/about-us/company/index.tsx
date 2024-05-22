@@ -1,6 +1,7 @@
 import Ready from '@/components/Banner';
 import Button from '@/components/buttons/Button';
 import Banners from '@/components/Jumbotron';
+import UnstyledLink from '@/components/links/UnstyledLink';
 
 import Hra from '@/views/about-us/company/components/about-hra';
 import Coach from '@/views/about-us/company/components/coach';
@@ -31,6 +32,7 @@ export default function Companys() {
       >
         <h1 className='text-center'>Ready to level up your success?</h1>
         <div className='my-5 flex flex-wrap justify-center'>
+        <UnstyledLink href='/about-us/contact-us'>
           <Button
             isLoading={false}
             variant='light'
@@ -38,15 +40,18 @@ export default function Companys() {
             className='border-0 rounded-l-md rounded-r-none p-3'
           >
             Get In Touch
-          </Button>
-          <Button
-            isLoading={false}
-            variant='dark'
-            size='base'
-            className='border-0 rounded-r-md rounded-l-none p-3'
-          >
-            Visit Our Services
-          </Button>
+          </Button>        
+        </UnstyledLink>
+          <UnstyledLink href='/#role'>
+            <Button
+              isLoading={false}
+              variant='dark'
+              size='base'
+              className='border-0 rounded-r-md rounded-l-none p-3'
+            >
+              Visit Our Services
+            </Button>
+          </UnstyledLink>
         </div>
       </Ready>
     </>

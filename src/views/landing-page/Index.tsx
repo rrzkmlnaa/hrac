@@ -12,7 +12,7 @@ import Course from '@/views/landing-page/components/course';
 import Featured from '@/views/landing-page/components/featured';
 import Learn from '@/views/landing-page/components/learn';
 import Resource from '@/views/landing-page/components/resource';
-import Role from '@/views/landing-page/components/role';
+import Role, { roles } from '@/views/landing-page/components/role';
 import Solution from '@/views/landing-page/components/solution';
 import Why from '@/views/landing-page/components/why';
 
@@ -22,12 +22,15 @@ export default function Index() {
 
   const imagUrls = selectedClients.map(client => client.src);
   const alts = selectedClients.map(client => client.alt);
+
+  // Roles
+  const selectedRoles = roles.slice(0, 3);
   return (
     <>
       <Jumbotron
         imageName='banner-landingpage.webp'
       >
-      <h1 className='text-5xl font-extrabold text-center md:text-start'>
+        <h1 className='text-5xl font-extrabold text-center md:text-start'>
               Your Path to Success Starts Here
             </h1>
 
@@ -46,13 +49,15 @@ export default function Index() {
                   Register Now
                 </Button>
               </UnstyledLink>
-              <Button
-                isLoading={false}
-                variant='primary'
-                className='border-0 rounded-r-md rounded-l-none'
-              >
-                Visit Our Services
-              </Button>
+              <UnstyledLink href='#role'>
+                <Button
+                  isLoading={false}
+                  variant='primary'
+                  className='border-0 rounded-r-md rounded-l-none'
+                >
+                  Visit Our Services
+                </Button>
+              </UnstyledLink>
             </div>
       </Jumbotron>
       <Client
@@ -63,9 +68,10 @@ export default function Index() {
         readMore=''
       />
       <Role
-        titleStyle='absolute bottom-0'
-        bgColor="bg-gray-100"
         title='DISCOVER TAILORED SOLUTIONS FOR YOU'
+        bgColor="bg-gray-100"
+        titleStyle='absolute bottom-0'
+        roles={selectedRoles}
       />
       <Why />
       <Career />
@@ -74,6 +80,7 @@ export default function Index() {
       <Solution />
       <Resource />
       <Featured 
+        // colorTitle='text-lime-500'
         head="Featured"
         headColor='text-white'
         sectionStyled='bg-blue-800 text-white'
@@ -93,13 +100,15 @@ export default function Index() {
               Get In Touch
             </Button>
           </UnstyledLink>
-          <Button
-            isLoading={false}
-            variant='dark'
-            className='bg-white text-black hover:text-white border-0 rounded-r-md rounded-l-none p-3'
-          >
-            Visit Our Services
-          </Button>
+          <UnstyledLink href='/#role'>
+            <Button
+              isLoading={false}
+              variant='dark'
+              className='bg-white text-black hover:text-white border-0 rounded-r-md rounded-l-none p-3'
+            >
+              Visit Our Services
+            </Button>
+          </UnstyledLink>
         </div>
       </Ready>
     </>

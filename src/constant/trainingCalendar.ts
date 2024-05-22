@@ -124,12 +124,46 @@ const workshopData: Workshop[] = [
         date: '7 May - 9 May 2024',
     },
     {
-        slug: 'hrs-14-may',
+        slug: 'bnsp-program-hr-staff',
         category: 'BNSP Program',
         name: 'HR STAFF',
         linkUrl: '/',
         duration: '3 day (6-7 hrs)',
         date: '14 May - 16 May 2024',
+        detailArticle: [
+            {
+                title: "testing different section?",
+                body: "Stay Ahead with the Annual Technical Update IFRS 2023!, In the dynamic world of financial reporting, staying up-to-date with International Financial Reporting Standards (IFRS) is crucial. Join us for the Annual Technical Update IFRS 2023, where we bring you the latest developments and changes in IFRS, such as IFRS 16 - Sales and leaseback. This exclusive training event offers in-depth sessions, expert-led workshops, and access to invaluable resources. Network with industry leaders and gain insights into the future of financial reporting. Don't miss out on this opportunity to enhance your skills and knowledge. Stay ahead of the curve with the Annual Technical Update IFRS 2023!",
+            },
+            {
+                title: "Who is it for?",
+                body: "Stay Ahead with the Annual Technical Update IFRS 2023!, In the dynamic world of financial reporting, staying up-to-date with International Financial Reporting Standards (IFRS) is crucial. Join us for the Annual Technical Update IFRS 2023, where we bring you the latest developments and changes in IFRS, such as IFRS 16 - Sales and leaseback. This exclusive training event offers in-depth sessions, expert-led workshops, and access to invaluable resources. Network with industry leaders and gain insights into the future of financial reporting. Don't miss out on this opportunity to enhance your skills and knowledge. Stay ahead of the curve with the Annual Technical Update IFRS 2023!",
+            },
+            {
+                title: "Topics covered",
+                body: "Stay Ahead with the Annual Technical Update IFRS 2023!, In the dynamic world of financial reporting, staying up-to-date with International Financial Reporting Standards (IFRS) is crucial. Join us for the Annual Technical Update IFRS 2023, where we bring you the latest developments and changes in IFRS, such as IFRS 16 - Sales and leaseback. This exclusive training event offers in-depth sessions, expert-led workshops, and access to invaluable resources. Network with industry leaders and gain insights into the future of financial reporting. Don't miss out on this opportunity to enhance your skills and knowledge. Stay ahead of the curve with the Annual Technical Update IFRS 2023!",
+            },
+            {
+                title: "Training duration",
+                body: "Stay Ahead with the Annual Technical Update IFRS 2023!, In the dynamic world of financial reporting, staying up-to-date with International Financial Reporting Standards (IFRS) is crucial. Join us for the Annual Technical Update IFRS 2023, where we bring you the latest developments and changes in IFRS, such as IFRS 16 - Sales and leaseback. This exclusive training event offers in-depth sessions, expert-led workshops, and access to invaluable resources. Network with industry leaders and gain insights into the future of financial reporting. Don't miss out on this opportunity to enhance your skills and knowledge. Stay ahead of the curve with the Annual Technical Update IFRS 2023!",
+            },
+            {
+                title: "Learning platform",
+                body: "Stay Ahead with the Annual Technical Update IFRS 2023!, In the dynamic world of financial reporting, staying up-to-date with International Financial Reporting Standards (IFRS) is crucial. Join us for the Annual Technical Update IFRS 2023, where we bring you the latest developments and changes in IFRS, such as IFRS 16 - Sales and leaseback. This exclusive training event offers in-depth sessions, expert-led workshops, and access to invaluable resources. Network with industry leaders and gain insights into the future of financial reporting. Don't miss out on this opportunity to enhance your skills and knowledge. Stay ahead of the curve with the Annual Technical Update IFRS 2023!",
+            },
+            {
+                title: "Investment",
+                body: "Stay Ahead with the Annual Technical Update IFRS 2023!, In the dynamic world of financial reporting, staying up-to-date with International Financial Reporting Standards (IFRS) is crucial. Join us for the Annual Technical Update IFRS 2023, where we bring you the latest developments and changes in IFRS, such as IFRS 16 - Sales and leaseback. This exclusive training event offers in-depth sessions, expert-led workshops, and access to invaluable resources. Network with industry leaders and gain insights into the future of financial reporting. Don't miss out on this opportunity to enhance your skills and knowledge. Stay ahead of the curve with the Annual Technical Update IFRS 2023!",
+            },
+            {
+                title: "Max participants",
+                body: "Stay Ahead with the Annual Technical Update IFRS 2023!, In the dynamic world of financial reporting, staying up-to-date with International Financial Reporting Standards (IFRS) is crucial. Join us for the Annual Technical Update IFRS 2023, where we bring you the latest developments and changes in IFRS, such as IFRS 16 - Sales and leaseback. This exclusive training event offers in-depth sessions, expert-led workshops, and access to invaluable resources. Network with industry leaders and gain insights into the future of financial reporting. Don't miss out on this opportunity to enhance your skills and knowledge. Stay ahead of the curve with the Annual Technical Update IFRS 2023!",
+            },
+            {
+                title: "Contact us",
+                body: "Stay Ahead with the Annual Technical Update IFRS 2023!, In the dynamic world of financial reporting, staying up-to-date with International Financial Reporting Standards (IFRS) is crucial. Join us for the Annual Technical Update IFRS 2023, where we bring you the latest developments and changes in IFRS, such as IFRS 16 - Sales and leaseback. This exclusive training event offers in-depth sessions, expert-led workshops, and access to invaluable resources. Network with industry leaders and gain insights into the future of financial reporting. Don't miss out on this opportunity to enhance your skills and knowledge. Stay ahead of the curve with the Annual Technical Update IFRS 2023!",
+            },
+        ]
     },
 ];
 

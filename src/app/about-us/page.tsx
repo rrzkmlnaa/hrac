@@ -2,6 +2,7 @@
 
 import Jumbotron from "@/components/Jumbotron"
 import UnstyledLink from "@/components/links/UnstyledLink"
+import NextImage from "@/components/NextImage"
 
 const data = [
     { title: 'Company', linkUrl: '/about-us/company' },
@@ -22,6 +23,19 @@ export default function Page() {
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit aut non nobis corrupti, cupiditate illum! Esse, harum animi! Qui quam veritatis magni tempora expedita quasi dolores iusto impedit! Magnam, ullam.
                 </p>
             </Jumbotron>
+            <section className="container mx-auto w-full h-auto flex flex-col justify-center items-center gap-5 md:gap-14 pt-20">
+                <h1 className="text-primary-500">Company structure</h1>
+                <div className="w-full h-auto sm:w-64 md:w-96 lg:w-128">
+                    <NextImage
+                        src='/images/company-structure.png'
+                        layout="responsive"
+                        width={350}
+                        height={350}
+                        alt='Company structure'
+                        classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
+                    />
+                </div>
+            </section>
             <section className="bg-white py-24">
                 <div className="container mx-auto w-full h-auto">
                     <h1 className="text-center text-primary-500 capitalize">Our About us services</h1>

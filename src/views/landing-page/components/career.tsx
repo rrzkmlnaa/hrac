@@ -5,6 +5,7 @@ import { TbClover } from 'react-icons/tb';
 
 import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
+import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 
 interface CareerSectionProps {
@@ -21,11 +22,13 @@ const CareerSection = ({ services }: CareerSectionProps) => {
       {services.map((service, index) => (
         <Link key={index} href={service.link} passHref>
           <div className='w-full p-3 rounded-xl hover:bg-yellow-400 hover:text-primary-500'>
-            <div className='flex justify-start gap-2'>
-              <TbClover size='2rem' color='#38BDF8' />
-              <h4 className='flex items-center'>{service.title}</h4>
+            <div className='grid grid-cols-[auto,1fr] gap-2'>
+              <TbClover size='2rem' color='#38BDF8' className='bg-white w-fit h-fit rounded-full p-2' />
+              <div className="block">
+                <h4 className='text-start'>{service.title}</h4>
+                <p className='text-sm text-start '>{service.description}</p>
+              </div>
             </div>
-            <p className='text-sm text-left ml-10 md:ml-14'>{service.description}</p>
           </div>
         </Link>
       ))}
@@ -36,13 +39,13 @@ const CareerSection = ({ services }: CareerSectionProps) => {
 export default function Career() {
   const services = [
     { 
-      title: 'Career Consulting', 
+      title: 'Career Coaching', 
       description: 'Need professional guidance to level up your career? Let’s get you connected with the perfect mentor.', 
       link: '/' 
     },
     { 
-      title: 'Resume Revision', 
-      description: 'Ready to win the resume wars? Our resumes are designed to stand out to your recruiters.', 
+      title: 'Job Search Strategy', 
+      description: 'Optimize your job search with our strategic quidance. Let us help you navigate the path to your ideal career.', 
       link: '/' 
     },
     { 
@@ -74,7 +77,7 @@ export default function Career() {
 
   const mainServices = services.slice(0, 3);
   const additionalServices = services.slice(3, 6);
-  const lastServices = services.slice(6, 7);
+  // const lastServices = services.slice(6, 7);
 
   return (
     <section id='career' className='bg-[#004AAD] text-white'>
@@ -89,7 +92,7 @@ export default function Career() {
             <br /> Let us guide you to your dream job. It's what we do best.
           </p>
         </div>
-        <div className='grid grid-cols-1 xl:grid-cols-3 place-items-center px-3 md:px-3 lg:px-6'>
+        <div className='grid grid-cols-1 xl:grid-cols-3 place-items-center px-3 md:px-3 lg:px-6 py-5'>
           <CareerSection services={mainServices} />
           <NextImage
             src='/images/career.webp'
@@ -102,7 +105,7 @@ export default function Career() {
           />
           <CareerSection services={additionalServices} />
         </div>
-        {lastServices.map((service, index) => (
+        {/* {lastServices.map((service, index) => (
           <Link key={index} href={service.link} passHref>
             <div className='flex justify-start lg:justify-center gap-5 md:gap-10 my-5 p-3 xl:pl-14'>
               <div className='w-full xl:w-1/3 p-3 rounded-xl hover:bg-yellow-400 hover:text-primary-500 duration-150'>
@@ -114,15 +117,17 @@ export default function Career() {
               </div>
             </div>
           </Link>
-        ))}
-        <Button
-          isLoading={false}
-          variant='yellow'
-          size='base'
-          className='border-none px-5 py-3'
-          >
-          VIEW OUR SERVICES
-        </Button>
+        ))} */}
+        <UnstyledLink href='/services/career-development'>
+          <Button
+            isLoading={false}
+            variant='yellow'
+            size='base'
+            className='border-none px-5 py-3'
+            >
+            VIEW OUR SERVICES
+          </Button>
+        </UnstyledLink>
       </div>
     </section>
   );

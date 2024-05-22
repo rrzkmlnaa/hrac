@@ -2,6 +2,7 @@
 
 import ArrowLink from '@/components/links/ArrowLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
+import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from "@/components/NextImage";
 
 export default function Resource() {
@@ -33,14 +34,16 @@ export default function Resource() {
           className='hidden lg:block md:absolute top-[20%] lg:w-2/6 w-full left-[51%] -z-10 h-auto'
         />
         <div className='flex flex-col justify-center items-center p-6'>
-          <NextImage
-            src='/images/resume.webp'
-            width={250}
-            height={250}
-            alt="Resume UI"
-            useSkeleton={true}
-            classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
-          />
+          <UnstyledLink href=''>
+            <NextImage
+              src='/images/resume.webp'
+              width={250}
+              height={250}
+              alt="Resume UI"
+              useSkeleton={true}
+              classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
+            />
+          </UnstyledLink>
           <h3 className='py-3'>Resume</h3>
           <p className='text-center text-balance'>
             Use HR Academy ATS-friendly resume template that has helped
@@ -48,28 +51,32 @@ export default function Resource() {
           </p>
         </div>
         <div className='flex flex-col justify-center items-center p-6'>
-          <NextImage
-            src='/images/networking.webp'
-            width={230}
-            height={230}
-            alt="Resume UI"
-            useSkeleton={true}
-            classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
-          />
+          <UnstyledLink href=''>
+            <NextImage
+              src='/images/networking.webp'
+              width={230}
+              height={230}
+              alt="Resume UI"
+              useSkeleton={true}
+              classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
+            />
+          </UnstyledLink>
           <h3 className='pt-4 pb-4'>Networking</h3>
           <p className='text-center'>
             Use HR Academy networking templates to increase your chances of connecting with recruiters & hiring managers
           </p>
         </div>
         <div className='flex flex-col justify-center items-center p-6'>
-          <NextImage
-            src='/images/interview.webp'
-            width={230}
-            height={230}
-            alt="Resume UI"
-            useSkeleton={true}
-            classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
-          />
+          <UnstyledLink href=''>
+            <NextImage
+              src='/images/interview.webp'
+              width={230}
+              height={230}
+              alt="Resume UI"
+              useSkeleton={true}
+              classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
+            />
+          </UnstyledLink>
           <h3 className='py-3'>Interview</h3>
           <p className='text-center text-balance'>
             Use HR Academy interview preparation resources to help you pass your interviews & land the offer
@@ -78,7 +85,7 @@ export default function Resource() {
       </div>
       <div className='text-center text-balance pt-10'>
         <ArrowLink href='#resource' className='text-primary-500'>
-          Get Resource
+          Get Resources
         </ArrowLink>
       </div>
     </section>

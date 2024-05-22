@@ -6,25 +6,25 @@ import NextImage from "@/components/NextImage";
 
 const data = [
     {
-        imageUrl: '/images/training-calendar.webp',
+        imageUrl: '/images/training-calendar.jpg',
         title: 'training calendar',
         description: 'check out our upcoming courses',
         link: '/training-calendar',
     },
     {
-        imageUrl: '/images/inhouse-training.webp',
+        imageUrl: '/images/meetourfacilitator.webp',
         title: 'Meet our facilitators',
         description: 'Who we are and what we do',
         link: '#',
     },
     {
-        imageUrl: '/images/inhouse-training.webp',
+        imageUrl: '/images/inhouse-course.webp',
         title: 'In-house course programmes',
         description: 'Designed specifically for you',
         link: '#',
     },
     {
-        imageUrl: '/images/lms.webp',
+        imageUrl: '/images/lms.jpg',
         title: 'LMS HR Academy',
         description: 'Learn Easier with LMS HR Academy',
         link: 'https://campus.hracademy.id/',
@@ -48,7 +48,8 @@ export default function Featured() {
                             height={305}
                             alt={item.title}
                             useSkeleton={true}
-                            classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
+                            classNames={{ image: 'object-cover', blur: 'blur' }}
+                            className="w-full h-auto overflow-hidden"
                         />
                         <div className="w-full h-auto bg-primary-500 p-4 rounded-md text-white">
                             <h4 className="capitalize">{item.title}</h4>

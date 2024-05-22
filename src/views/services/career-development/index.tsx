@@ -3,6 +3,7 @@
 import Ready from '@/components/Banner';
 import Button from '@/components/buttons/Button';
 import Jumbotron from '@/components/Jumbotron'
+import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 
 // import BundleService from '@/views/services/career-development/components/BundleService';
@@ -37,11 +38,13 @@ export default function index() {
           <div className="block">
             <h2 className='text-3xl'>Questions about our services?</h2>
             <h5 className='pb-5 pt-2 text-xl'>Chat with our Success Team.</h5>
-            <Button
-              variant='yellow'
-            >
-              Chat Now
-            </Button>
+            <UnstyledLink href='https://api.whatsapp.com/send/?phone=6285942210587&text=Saya+tertarik+untuk+Menggunakan+Layanan+di+Perusahan+Anda.+Apakah+bisa+dibantu+jelaskan+lebih+lanjut+mengenai+.....%3F&type=phone_number&app_absent=0'>
+              <Button
+                variant='yellow'
+              >
+                Chat Now
+              </Button>
+            </UnstyledLink>
           </div>
           <NextImage
             src='/images/dummy2.png'

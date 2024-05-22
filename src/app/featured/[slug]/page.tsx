@@ -4,7 +4,7 @@ import NextImage from '@/components/NextImage';
 
 import NotFound from '@/app/not-found';
 import { featuredItems } from '@/constant/featured';
-import Featured from '@/views/landing-page/components/featured';
+import Featured from '@/views/featured/slug/Index';
 
 interface Featured {
   date: string;
