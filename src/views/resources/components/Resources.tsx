@@ -13,6 +13,7 @@ export const resourceData = [
     title: "HR Academy Resume Template",
     description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
     buttonText: "dowload here",
+    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
     link: "#"
   },
   {
@@ -21,30 +22,34 @@ export const resourceData = [
     title: "HR Academy Resume Template",
     description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
     buttonText: "dowload here",
+    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
     link: "#"
   },
   {
-    slug: "cv-ats-template",
+    slug: "cover-letter-template",
     category: "Cover Letter Template",
     title: "Career Resume Testing",
     description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
     buttonText: "Testing Button Name",
+    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
     link: "#"
   },
   {
-    slug: "cv-ats-template",
+    slug: "interview-question",
     category: "Interview Question",
     title: "Networking Testing",
     description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
     buttonText: "Testing Button Name",
+    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
     link: "#"
   },
   {
-    slug: "cv-ats-template",
+    slug: "networking-template",
     category: "networking template",
     title: "Interview Testing",
     description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
     buttonText: "Testing Button Name",
+    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
     link: "#"
   },
 ]
@@ -54,6 +59,7 @@ interface propResources {
   title: string;
   description: string;
   buttonText: string;
+  documentPATH: string;
   link: string;
 }
 

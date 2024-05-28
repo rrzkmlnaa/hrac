@@ -4,8 +4,8 @@ interface ContactFormInputProps {
   type?: string;
   placeholder: string;
   required?: boolean;
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
 }
 
 const ContactFormInput = ({

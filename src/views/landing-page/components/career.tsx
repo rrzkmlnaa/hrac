@@ -10,13 +10,6 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Modal from '@/components/Modal';
 import NextImage from '@/components/NextImage';
 
-// interface CareerSectionProps {
-//   services: {
-//     title: string;
-//     description: string;
-//     link: string;
-//   }[];
-// }
 interface CareerService {
   title: string;
   description: string;
@@ -26,27 +19,6 @@ interface CareerService {
 interface CareerSectionProps {
   services: CareerService[];
 }
-
-// const CareerSection = ({ services }: CareerSectionProps) => {
-//   return (
-//     <div className='flex flex-wrap gap-5 md:gap-10'>
-//       {services.map((service, index) => (
-//         <Link key={index} href={service.link} passHref onClick={() => setSelectedCard(open)}>
-//           <div className='w-full p-3 rounded-xl hover:bg-yellow-400 hover:text-primary-500'>
-//             <div className='grid grid-cols-[auto,1fr] gap-2'>
-//               <TbClover size='2rem' color='#38BDF8' className='bg-white w-fit h-fit rounded-full p-2' />
-//               <div className="block">
-//                 <h4 className='text-start'>{service.title}</h4>
-//                 <p className='text-sm text-start '>{service.description}</p>
-//               </div>
-//             </div>
-//           </div>
-//         </Link>
-//       ))}
-//     </div>
-//   );
-// };
-
 
 const CareerSection = ({ services, setSelectedCard }: CareerSectionProps & { setSelectedCard: (card: CareerService | null) => void }) => {
   return (

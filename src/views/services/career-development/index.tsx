@@ -6,7 +6,7 @@ import Jumbotron from '@/components/Jumbotron'
 import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 
-// import BundleService from '@/views/services/career-development/components/BundleService';
+import BundleService from '@/views/services/career-development/components/BundleService';
 import SingleService from '@/views/services/career-development/components/SingleService';
 
 export default function index() {
@@ -24,12 +24,12 @@ export default function index() {
           COACHING AND ESSENTIALS RESOURCES
         </p>
       </Jumbotron>
-      {/* <BundleService /> */}
-      {/* <Ready
+      <BundleService />
+      <Ready
         colorstyle='bg-blue-700 text-white p-10'
        >
         <h1 className='text-center text-2xl md:text-5xl'>3 Months Average <br />time to land a job</h1>
-      </Ready> */}
+      </Ready>
       <SingleService />
       <Ready
         colorstyle='bg-blue-700 text-white p-10'
