@@ -49,7 +49,7 @@ export const resourceData = [
     title: "Interview Testing",
     description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
     buttonText: "Testing Button Name",
-    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
+    documentPATH: "/document/HR_Academy_CV_Template.pdf",
     link: "#"
   },
 ]

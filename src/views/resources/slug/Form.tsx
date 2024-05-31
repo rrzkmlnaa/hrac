@@ -30,12 +30,11 @@ const ContactForm = ({ fileDownload }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState('');
   const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitted, setIsSubmitted] = useState(false); // New state variable
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     if (name === 'whatsapp') {
-      // Ensure WhatsApp number does not contain spaces
       const whatsappWithoutSpaces = value.replace(/\s/g, '');
       setFormData({ ...formData, whatsapp: whatsappWithoutSpaces });
     } else {
@@ -53,34 +52,31 @@ const ContactForm = ({ fileDownload }: ContactFormProps) => {
     setIsSubmitting(true);
     setResponseMessage('');
     setIsSubmitted(true);
-
+  
     const formValidationErrors = validateForm(formData);
     setErrors(formValidationErrors);
-
+  
     if (hasErrors(formValidationErrors)) {
       setIsSubmitting(false);
       return;
     }
-
+  
     try {
       const response = await fetch('/api/resourceSubmitForm', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-
-      const result = await response.json();
-      if (response.ok) {
-        setResponseMessage(result.message);
-        const link = document.createElement('a');
-        link.href = result.fileUrl;
-        link.download = fileDownload;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } else {
-        setResponseMessage(result.message || 'Failed to submit form');
+  
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
       }
+  
+      const result = await response.json();
+      
+      setResponseMessage(result.message || 'File downloaded successfully');
+      window.open(fileDownload, '_blank');
+      
     } catch (error) {
       setResponseMessage('An error occurred while submitting the form.');
     } finally {
@@ -96,7 +92,7 @@ const ContactForm = ({ fileDownload }: ContactFormProps) => {
       {isSubmitted && errors.email && <p className="text-red-600 text-sm">{errors.email}</p>}
       <ContactFormInput label="WhatsApp Number" name="whatsapp" required placeholder="+62 345 678 910" value={formData.whatsapp} onChange={handleChange} />
       {isSubmitted && errors.whatsapp && <p className="text-red-600 text-sm">{errors.whatsapp}</p>}
-      <ContactFormInput label="Industry" name="industry" required placeholder="Perbankan" value={formData.industry} onChange={handleChange} />
+      <ContactFormInput label="Industry" name="industry" required placeholder="Banking" value={formData.industry} onChange={handleChange} />
       {isSubmitted && errors.industry && <p className="text-red-600 text-sm">{errors.industry}</p>}
       <label htmlFor="careerRole" className="block text-sm font-medium leading-6 text-gray-900">Where Are You In Your Career <span className="text-red-600">*</span></label>
       <select required name="careerRole" id="careerRole" className="block w-full rounded-md border-0 py-1.5 pl-4 pr-8.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" value={formData.careerRole} onChange={handleChange}>
