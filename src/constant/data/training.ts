@@ -1,4 +1,4 @@
-export interface Workshop {
+export interface Training {
     slug: string;
     name: string;
     linkUrl: string;
@@ -8,7 +8,7 @@ export interface Workshop {
     detailArticle?: { title: string; body: string }[];
 }
 
-const workshopData: Workshop[] = [
+const TrainingData: Training[] = [
     { 
         slug: 'sphr-6-may',
         category: 'Double Degree Program',
@@ -167,4 +167,4 @@ const workshopData: Workshop[] = [
     },
 ];
 
-export { workshopData };
+export { TrainingData };

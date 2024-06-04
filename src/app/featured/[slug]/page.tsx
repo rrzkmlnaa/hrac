@@ -3,7 +3,7 @@
 import NextImage from '@/components/NextImage';
 
 import NotFound from '@/app/not-found';
-import { featuredItems } from '@/constant/featured';
+import { FeaturedData } from '@/constant/index';
 import Featured from '@/views/featured/slug/Index';
 
 interface Featured {
@@ -22,7 +22,7 @@ interface Query {
 }
 
 const FeaturedDetail = (query: Query) => {
-  const featured: Featured | undefined = featuredItems.find((item) => {
+  const featured: Featured | undefined = FeaturedData.find((item) => {
     if (Array.isArray(query)) {
       return item.slug === query?.params?.slug;
     } else {
@@ -51,7 +51,7 @@ const FeaturedDetail = (query: Query) => {
           classNames={{ image: 'rounded-md object-cover w-full h-auto', blur: 'blur' }}
         />
         <h1 className='text-xl md:text-4xl lg:text-5xl py-5'>{featured.title}</h1>
-        
+
         <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
       </div>
       <Featured

@@ -20,7 +20,7 @@ export const dummyData: SingleServiceType[] = [
         imageUrl: '/images/career-coacing-icon.png',
         title: 'Career Coacing',
         description: 'Need professional guidance to level up your career? Let’s get you connected with the perfect mentor.',
-        price: 'Rp. 5.000',
+        price: 'Rp. 300.000',
         body: '<div style={"font-family: Arial, sans-serif; line-height: 1.6; color: #333;"}><p><strong>Get one-on-one guidance to reveal your dream job.</strong></p><p><strong>Learn what to look for in a job</strong><br>Design your career path and understand what industries, companies and roles suit you best as an individual.</p><p><strong>Plan your next career move</strong><br>Once you figure out what you want, get one-on-one guidance that shows you the way.</p><p><strong>No experience required</strong><br>No experience or background required. All underdogs welcome.</p></div>',
     },
     {
@@ -28,7 +28,7 @@ export const dummyData: SingleServiceType[] = [
         imageUrl: '/images/resume-revision-icon.png',
         title: 'CV Revision',
         description: 'Ready to win the resume wars? Our CV are designed to stand out to your recruiters.',
-        price: 'Rp. 5.000',
+        price: 'Rp. 25.000',
         tag: 'Most Popular',
         body: '<div style={"font-family: Arial, sans-serif; line-height: 1.6; color: #333;"}><p><strong>Get one-on-one guidance to reveal your dream job.</strong></p><p><strong>Learn what to look for in a job</strong><br>Design your career path and understand what industries, companies and roles suit you best as an individual.</p><p><strong>Plan your next career move</strong><br>Once you figure out what you want, get one-on-one guidance that shows you the way.</p><p><strong>No experience required</strong><br>No experience or background required. All underdogs welcome.</p></div>',
     },
@@ -37,14 +37,14 @@ export const dummyData: SingleServiceType[] = [
         imageUrl: '/images/linkedin-icon.png',
         title: 'Linkedin Revision',
         description: 'Enhance your LinkedIn profile. Stand out professionally and attract potential opportunities.',
-        price: 'Rp. 5.000',
+        price: 'Rp. 50.000',
         body: '<div style={"font-family: Arial, sans-serif; line-height: 1.6; color: #333;"}><p><strong>Get one-on-one guidance to reveal your dream job.</strong></p><p><strong>Learn what to look for in a job</strong><br>Design your career path and understand what industries, companies and roles suit you best as an individual.</p><p><strong>Plan your next career move</strong><br>Once you figure out what you want, get one-on-one guidance that shows you the way.</p><p><strong>No experience required</strong><br>No experience or background required. All underdogs welcome.</p></div>',
     },
     {
         slug: 'job-search-strategy',
         imageUrl: '/images/job-search-icon.png',
         title: 'Job Search Strategy',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laborum ratione, officia animi commodi aut veritatis in asperiores impedit nemo.',
+        description: 'Optimize your networking strategies to get the best referrals.',
         price: 'Rp. 5.000',
         body: '<div style={"font-family: Arial, sans-serif; line-height: 1.6; color: #333;"}><p><strong>Get one-on-one guidance to reveal your dream job.</strong></p><p><strong>Learn what to look for in a job</strong><br>Design your career path and understand what industries, companies and roles suit you best as an individual.</p><p><strong>Plan your next career move</strong><br>Once you figure out what you want, get one-on-one guidance that shows you the way.</p><p><strong>No experience required</strong><br>No experience or background required. All underdogs welcome.</p></div>',
     },
@@ -53,27 +53,27 @@ export const dummyData: SingleServiceType[] = [
         imageUrl: '/images/interview-prep-icon.png',
         title: 'Interview Prep',
         description: 'Prepare for success with our interview coaching. Gain confidence and hone your skills to ace your upcoming interviews.',
-        price: 'Rp. 5.000',
+        price: 'Rp. 300.000',
         body: '<div style={"font-family: Arial, sans-serif; line-height: 1.6; color: #333;"}><p><strong>Get one-on-one guidance to reveal your dream job.</strong></p><p><strong>Learn what to look for in a job</strong><br>Design your career path and understand what industries, companies and roles suit you best as an individual.</p><p><strong>Plan your next career move</strong><br>Once you figure out what you want, get one-on-one guidance that shows you the way.</p><p><strong>No experience required</strong><br>No experience or background required. All underdogs welcome.</p></div>',
     },
     {
         slug: 'cover-letter-revision',
         imageUrl: '/images/cv-icon.png',
         title: 'Cover Letter Revision',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laborum ratione, officia animi commodi aut veritatis in asperiores impedit nemo.',
-        price: 'Rp. 5.000',
+        description: 'We\'ll use your relevant work experience to create the perfect cover letter to land your dream job.',
+        price: 'Rp. 50.000',
         body: '<div style={"font-family: Arial, sans-serif; line-height: 1.6; color: #333;"}><p><strong>Get one-on-one guidance to reveal your dream job.</strong></p><p><strong>Learn what to look for in a job</strong><br>Design your career path and understand what industries, companies and roles suit you best as an individual.</p><p><strong>Plan your next career move</strong><br>Once you figure out what you want, get one-on-one guidance that shows you the way.</p><p><strong>No experience required</strong><br>No experience or background required. All underdogs welcome.</p></div>',
     },
 
 ];
 
-export default function SingleService() {
+export default function CareerDevelopment() {
     const [selectedCard, setSelectedCard] = useState<SingleServiceType | null>(null);
 
     return (
-        <section id='singleService' className="container mx-auto w-full h-auto px-6 py-20">
+        <section id='careerDevelopment' className="container mx-auto w-full h-auto px-6 py-20">
             <div className="text-center">
-                <UnderlineLink href='#singleService' className='text-base uppercase'>
+                <UnderlineLink href='#careerDevelopment' className='text-base uppercase'>
                     Career development
                 </UnderlineLink>
                 <h1 className='text-primary-500 py-5'>Quick fix with our single services</h1>

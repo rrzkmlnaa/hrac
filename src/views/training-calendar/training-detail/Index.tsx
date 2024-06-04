@@ -4,14 +4,14 @@ import { useState } from 'react';
 import TextButton from '@/components/buttons/TextButton';
 import NextImage from "@/components/NextImage";
 
-import { Workshop } from '@/constant/trainingCalendar';
+import { Training } from '@/constant/data/training';
 
 interface Props {
-  workshop: Workshop;
+  trainingProps: Training;
 }
 
-export default function Detail({ workshop }: Props) {
-  const [showDropdown, setShowDropdown] = useState<boolean[]>(new Array(workshop.detailArticle?.length).fill(false));
+export default function Detail({ trainingProps }: Props) {
+  const [showDropdown, setShowDropdown] = useState<boolean[]>(new Array(trainingProps.detailArticle?.length).fill(false));
 
   const toggleDropdown = (index: number) => {
     setShowDropdown(prevState => {
@@ -43,7 +43,7 @@ export default function Detail({ workshop }: Props) {
           />
         </div>
         <div className="col-span-2 border-t-4 border-primary-500">
-          {workshop.detailArticle?.map((item, index) => (
+          {trainingProps.detailArticle?.map((item, index) => (
             <div key={index} className="border-b-2 border-gray-200">
               <TextButton
                 variant='basic'

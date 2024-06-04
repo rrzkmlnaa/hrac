@@ -2,6 +2,7 @@
 
 import Button from '@/components/buttons/Button'
 import UnderlineLink from '@/components/links/UnderlineLink'
+import UnstyledLink from '@/components/links/UnstyledLink'
 import NextImage from '@/components/NextImage'
 
 export default function bundleService() {
@@ -28,14 +29,14 @@ export default function bundleService() {
                     <p>Success Interview Preparation</p>
                     <p>Ongoing Support</p>
                 </div>
-                <Button
-                  isLoading={false}
-                  variant='yellow'
-                  size='base'
-                  className='w-auto md:w-1/4 uppercase flex justify-center'
-                >
-                  Register for Bundle Service
-                </Button>
+                <UnstyledLink href='https://api.whatsapp.com/send/?phone=6285942210587&text=Saya+tertarik+untuk+Menggunakan+Layanan+di+Perusahan+Anda.+Apakah+bisa+dibantu+jelaskan+lebih+lanjut+mengenai+.....%3F&type=phone_number&app_absent=0'>
+                    <Button
+                        variant='yellow'
+                        size='base'
+                    >
+                        Register for Bundle Service
+                    </Button>
+                </UnstyledLink>
             </div>
         </section>
     )

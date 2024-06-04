@@ -61,13 +61,13 @@ export default function Index() {
           <h1 className='text-center'>How many years have you worked full-time?</h1>
           <div className="w-full h-auto flex flex-wrap justify-center items-center gap-5 md:gap-50 text-white pt-10">
             <UnstyledLink href='#priceView'>
-              <Button onClick={() => { handlePriceChange('Price is $100') }} className='relative py-5 px-8' variant='primary'>
+              <Button onClick={() => { handlePriceChange('Price is Rp. 300.000') }} className='relative py-5 px-8' variant='primary'>
                 <span className="animate-ping absolute -top-2 -right-2 h-5 w-5 rounded-full bg-yellow-500 opacity-75"></span>
                 0-7 Years
               </Button>
             </UnstyledLink>
             <UnstyledLink href='#priceView'>
-              <Button onClick={() => { handlePriceChange('Price is $150') }} className='relative py-5 px-8' variant='primary'>
+              <Button onClick={() => { handlePriceChange('Price is Rp. 300.000') }} className='relative py-5 px-8' variant='primary'>
                 <span className="animate-ping absolute -top-2 -right-2 h-5 w-5 rounded-full bg-yellow-500 opacity-75"></span>
                 {'> 7 Years'}
               </Button>

@@ -1,59 +1,14 @@
 'use client'
 
-import { useEffect, useMemo,useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { TbClover } from 'react-icons/tb';
 
 import Button from '@/components/buttons/Button';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
-export const resourceData = [
-  {
-    slug: "cv-ats-template",
-    category: "CV ATS Template",
-    title: "HR Academy Resume Template",
-    description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
-    buttonText: "dowload here",
-    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
-    link: "#"
-  },
-  {
-    slug: "cv-ats-template",
-    category: "CV ATS Template",
-    title: "HR Academy Resume Template",
-    description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
-    buttonText: "dowload here",
-    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
-    link: "#"
-  },
-  {
-    slug: "cover-letter-template",
-    category: "Cover Letter Template",
-    title: "Career Resume Testing",
-    description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
-    buttonText: "Testing Button Name",
-    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
-    link: "#"
-  },
-  {
-    slug: "interview-question",
-    category: "Interview Question",
-    title: "Networking Testing",
-    description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
-    buttonText: "Testing Button Name",
-    documentPATH: "/document/HR-Academy-Pelatihan-Sertifikasi-SDM-BNSP-Double-Degree.pdf",
-    link: "#"
-  },
-  {
-    slug: "networking-template",
-    category: "networking template",
-    title: "Interview Testing",
-    description: "The famous HR Academy resume template! It's landed tons of jobs. Take control of your career today, or work with one of our career consultants to get hired.",
-    buttonText: "Testing Button Name",
-    documentPATH: "/document/HR_Academy_CV_Template.pdf",
-    link: "#"
-  },
-]
-interface propResources {
+import { ResourceData } from '@/constant/index';
+
+interface resourceProps {
   slug: string;
   category: string;
   title: string;
@@ -64,12 +19,12 @@ interface propResources {
 }
 
 interface TableProps {
-  data: propResources[];
+  data: resourceProps[];
 }
 
 const Resources = ({ data }: TableProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-5">
       {data.map((item, index) => (
         <div key={index} className="w-full h-auto rounded-md bg-slate-50 shadow-md p-5">
           <div className="flex flex-col gap-4">
@@ -79,11 +34,11 @@ const Resources = ({ data }: TableProps) => {
             </div>
             <p>{item.description}</p>
           </div>
-            <UnstyledLink href={`/resources/${item.slug}`} className='pt-5 flex justify-center items-center'>
-              <Button variant='primary' className='capitalize'>
-                {item.buttonText}
-              </Button>
-            </UnstyledLink>
+          <UnstyledLink href={`/resources/${item.slug}`} className='pt-5 flex justify-center items-center'>
+            <Button variant='primary' className='capitalize'>
+              {item.buttonText}
+            </Button>
+          </UnstyledLink>
         </div>
       ))}
     </div>
@@ -91,7 +46,7 @@ const Resources = ({ data }: TableProps) => {
 }
 
 const Resource = () => {
-  const data: propResources[] = useMemo(() => resourceData, []);
+  const data: resourceProps[] = useMemo(() => ResourceData, []);
   const [categories, setCategories] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 
@@ -106,8 +61,8 @@ const Resource = () => {
   };
 
   return (
-    <div className="container mx-auto w-full h-auto min-h-96 py-16">
-      <div className="flex flex-wrap justify-center space-x-2  mb-6 px-6 xl:px-4 border-b-2 pb-5 border-primary-500">
+    <div className="container mx-auto w-full h-auto min-h-96">
+      <div className="flex flex-wrap justify-center gap-3 px-6 xl:px-4 border-b-2 pb-5 border-primary-500">
         {categories.map((category, index) => (
           <Button
             key={index}

@@ -7,7 +7,7 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 
 import BundleService from '@/views/services/career-development/components/BundleService';
-import SingleService from '@/views/services/career-development/components/SingleService';
+import CareerDevelopment from '@/views/services/career-development/components/CareerDevelopment';
 
 export default function index() {
   return (
@@ -30,7 +30,7 @@ export default function index() {
        >
         <h1 className='text-center text-2xl md:text-5xl'>3 Months Average <br />time to land a job</h1>
       </Ready>
-      <SingleService />
+      <CareerDevelopment />
       <Ready
         colorstyle='bg-blue-700 text-white p-10'
        >

@@ -68,7 +68,7 @@ export default function Index() {
               title='Job Search Strategy'
               description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laborum ratione, officia animi commodi aut veritatis in asperiores impedit nemo.'
             >
-              <p className="text-primary-500 font-bold text-center">$500</p>
+              <p className="text-primary-500 font-bold text-center">Rp. 300.000</p>
             </Card>
           </div>
         </div>

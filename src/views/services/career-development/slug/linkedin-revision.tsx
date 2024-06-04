@@ -70,7 +70,7 @@ export default function Index() {
               Identify your dream job
               Develop your career strategy Consult with an industry pro'
             >
-              <p className="text-primary-500 font-bold text-center">$500</p>
+              <p className="text-primary-500 font-bold text-center">Rp. 50.000</p>
             </Card>
           </div>
         </div>

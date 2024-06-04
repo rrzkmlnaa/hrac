@@ -10,7 +10,7 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 
-import { featuredItems } from '@/constant/featured';
+import { FeaturedData } from '@/constant/index';
 
 interface FeaturedItemProps {
   title: string;
@@ -38,9 +38,9 @@ const FeaturedItem = ({ title, imageUrl, alt, children, slug }: FeaturedItemProp
         useSkeleton={true}
         classNames={{ image: 'rounded-md object-cover w-full h-auto', blur: 'blur' }}
       /><div className="w-full h-60 overflow-hidden">
-          <h4 className="w-full h-24 overflow-hidden text-lime-200">{title}</h4>
-          <p className="w-full h-36 overflow-hidden">{children}</p>
-        </div>
+        <h4 className="w-full h-24 overflow-hidden text-lime-200">{title}</h4>
+        <p className="w-full h-36 overflow-hidden">{children}</p>
+      </div>
       <div className='text-start'>
         <UnderlineLink href={`/featured/${slug}`}>Read more</UnderlineLink>
       </div>
@@ -71,7 +71,7 @@ export default function Featured({ head, headColor, sectionStyled }: styledCusto
           modules={[Navigation, Mousewheel]}
           className="mySwiper"
         >
-          {featuredItems.map((item, index) => (
+          {FeaturedData.map((item, index) => (
             <SwiperSlide key={index}>
               <FeaturedItem  {...item}>
                 {item.shortDescription}

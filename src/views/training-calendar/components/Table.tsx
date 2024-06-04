@@ -1,13 +1,13 @@
 'use client'
 
-import { useEffect, useMemo,useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
-import { workshopData } from '../../../constant/trainingCalendar';
+import { TrainingData } from '@/constant/index';
 
-interface Workshop {
+interface Training {
   slug: string;
   name: string;
   linkUrl: string;
@@ -18,7 +18,7 @@ interface Workshop {
 }
 
 interface TableProps {
-  data: Workshop[];
+  data: Training[];
 }
 
 const WorkshopPage = ({ data }: TableProps) => {
@@ -51,7 +51,7 @@ const WorkshopPage = ({ data }: TableProps) => {
 }
 
 const Table = () => {
-  const data: Workshop[] = useMemo(() => workshopData, []);
+  const data: Training[] = useMemo(() => TrainingData, []);
   const [categories, setCategories] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 

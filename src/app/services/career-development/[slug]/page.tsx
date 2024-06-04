@@ -48,7 +48,7 @@
 import { useEffect, useState } from 'react';
 
 import NotFound from '@/app/not-found';
-import { dummyData } from '@/views/services/career-development/components/SingleService';
+import { dummyData } from '@/views/services/career-development/components/CareerDevelopment';
 
 interface PropType {
   slug: string;

@@ -6,7 +6,7 @@ export interface FormErrors {
   careerRole?: string;
 }
 
-interface FormData {
+export interface FormData {
   fullname: string;
   email: string;
   whatsapp: string;
@@ -14,7 +14,7 @@ interface FormData {
   careerRole: string;
 }
 
-export const validateForm = (formData: FormData): FormErrors => {
+export const validateField = (formData: FormData): FormErrors => {
   const { fullname, email, whatsapp, industry, careerRole } = formData;
   const errors: FormErrors = {};
 

@@ -61,19 +61,19 @@ export default function Index() {
           <h1 className='text-center'>What services is best for you?</h1>
           <div className="w-full h-auto flex flex-wrap justify-center items-center gap-5 md:gap-50 text-white pt-10">
             <UnstyledLink href='#priceView'>
-              <Button onClick={() => { handlePriceChange('Price is $50') }} className='relative py-5 px-8' variant='primary'>
+              <Button onClick={() => { handlePriceChange('Price is Rp. 25.000') }} className='relative py-5 px-8' variant='primary'>
                 <span className="animate-ping absolute -top-2 -right-2 h-5 w-5 rounded-full bg-yellow-500 opacity-75"></span>
                 Revision Only
               </Button>
             </UnstyledLink>
             <UnstyledLink href='#priceView'>
-              <Button onClick={() => { handlePriceChange('Price is $100') }} className='relative py-5 px-8' variant='primary'>
+              <Button onClick={() => { handlePriceChange('Price is Rp. 100.000') }} className='relative py-5 px-8' variant='primary'>
                 <span className="animate-ping absolute -top-2 -right-2 h-5 w-5 rounded-full bg-yellow-500 opacity-75"></span>
                 Schedule a Call
               </Button>
             </UnstyledLink>
             <UnstyledLink href='#priceView'>
-              <Button onClick={() => { handlePriceChange('Price is $150') }} className='relative py-5 px-8' variant='primary'>
+              <Button onClick={() => { handlePriceChange('Price is Rp. 50.000') }} className='relative py-5 px-8' variant='primary'>
                 <span className="animate-ping absolute -top-2 -right-2 h-5 w-5 rounded-full bg-yellow-500 opacity-75"></span>
                 Create an “ATS” CV
               </Button>

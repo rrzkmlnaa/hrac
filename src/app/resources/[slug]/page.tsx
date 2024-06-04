@@ -4,7 +4,7 @@ import ArrowLink from '@/components/links/ArrowLink';
 import NextImage from '@/components/NextImage';
 
 import NotFound from '@/app/not-found';
-import { resourceData } from '@/views/resources/components/Resources';
+import { ResourceData } from '@/constant/index';
 import ContactForm from '@/views/resources/slug/Form';
 
 interface Workshop {
@@ -24,7 +24,7 @@ interface Query {
 }
 
 const ResourceDetail = (query: Query) => {
-  const selectedWorkshop: Workshop | undefined = resourceData.find(
+  const selectedWorkshop: Workshop | undefined = ResourceData.find(
     (item) => item.slug === query?.params?.slug
   );
 

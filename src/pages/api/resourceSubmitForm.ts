@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { NextApiRequest, NextApiResponse } from 'next';
 
-import { sheets, spreadsheetId } from '@/pages/api/resourceSheetsClient';
+import { sheets, spreadsheetId } from './resourceSheetsClient';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
