@@ -42,40 +42,40 @@ const CareerSection = ({ services, setSelectedCard }: CareerSectionProps & { set
 
 
 export const services = [
-  { 
-    title: 'Career Coaching', 
-    description: 'Need professional guidance to level up your career? Let’s get you connected with the perfect mentor.', 
-    link: '#scrollLimitations' 
+  {
+    title: 'Career Coaching',
+    description: 'Need professional guidance to level up your career? Let’s get you connected with the perfect mentor.',
+    link: '#scrollLimitations'
   },
-  { 
-    title: 'Job Search Strategy', 
-    description: 'Optimize your job search with our strategic quidance. Let us help you navigate the path to your ideal career.', 
-    link: '#scrollLimitations' 
+  {
+    title: 'Job Search Strategy',
+    description: 'Optimize your job search with our strategic quidance. Let us help you navigate the path to your ideal career.',
+    link: '#scrollLimitations'
   },
-  { 
-    title: 'Interview Prep', 
-    description: 'Prepare for success with our interview coaching. Gain confidence and hone your skills to ace your upcoming interviews.', 
-    link: '#scrollLimitations' 
+  {
+    title: 'Interview Prep',
+    description: 'Prepare for success with our interview coaching. Gain confidence and hone your skills to ace your upcoming interviews.',
+    link: '#scrollLimitations'
   },
-  { 
-    title: 'Cover Letter Revision', 
-    description: 'We’ll translate your relevant work experience to craft the perfect job cover letter and increase your chances of landing your dream job.', 
-    link: '#scrollLimitations' 
+  {
+    title: 'Cover Letter Revision',
+    description: 'We’ll translate your relevant work experience to craft the perfect job cover letter and increase your chances of landing your dream job.',
+    link: '#scrollLimitations'
   },
-  { 
+  {
     title: 'CV Revision',
-    description: 'Ready to pass the CV selection? Let’s craft your CV to stand out.', 
-    link: '#scrollLimitations' 
+    description: 'Ready to pass the CV selection? Let’s craft your CV to stand out.',
+    link: '#scrollLimitations'
   },
-  { 
-    title: 'Linkedin Revision', 
-    description: 'Enhance your LinkedIn profile. Stand out professionally and attract potential opportunities.', 
-    link: '#scrollLimitations' 
+  {
+    title: 'Linkedin Revision',
+    description: 'Enhance your LinkedIn profile. Stand out professionally and attract potential opportunities.',
+    link: '#scrollLimitations'
   },
-  { 
-    title: 'Individual Development Planning', 
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, labore nihil.', 
-    link: '#scrollLimitations', 
+  {
+    title: 'Individual Development Planning',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, labore nihil.',
+    link: '#scrollLimitations',
   },
 ];
 
@@ -131,19 +131,19 @@ export default function Career() {
             variant='yellow'
             size='base'
             className='border-none px-5 py-3'
-            >
+          >
             VIEW OUR SERVICES
           </Button>
         </UnstyledLink>
       </div>
-        {selectedCard && (
-                <Modal onClose={() => setSelectedCard(null)}>
-                    <div className='text-black'>
-                        <h3 className="text-xl font-semibold text-center pb-3 text-primary-500">{selectedCard.title}</h3>
-                        {selectedCard.description && <div dangerouslySetInnerHTML={{ __html: selectedCard.description }} />}
-                    </div>
-                </Modal>
-            )}
+      {selectedCard && (
+        <Modal onClose={() => setSelectedCard(null)}>
+          <div className='text-black'>
+            <h3 className="text-xl font-semibold text-center pb-3 text-primary-500">{selectedCard.title}</h3>
+            {selectedCard.description && <div dangerouslySetInnerHTML={{ __html: selectedCard.description }} />}
+          </div>
+        </Modal>
+      )}
     </section>
   );
 };

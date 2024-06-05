@@ -16,7 +16,7 @@ export const roles = [
   { titleActivity: 'individual', link: 'career', imageUrl: 'individual.webp' },
   { titleActivity: 'hr-professionals', link: 'course', imageUrl: 'hr-professionals.webp' },
   { titleActivity: 'corporate', link: 'solution', imageUrl: 'corporate.webp' },
-  
+
   { titleActivity: 'HR Generalis', link: 'career', imageUrl: 'hr-generalist.webp' },
   { titleActivity: 'HR Specialist', link: 'course', imageUrl: 'hr-professionals.webp' },
   { titleActivity: 'Business', link: 'solution', imageUrl: 'corporate.webp' },

@@ -10,7 +10,7 @@ import NextImage from '@/components/NextImage';
 
 interface SolutionType {
   title: string;
-  icon:  React.ElementType<IconBaseProps>;
+  icon: React.ElementType<IconBaseProps>;
 }
 
 const data: SolutionType[] = [
@@ -35,7 +35,7 @@ export default function Solution() {
             <h1 className='py-4 text-primary-500 text-balance text-start'>
               Human Capital Solutions for <br /> the Digital Era
             </h1>
-            {data.map((item, index)=>(
+            {data.map((item, index) => (
               <div key={index} className='flex flex-wrap gap-1 sm:gap-3 pt-5 pl-2 md:pl-5 pb-2'>
                 <item.icon size='2rem' color='#EDB526' />
                 <p className="place-self-center text-sm sm:text-base">{item.title}</p>

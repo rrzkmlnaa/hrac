@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import { Autoplay,Mousewheel, Navigation } from 'swiper/modules';
+import { Autoplay, Mousewheel, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';

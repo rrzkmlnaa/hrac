@@ -31,34 +31,34 @@ export default function Index() {
         imageName='banner-landingpage.webp'
       >
         <h1 className='text-5xl font-extrabold text-center md:text-start'>
-              Your Path to Success Starts Here
-            </h1>
+          Your Path to Success Starts Here
+        </h1>
 
-            <p className='mt-4 max-w-lg text-xl/relaxed text-center md:text-start'>
-              ELEVATE YOUR COMPETENCE, SECURE YOUR DREAM JOB, AND EXPAND YOUR
-              BUSINESS WITH OUR TAILORED COACHING AND TRAINING PROGRAMS
-            </p>
+        <p className='mt-4 max-w-lg text-xl/relaxed text-center md:text-start'>
+          ELEVATE YOUR COMPETENCE, SECURE YOUR DREAM JOB, AND EXPAND YOUR
+          BUSINESS WITH OUR TAILORED COACHING AND TRAINING PROGRAMS
+        </p>
 
-            <div className='mt-8 flex flex-wrap text-center justify-center md:justify-start'>
-              <UnstyledLink href='/about-us/contact-us'>
-                <Button
-                  isLoading={false}
-                  variant='yellow'
-                  className='border-0 rounded-l-md rounded-r-none'
-                >
-                  Register Now
-                </Button>
-              </UnstyledLink>
-              <UnstyledLink href='#role'>
-                <Button
-                  isLoading={false}
-                  variant='primary'
-                  className='border-0 rounded-r-md rounded-l-none'
-                >
-                  Visit Our Services
-                </Button>
-              </UnstyledLink>
-            </div>
+        <div className='mt-8 flex flex-wrap text-center justify-center md:justify-start'>
+          <UnstyledLink href='/about-us/contact-us'>
+            <Button
+              isLoading={false}
+              variant='yellow'
+              className='border-0 rounded-l-md rounded-r-none'
+            >
+              Register Now
+            </Button>
+          </UnstyledLink>
+          <UnstyledLink href='#role'>
+            <Button
+              isLoading={false}
+              variant='primary'
+              className='border-0 rounded-r-md rounded-l-none'
+            >
+              Visit Our Services
+            </Button>
+          </UnstyledLink>
+        </div>
       </Jumbotron>
       <Client
         bgColor='py-20 md:py-32'
@@ -79,7 +79,7 @@ export default function Index() {
       <Learn />
       <Solution />
       <Resource />
-      <Featured 
+      <Featured
         // colorTitle='text-lime-500'
         head="Featured"
         headColor='text-white'

@@ -16,7 +16,8 @@ export interface SingleServiceType {
 }
 
 export const dummyData: SingleServiceType[] = [
-    {   slug: 'career-coacing',
+    {
+        slug: 'career-coacing',
         imageUrl: '/images/career-coacing-icon.png',
         title: 'Career Coacing',
         description: 'Need professional guidance to level up your career? Let’s get you connected with the perfect mentor.',

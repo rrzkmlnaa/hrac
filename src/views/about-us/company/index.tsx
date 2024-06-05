@@ -29,21 +29,21 @@ export default function Companys() {
       <VisiMisi />
       <Join />
       <Coach />
-      <Ready 
+      <Ready
         colorstyle='bg-blue-800 text-white p-10'
       >
         <h1 className='text-center'>Ready to level up your success?</h1>
         <div className='my-5 flex flex-wrap justify-center'>
-        <UnstyledLink href='/about-us/contact-us'>
-          <Button
-            isLoading={false}
-            variant='light'
-            size='base'
-            className='border-0 rounded-l-md rounded-r-none p-3'
-          >
-            Get In Touch
-          </Button>        
-        </UnstyledLink>
+          <UnstyledLink href='/about-us/contact-us'>
+            <Button
+              isLoading={false}
+              variant='light'
+              size='base'
+              className='border-0 rounded-l-md rounded-r-none p-3'
+            >
+              Get In Touch
+            </Button>
+          </UnstyledLink>
           <UnstyledLink href='/#role'>
             <Button
               isLoading={false}

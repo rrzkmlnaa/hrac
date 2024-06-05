@@ -20,20 +20,20 @@ export default function index() {
         </h1>
 
         <p className='mt-4 max-w-xl text-xl/relaxed text-center md:text-start'>
-          EMPOWER INDIVIDUALS IN ACHIEVING THEIR CAREER ASPIRATIONS WITH PERSONALIZED 
+          EMPOWER INDIVIDUALS IN ACHIEVING THEIR CAREER ASPIRATIONS WITH PERSONALIZED
           COACHING AND ESSENTIALS RESOURCES
         </p>
       </Jumbotron>
       <BundleService />
       <Ready
         colorstyle='bg-blue-700 text-white p-10'
-       >
+      >
         <h1 className='text-center text-2xl md:text-5xl'>3 Months Average <br />time to land a job</h1>
       </Ready>
       <CareerDevelopment />
       <Ready
         colorstyle='bg-blue-700 text-white p-10'
-       >
+      >
         <div className="flex flex-wrap justify-between items-center px-6">
           <div className="block">
             <h2 className='text-3xl'>Questions about our services?</h2>

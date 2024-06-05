@@ -13,15 +13,15 @@ export default function Index() {
   return (
     <>
       <Jumbotron
-          imageName="training-sertif-banner.webp"
+        imageName="training-sertif-banner.webp"
       >
-          <h1 className='text-5xl md:text-6xl font-extrabold text-center text-wrap md:text-start md:text-nowrap'>
-              Training & Certifications
-          </h1>
+        <h1 className='text-5xl md:text-6xl font-extrabold text-center text-wrap md:text-start md:text-nowrap'>
+          Training & Certifications
+        </h1>
 
-          <p className='mt-4 max-w-xl text-xl/relaxed text-center md:text-start'>
+        <p className='mt-4 max-w-xl text-xl/relaxed text-center md:text-start'>
           LOOKING TO BECOME AN HR PRACTITIONER? ENHANCE YOUR SKILLS WITH HR ACADEMY'S TRAINING PROGRAM LED BY EXPERIENCED PRACTITIONERS AND ACCREDITED BNSP CERTIFICATION
-          </p>
+        </p>
       </Jumbotron>
       <Featured />
       <Role

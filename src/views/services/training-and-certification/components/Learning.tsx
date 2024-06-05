@@ -1,11 +1,11 @@
 'use client'
 
 import { IconBaseProps } from 'react-icons';
-import { FaBriefcase, FaClipboardCheck, FaComments, FaFileAlt, FaGamepad,FaLightbulb, FaTasks, FaUserFriends } from 'react-icons/fa';
+import { FaBriefcase, FaClipboardCheck, FaComments, FaFileAlt, FaGamepad, FaLightbulb, FaTasks, FaUserFriends } from 'react-icons/fa';
 
 interface LearningType {
     title: string;
-    icon:  React.ElementType<IconBaseProps>;
+    icon: React.ElementType<IconBaseProps>;
 }
 
 const data: LearningType[] = [
@@ -29,7 +29,7 @@ export default function Learning() {
                     {data.map((item, index) => (
                         <div key={index} className="flex flex-col justify-center items-center gap-5 w-full h-40 bg-primary-500 p-5">
                             <h3 className="capitalize text-white text-center">{item.title}</h3>
-                            <item.icon size={44} className="text-white" /> 
+                            <item.icon size={44} className="text-white" />
                         </div>
                     ))}
                 </div>
