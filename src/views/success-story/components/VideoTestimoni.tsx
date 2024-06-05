@@ -22,33 +22,26 @@ export default function VideoTestimoni() {
             videoSrc: '/videos/budi.mp4',
             thumbnail: '/videos/thumbnail-budi.png',
             name: 'Pak Budi',
-            pelatihan: 'lorem ipsum dor sit amet',
+            pelatihan: '',
         },
         {
             videoSrc: '/videos/hari.mp4',
             thumbnail: '/videos/thumbnail-hari.png',
             name: 'Pak Hari',
-            pelatihan: 'lorem ipsum dor sit amet',
+            pelatihan: '',
         },
         {
             videoSrc: '/videos/rumi.mp4',
             thumbnail: '/videos/thumbnail-rumi.png',
             name: 'Ibu Rumi',
-            pelatihan: 'lorem ipsum dor sit amet',
+            pelatihan: '',
         },
         {
             videoSrc: '/videos/gina.mp4',
             thumbnail: '/videos/thumbnail-gina.png',
             name: 'Ibu Gina',
-            pelatihan: 'lorem ipsum dor sit amet',
-        },
-        {
-            videoSrc: '/videos/6.mp4',
-            thumbnail: '/videos/thumbnail-6.png',
-            name: 'Lorem Ipsum dor sit amet',
-            pelatihan: 'lorem ipsum dor sit amet',
-        },
-        
+            pelatihan: '',
+        }
     ]
     return (
         <section className="bg-primary-500 text-white py-20">
@@ -64,8 +57,8 @@ export default function VideoTestimoni() {
                                 videoSrc={item.videoSrc}
                                 thumbnail={item.thumbnail}
                             />
-                            <h3>{item.name}</h3>
-                            <p>{item.pelatihan}</p>
+                            <h3 className='text-center'>{item.name}</h3>
+                            <p className='text-center'>{item.pelatihan}</p>
                         </div>
                     ))}
                 </div>

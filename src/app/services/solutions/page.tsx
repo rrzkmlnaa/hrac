@@ -29,8 +29,7 @@ export default function Page() {
             </Jumbotron>
             <section className="bg-white py-24">
                 <div className="container mx-auto w-full h-auto">
-                    <h1 className="text-center text-primary-500 capitalize">Our HR Solution Services</h1>
-                    <h4 className="font-normal text-center py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae necessitatibus qui inventore unde sunt earum, animi, dolore assumenda reiciendis magni numquam debitis facilis odit dolorum labore iste modi beatae.</h4>
+                    <h1 className="text-center text-primary-500 capitalize pb-5">Our HR Solution Services</h1>
                     <div className="flex flex-wrap justify-center items-center gap-5 py-5 px-6 xl:px-0 ">
                         {data.map((item, index) => (
                             <UnstyledLink key={index} href={`${item.linkUrl}`} className="relative">
@@ -40,9 +39,9 @@ export default function Page() {
                                     height={350}
                                     alt={`${item.title} Images`}
                                     useSkeleton={true}
-                                    classNames={{ image: 'object-cover w-full h-auto', blur: 'blur' }}
+                                    classNames={{ image: 'object-cover w-full h-auto rounded-md', blur: 'blur' }}
                                 />
-                                <div className="absolute bottom-0 flex justify-center items-center w-full h-24 bg-primary-500 p-5">
+                                <div className="absolute bottom-0 flex justify-center items-center w-full h-24 bg-primary-500 p-5 rounded-md">
                                     <h3 className="capitalize text-white text-center">{item.title}</h3>
                                 </div>
                             </UnstyledLink>
