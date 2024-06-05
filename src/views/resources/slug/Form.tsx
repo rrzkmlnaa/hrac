@@ -4,6 +4,7 @@ import Button from '@/components/buttons/Button';
 import ToastDanger from '@/components/toasts/ToastDanger';
 import ToastSuccess from '@/components/toasts/ToastSuccess';
 
+import { downloadFile } from '@/handler/DownloadFile';
 import { FormData, FormErrors, hasErrors, validateField } from '@/utils/validation/FormValidation';
 import ContactFormInput from '@/views/about-us/contact-us/components/ContactFormInput';
 
@@ -68,7 +69,8 @@ const ContactForm = ({ fileDownload }: ContactFormProps) => {
       await response.json();
 
       addToast('success', 'Submit Successfully.');
-      window.open(fileDownload, '_blank');
+      // window.open(fileDownload, '_blank');
+      downloadFile(fileDownload, 'template-cv-hra.pdf');
 
     } catch (error) {
       addToast('danger', 'An error occurred while submitting the form.');
